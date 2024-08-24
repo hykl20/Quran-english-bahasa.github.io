@@ -638,8 +638,21 @@ document.getElementById('audioPlayerContainer').addEventListener('click', functi
             }
         });
     }
+ document.addEventListener("DOMContentLoaded", () => {
+    // Check if there is a hash in the URL
+    const hash = window.location.hash;
+    if (hash) {
+        const chapNum = hash.replace('#', ''); // Extract the chapter number from the hash
+        if (!isNaN(chapNum) && chapNum > 0 && chapNum <= 114) {
+            // Call showChapter if the hash is a valid chapter number
+            showChapter(chapNum);
+        } else {
+            console.warn('Invalid chapter number in URL hash.');
+        }
+    }
+});
 
-    async function showChapter(chapNum) {
+async function showChapter(chapNum) {
         const chapterTitleElement = document.getElementById('chapter-title');
         const bismillahContainer = document.getElementById('bismillah-container');
         if (chapters[chapNum]) {
