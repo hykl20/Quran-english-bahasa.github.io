@@ -682,19 +682,19 @@ function adjustImageSize() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+//document.addEventListener("DOMContentLoaded", () => {
     // Check if there is a hash in the URL
-    const hash = window.location.hash;
-    if (hash) {
-        const chapNum = hash.replace('#', ''); // Extract the chapter number from the hash
-        if (!isNaN(chapNum) && chapNum > 0 && chapNum <= 114) {
+   // const hash = window.location.hash;
+   // if (hash) {
+      //  const chapNum = hash.replace('#', ''); // Extract the chapter number from the hash
+      //  if (!isNaN(chapNum) && chapNum > 0 && chapNum <= 114) {
             // Call showChapter if the hash is a valid chapter number
-            showChapter(chapNum);
-        } else {
-            console.warn('Invalid chapter number in URL hash.');
-        }
-    }
-});
+        //    showChapter(chapNum);
+       // } else {
+         //   console.warn('Invalid chapter number in URL hash.');
+      ///  }
+  /  }
+// });
 
 async function showChapter(chapNum) {
     const chapterTitleElement = document.getElementById('chapter-title');
@@ -936,7 +936,7 @@ async function showChapter(chapNum) {
                 mainContent.style.width = '100%';
             } else {
                 sidebar.style.display = 'block'; // default block
-                mainContent.style.width = '100%'; // 75
+                mainContent.style.width = '75%'; // 75
             }
 
             // Handle chapter selection to hide sidebar and adjust main content
@@ -949,9 +949,9 @@ async function showChapter(chapNum) {
             });
         } else {
             // Desktop view
-            sidebar.style.display = 'none';
-            mainContent.style.width = '100%'; // default 75
-            localStorage.setItem('sidebarHidden', 'true');  // default "localStorage.removeItem('sidebarHidden');"
+            sidebar.style.display = 'block';
+            mainContent.style.width = '75%'; // default 75
+            localStorage.removeItem('sidebarHidden');  // default "localStorage.removeItem('sidebarHidden');"
         }
     });
 </script>
