@@ -14,6 +14,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
     <style>
+     .cback {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #10142c; /* Background color when not hovered */
+            color: white;
+            border: 2px solid #10142c; /* Outline color when not hovered */
+            border-radius: 4px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s, border-radius 0.3s;
+        }
+        .chapter:hover {
+            background-color: transparent; /* Transparent background when hovered */
+            color: #10142c; /* Change text color when hovered */
+
+            border-color: #10142c; /* Outline color when hovered */
+        }
        /* Global Styles */
 body {
     font-family: 'IBM Plex Sans Arabic', sans-serif;
@@ -663,7 +682,7 @@ async function showChapter(chapNum) {
         const bismillahContainer = document.getElementById('bismillah-container');
         if (chapters[chapNum]) {
             chapterTitleElement.innerHTML = `
-                Surah ${chapNum}: ${chapters[chapNum].title}
+                Surah ${chapNum}: ${chapters[chapNum].title}  <a class="cback" href="https://sites.google.com/moe-dl.edu.my/quran-english-bahasa" target="_self">Back</a>
                 <div id="title-container">
                     <span style="font-family: 'Reem Kufi', sans-serif; font-size: 60px;">${arabic[chapNum].title}</span>
                     <div>
