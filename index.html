@@ -8,6 +8,8 @@
    <meta name="author" content="Muslim1446">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Noble Qur'an </title>
+ <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/muslim1446/Quran-english-bahasa.github.io/master/bismillah.ico">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -50,7 +52,7 @@ body {
     background-color: #495057;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    color : #ffffff;
+    
 }
 
 #main-content {
@@ -609,16 +611,24 @@ document.getElementById('audioPlayerContainer').addEventListener('click', functi
         // Add other chapters as needed
     };
 
-    function generateChapterList() {
-        const chaptersList = document.getElementById('chapters-list');
-        Object.keys(chapters).forEach(chapNum => {
-            const chapter = chapters[chapNum];
-            const chapterDiv = document.createElement('div');
-            chapterDiv.classList.add('chapter');
-            chapterDiv.innerText = `${chapNum}.  ${chapter.title} (${chapter.verses} ayahs)`;
-            chapterDiv.onclick = () => showChapter(chapNum);
-            chaptersList.appendChild(chapterDiv);
-        });
+function generateChapterList() {
+    const chaptersList = document.getElementById('chapters-list');
+    Object.keys(chapters).forEach(chapNum => {
+        const chapter = chapters[chapNum];
+        const chapterDiv = document.createElement('div');
+        chapterDiv.classList.add('chapter');
+        chapterDiv.innerText = `${chapNum}.  ${chapter.title} (${chapter.verses} ayahs)`;
+        chapterDiv.onclick = () => showChapter(chapNum);
+
+        // Apply styles
+        chapterDiv.style.fontFamily = "'Young Serif', serif";
+        chapterDiv.style.borderRadius = '10px';
+        chapterDiv.style.color = '#ffffff';
+        chapterDiv.style.padding = '10px';
+        chapterDiv.style.margin = '5px 0';
+
+        chaptersList.appendChild(chapterDiv);
+    });
     }
 
     async function fetchXML(url) {
