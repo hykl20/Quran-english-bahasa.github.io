@@ -13,117 +13,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Noble Qur'an</title>
     <!-- Preconnect to Google Fonts -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Font stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
 
        <style>
-body {
-    font-family: 'Young Serif', serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center items horizontally */
-    padding: 10px; /* Add padding to avoid touching the edges of the screen */
-}
-
-.chapter {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: #272F33;
-    color: white;
-    border: 2px solid #272F33;
-    border-radius: 4px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 16px;
-    transition: background-color 0.3s, border-radius 0.3s, color 0.3s;
-}
-
-.chapter:hover {
-    background-color: transparent;
-    color: #272F33;
-    border-color: #272F33;
-    border-radius: 8px; /* Slightly more rounded corners on hover */
-}
-
-#searchBox {
-    width: 100%;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd; /* Light border around the input */
-    box-sizing: border-box; /* Ensures padding is included in width */
-    margin-bottom: 20px; /* Space between the search box and results */
-}
-
-#results {
-    margin-top: 10px;
-    font-family: 'Young Serif', serif;
-    border-radius: 10px;
-    color: #ffffff;
-}
-
-/* Media Queries for Responsiveness */
-
-/* Small devices (phones, 600px and down) */
-@media (max-width: 600px) {
-    .chapter {
-        font-size: 14px; /* Slightly smaller text on small screens */
-        padding: 8px 16px; /* Adjust padding for smaller screens */
-        margin: 3px;
-    }
-
-    #searchBox {
-        font-size: 14px; /* Slightly smaller text in the input on small screens */
-        padding: 8px;
-    }
-}
-
-/* Extra Small devices (very small phones, 400px and down) */
-@media (max-width: 400px) {
-    .chapter {
-        font-size: 12px; /* Smaller text for very small screens */
-        padding: 6px 12px; /* Adjust padding for extra small screens */
-    }
-
-    #searchBox {
-        font-size: 12px;
-        padding: 6px;
-    }
-}
-
-/* Large devices (desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%; /* Restrict the width of the container on large screens */
-    }
-
-    .chapter {
-        font-size: 18px; /* Slightly larger text on large screens */
-        padding: 12px 24px; /* More padding for large screens */
-    }
-           }
-
+        body {
+            font-family: 'Young Serif', serif; /* Apply the new font */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: center; /* Center items horizontally */
+        }
+        .chapter {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #272F33; /* Background color when not hovered */
+            color: white;
+            border: 2px solid #272F33; /* Outline color when not hovered */
+            border-radius: 4px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s, border-radius 0.3s;
+        }
+        .chapter:hover {
+            background-color: transparent; /* Transparent background when hovered */
+            color: #272F33; /* Change text color when hovered */
+            border-color: #272F33; /* Outline color when hovered */
+        }
+        #searchBox {
+            
+           
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            
+        }
+        #results {
+            margin-top: 10px;
+            font-family: 'Young Serif', serif;
+            border-radius: 10px;
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
 <!-- Search Box and Results Container -->
-<div style="margin-top: 20px; padding: 10px; width: 100%; max-width: 400px; margin: auto;">
-    <input type="text" id="searchBox" placeholder="Find 'Al-Mulk' or '67'" 
-           style="outline: 0.1px solid #10142c; opacity: 0.2; width: 100%; 
-           border-radius: 10px; padding: 10px; font-size: 16px; 
-           font-family: 'Young Serif', serif; box-sizing: border-box;">
-    <div id="results" style="margin-top: 10px; font-family: 'Young Serif', serif; 
-         border-radius: 10px; color: #ffffff;"></div>
-</div>
+    <div style="margin-top: 20px;">
+        <input type="text" id="searchBox" placeholder="Find 'Al-Mulk' or '67'" style="outline: 0.1px solid #10142c opacity: 0.2;; width: 100%; border-radius: 10px; padding: 10px; font-size: 16px; font-family: 'Young Serif', serif;">
+        <div id="results" style="margin-top: 10px; font-family: 'Young Serif'; serif; border-radius: 10px; color: #ffffff;"></div>
+    </div>
     <a class="chapter" href="https://muslim1446.github.io#1" target="_self">Al-Fatihah</a>
     <a class="chapter" href="https://muslim1446.github.io#2" target="_self">Al-Baqarah</a>
     <a class="chapter" href="https://muslim1446.github.io#3" target="_self">Aali Imran</a>
@@ -407,33 +353,25 @@ body {
 </script>
 <style>
     .result-button {
-    display: block;
-    margin: 5px 0;
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #272F33;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: "Oswald", sans-serif;
-    box-sizing: border-box; /* Ensures padding is included in width */
-}
+        display: block;
+        margin: 5px 0;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #272F33;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 16px;
+        font-family: "Oswald", sans-serif;
+    }
 
-.result-button:hover {
-    background-color: #000000;
-    opacity: 0.9;
-    outline: 0.1px solid #272F33;
-    font-family: 'Young Serif'; /* Changes font on hover */
-}
-
-/* Optional: Media Query for even smaller screens */
-@media (max-width: 480px) {
-    .result-button {
-        font-size: 14px; /* Slightly smaller text for very small screens */
-        padding: 8px; /* Adjust padding */
+    .result-button:hover {
+        background-color: #000000;
+        opacity: 0.9;
+        outline: 0.1px solid #272F33;
+        font-family: 'Young Serif';
     }
 </style>
 
