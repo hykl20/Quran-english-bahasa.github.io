@@ -932,8 +932,8 @@ async function showChapter(chapNum) {
                 sidebar.style.display = 'none';
                 mainContent.style.width = '100%';
             } else {
-                sidebar.style.display = 'block';
-                mainContent.style.width = '75%';
+                sidebar.style.display = 'block'; // default block
+                mainContent.style.width = '100%'; // 75
             }
 
             // Handle chapter selection to hide sidebar and adjust main content
@@ -946,9 +946,9 @@ async function showChapter(chapNum) {
             });
         } else {
             // Desktop view
-            sidebar.style.display = 'block';
-            mainContent.style.width = '75%';
-            localStorage.removeItem('sidebarHidden');
+            sidebar.style.display = 'none';
+            mainContent.style.width = '100%'; // default 75
+            localStorage.setItem('sidebarHidden', 'true');  // default "localStorage.removeItem('sidebarHidden');"
         }
     });
 </script>
