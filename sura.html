@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Noble Qur'an</title>
-
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <!-- Font stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
 
-    <!-- External Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
-
-    <style>
+       <style>
         body {
-            font-family: 'Young Serif', serif;
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
+            font-family: 'Young Serif', serif; /* Apply the new font */
+            margin: 0;
+            padding: 0;
             overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: center; /* Center items horizontally */
         }
         .chapter {
             display: inline-block;
             margin: 5px;
             padding: 10px 20px;
-            background-color: #10142c; /* Background color when not hovered */
+            background-color: #272F33; /* Background color when not hovered */
             color: white;
-            border: 2px solid #10142c; /* Outline color when not hovered */
+            border: 2px solid #272F33; /* Outline color when not hovered */
             border-radius: 4px;
             text-decoration: none;
             text-align: center;
             font-size: 16px;
             transition: background-color 0.3s, border-radius 0.3s;
-            white-space: nowrap; /* Prevent text wrapping */
         }
         .chapter:hover {
-          background-color: transparent; /* Transparent background when hovered */
-            color: #10142c; /* Change text color when hovered */
-
-            border-color: #10142c; /* Outline color when hovered */
+            background-color: transparent; /* Transparent background when hovered */
+            color: #272F33; /* Change text color when hovered */
+            border-color: #272F33; /* Outline color when hovered */
         }
-        .chapter-container {
-            overflow-x: auto; /* Add horizontal scroll if needed */
-            white-space: nowrap; /* Prevent text wrapping */
-            padding: 10px; /* Add padding if needed */
-            box-sizing: border-box; /* Include padding in width calculation */
-        }
-        input[type="text"] {
-            outline: 0.1px solid #10142c;
-            opacity: 0.2;
+        #searchBox {
+            
+           
             width: 100%;
             border-radius: 10px;
             padding: 10px;
-            font-size: 16px;
+            
+        }
+        #results {
+            margin-top: 10px;
             font-family: 'Young Serif', serif;
-            box-sizing: border-box; /* Include padding in width calculation */
+            border-radius: 10px;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -366,11 +370,10 @@
     .result-button:hover {
         background-color: #000000;
         opacity: 0.9;
-        outline: 0.1px solid #10142c;
+        outline: 0.1px solid #272F33;
         font-family: 'Young Serif';
     }
 </style>
 
 
 </html>
-
