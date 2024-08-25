@@ -7,7 +7,7 @@
     <meta name="keywords" content="Quran,Qur'an,The Noble Quran,The Noble Qur'an,Islam,Muslim">
     <meta name="author" content="Muslim1446">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Noble Qur'an </title>
+    <title>0- The Noble Qur'an </title>
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/muslim1446/Quran-english-bahasa.github.io/master/bismillah.ico">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;500&display=swap" rel="stylesheet">
@@ -714,6 +714,9 @@ async function showChapter(chapNum) {
     const chapterTitleElement = document.getElementById('chapter-title');
     const bismillahContainer = document.getElementById('bismillah-container');
     if (chapters[chapNum]) {
+        // Update the page title
+        document.title = `Surah ${chapters[chapNum].title} - The Noble Qur'an`;
+
         chapterTitleElement.innerHTML = `
             Surah ${chapNum}: ${chapters[chapNum].title}  <a class="cback" href="/sura" target="_self">Back</a>
             <div id="title-container">
@@ -728,11 +731,11 @@ async function showChapter(chapNum) {
                         </div>
                         <div class="ienglish">I seek refuge in Allāh from Satan being expelled from His mercy</div>
                         <div class="ienglish0 ${chapNum === '9' || chapNum === '1' ? 'hidden' : ''}">
-                            <div>In the name of Allāh, the Most Compassionate, the Most Merciful</div>
+                            <div>In the name of Allāh, the Entirely Merciful, the Especially Merciful</div>
                         </div>
-                        <div class="indonesian">Aku berlindung kepada Allah dari setan yang terkutuk</div>
-                        <div class="indonesian0 ${chapNum === '9' || chapNum === '1' ? 'hidden' : ''}">
-                            <div>Dengan nama Allah Yang Maha Pengasih, Maha Penyayang</div>
+                        <div class="iindonesian">Aku berlindung kepada Allah dari godaan <i>syaitan</i> yang terkutuk</div>
+                        <div class="iindonesian0 ${chapNum === '9' || chapNum === '1' ? 'hidden' : ''}">
+                            <div>Dengan nama Allah, Yang Maha Pengasih, Maha Penyayang</div>
                         </div>
                     </div>
                 </div>
