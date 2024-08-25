@@ -1,15 +1,14 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-   <meta name="description" content="The Noble Quran in English and Bahasa translation by Saheeh International and Indonesia Islamic affairs ministry | Indonesian udio: archive.org/details/@muhdayin | © Timings VerseByVerseQuran.com">
-   <meta name="keywords" content="Quran,Qur'an,The Noble Quran,The Noble Qur'an,Islam,Muslim">
-   <meta name="author" content="Muslim1446">
+    <meta name="description" content="The Noble Quran in English and Bahasa translation by Saheeh International and Indonesia Islamic affairs ministry | Indonesian audio: archive.org/details/@muhdayin | © Timings VerseByVerseQuran.com">
+    <meta name="keywords" content="Quran,Qur'an,The Noble Quran,The Noble Qur'an,Islam,Muslim">
+    <meta name="author" content="Muslim1446">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Noble Qur'an </title>
- <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/muslim1446/Quran-english-bahasa.github.io/master/bismillah.ico">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -240,32 +239,47 @@ body {
     </div>
 
     <div class="audio-player" id="audioPlayerContainer">
-    <audio id="audioPlayer" controls autoplay>
-        <source id="audioSource" src="" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-</div>
+        <audio id="audioPlayer" controls autoplay>
+            <source id="audioSource" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
+    <div id="loading"><b>Select a Chapter</b></div>
+    <a href="https://VerseByVerseQuran.com" target="_blank"><i>(C) Timings by VerseByVerseQuran.com</i></a>
+    <div>
+        <a href="https://EveryAyah.com" target="_blank"><i> EveryAyah.com </i></a>
+    </div>
+    <div>
+        <a href="https://archive.org/details/@muhdayin" target="_blank"><i> @muhdayin - archive.org </i></a>
+    </div>
 </div>
-
-</div>
-
-<div id="loading"><b>Select a Chapter</b><div>
-<a href="https://VerseByVerseQuran.com" target="_blank"><i>(C) Timings by VerseByVerseQuran.com</i></a>
-<div>
-<a href="https://EveryAyah.com" target="_blank"><i> EveryAyah.com </i></a>
-<div>
-<a href="https://archive.org/details/@muhdayin" target="_blank"><i> @muhdayin - archive.org </i></a> </div>
 
 <script>
 document.getElementById('audioPlayerContainer').addEventListener('click', function() {
     this.classList.toggle('expanded');
 });
 
-    const chapters = {
-         1: { "title": "Al-Fatiha", "verses": 7 },
+// Check if there is a hash in the URL
+const hash = window.location.hash;
+if (hash && hash !== '#') {
+    const chapNum = hash.replace('#', ''); // Extract the chapter number from the hash
+    if (!isNaN(chapNum) && chapNum > 0 && chapNum <= 114) {
+        // If the hash is valid, don't redirect
+        // Call showChapter if the hash is a valid chapter number
+        document.addEventListener('DOMContentLoaded', () => showChapter(chapNum));
+    } else {
+        console.warn('Invalid chapter number in URL hash.');
+    }
+} else if (window.location.hostname === 'muslim1446.github.io') {
+    // Redirect to the specified URL if no valid hash and on the correct domain
+    window.location.replace('https://sites.google.com/moe-dl.edu.my/quran-english-bahasa');
+}
+
+const chapters = {
+    1: { "title": "Al-Fatiha", "verses": 7 },
     2: { "title": "Al-Baqarah", "verses": 286 },
-    3: { "title": "Aal-E-Imran", "verses": 200 },
+3: { "title": "Aal-E-Imran", "verses": 200 },
     4: { "title": "An-Nisa", "verses": 176 },
     5: { "title": "Al-Ma'idah", "verses": 120 },
     6: { "title": "Al-An'am", "verses": 165 },
@@ -377,15 +391,15 @@ document.getElementById('audioPlayerContainer').addEventListener('click', functi
     112: { "title": "Al-Ikhlas", "verses": 4 },
     113: { "title": "Al-Falaq", "verses": 5 },
     114: { "title": "An-Nas", "verses": 6 }
-      // Add other chapters as needed
-    };
+    // Add other chapters as needed
+};
 
-    const englishXMLUrl = 'https://blue-carlina-25.tiiny.site/quran_xml/en-sahih.xml';
-    const indonesianXMLUrl = 'https://blue-carlina-25.tiiny.site/quran_xml/id-indonesian.xml';
-    const arabic = {
-       "1": { "title": "الفاتِحة" },
-  "2": { "title": "البَقَرَة" },
-  "3": { "title": "آل عِمْرَان" },
+const englishXMLUrl = 'https://blue-carlina-25.tiiny.site/quran_xml/en-sahih.xml';
+const indonesianXMLUrl = 'https://blue-carlina-25.tiiny.site/quran_xml/id-indonesian.xml';
+const arabic = {
+    "1": { "title": "الفاتِحة" },
+    "2": { "title": "البَقَرَة" },
+ "3": { "title": "آل عِمْرَان" },
   "4": { "title": "النِّسَاء" },
   "5": { "title": "المَائِدَة" },
   "6": { "title": "الأَنْعَام" },
@@ -497,13 +511,13 @@ document.getElementById('audioPlayerContainer').addEventListener('click', functi
   "112": { "title": "الإِخْلَاص" },
   "113": { "title": "الفَلَق" },
   "114": { "title": "النَّاس" }
-      // Add other chapters as needed
-    };
+    // Add other chapters as needed
+};
 
-    const arabicmean = {
-      1: { "title": "The Opening" },
-      2: { "title": "The Cow" },
-      3: { "title": "The Family of Imran" },
+const arabicmean = {
+    1: { "title": "The Opening" },
+    2: { "title": "The Cow" },
+   3: { "title": "The Family of Imran" },
       4: { "title": "The Women" },
 5: { "title": "The Table Spread" },
 6: { "title": "The Cattle" },
@@ -615,8 +629,8 @@ document.getElementById('audioPlayerContainer').addEventListener('click', functi
 112: { "title": "The Sincerity" },
 113: { "title": "The Daybreak" },
 114: { "title": "The Mankind" }
-        // Add other chapters as needed
-    };
+    // Add other chapters as needed
+};
 
 function generateChapterList() {
     const chaptersList = document.getElementById('chapters-list');
@@ -636,53 +650,54 @@ function generateChapterList() {
 
         chaptersList.appendChild(chapterDiv);
     });
-    }
+}
 
-    async function fetchXML(url) {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const text = await response.text();
-            console.log(`Fetched XML from ${url}`);
-            const parser = new DOMParser();
-            return parser.parseFromString(text, 'text/xml');
-        } catch (error) {
-            console.error(`Error fetching XML from ${url}:`, error);
-            return null;
+async function fetchXML(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const text = await response.text();
+        console.log(`Fetched XML from ${url}`);
+        const parser = new DOMParser();
+        return parser.parseFromString(text, 'text/xml');
+    } catch (error) {
+        console.error(`Error fetching XML from ${url}:`, error);
+        return null;
+    }
+}
+
+function parseXML(xml) {
+    const translations = {};
+    if (!xml) return translations;
+    const suras = xml.getElementsByTagName('sura');
+    for (let sura of suras) {
+        const index = sura.getAttribute('index');
+        const ayas = sura.getElementsByTagName('aya');
+        translations[index] = {};
+        for (let aya of ayas) {
+            const verseIndex = aya.getAttribute('index');
+            const text = aya.getAttribute('text');
+            translations[index][verseIndex] = text;
         }
     }
+    return translations;
+}
 
-    function parseXML(xml) {
-        const translations = {};
-        if (!xml) return translations;
-        const suras = xml.getElementsByTagName('sura');
-        for (let sura of suras) {
-            const index = sura.getAttribute('index');
-            const ayas = sura.getElementsByTagName('aya');
-            translations[index] = {};
-            for (let aya of ayas) {
-                const verseIndex = aya.getAttribute('index');
-                const text = aya.getAttribute('text');
-                translations[index][verseIndex] = text;
-            }
+function adjustImageSize() {
+    const images = document.querySelectorAll('.arabic-image');
+    images.forEach(img => {
+        if (window.innerWidth < 768) {
+            img.style.width = '100%'; // Full width for mobile
+            img.style.height = 'auto'; // Maintain aspect ratio
+        } else {
+            img.style.width = 'auto'; // Default width for desktop
+            img.style.height = 'auto'; // Maintain aspect ratio
         }
-        return translations;
-    }
+    });
+}
 
-    function adjustImageSize() {
-        const images = document.querySelectorAll('.arabic-image');
-        images.forEach(img => {
-            if (window.innerWidth < 768) {
-                img.style.width = '100%'; // Full width for mobile
-                img.style.height = 'auto'; // Maintain aspect ratio
-            } else {
-                img.style.width = 'auto'; // Default width for desktop
-                img.style.height = 'auto'; // Maintain aspect ratio
-            }
-        });
-    }
- document.addEventListener("DOMContentLoaded", () => {
- // Check if there is a hash in the URL
+document.addEventListener("DOMContentLoaded", () => {
+    // Check if there is a hash in the URL
     const hash = window.location.hash;
     if (hash) {
         const chapNum = hash.replace('#', ''); // Extract the chapter number from the hash
@@ -696,34 +711,34 @@ function generateChapterList() {
 });
 
 async function showChapter(chapNum) {
-        const chapterTitleElement = document.getElementById('chapter-title');
-        const bismillahContainer = document.getElementById('bismillah-container');
-        if (chapters[chapNum]) {
-            chapterTitleElement.innerHTML = `
-                Surah ${chapNum}: ${chapters[chapNum].title}  <a class="cback" href="/sura" target="_self">Back</a>
-                <div id="title-container">
-                    <span style="font-family: 'Reem Kufi', sans-serif; font-size: 60px;">${arabic[chapNum].title}</span>
-                    <div>
-                        <span style="font-style: italic; font-size: 0.8em;">${arabicmean[chapNum].title}</span>
-                        <div id="bismillah-container" class="${chapNum === '9' || chapNum === '1' ? 'hidden' : ''}">
-                            <hr>
-                            <div class="iarabic">أعوذ بالله من الشيطان الرجيم</div>
-                            <div class="iarabic0 ${chapNum === '9' || chapNum === '1' ? 'hidden' : ''}">
-                                <div>بسم الله الرحمن الرحيم</div>
-                            </div>
-                            <div class="ienglish">I seek refuge in Allāh from Satan being expelled from His mercy</div>
-                            <div class="ienglish0 ${chapNum === '9' || chapNum === '1' ? 'hidden' : ''}">
-                                <div>In the name of Allāh, the Entirely Merciful, the Especially Merciful</div>
-                            </div>
-                            <div class="iindonesian">Aku berlindung kepada Allah dari godaan <i>syaitan</i> yang terkutuk</div>
-                            <div class="iindonesian0 ${chapNum === '9' || chapNum === '1' ? 'hidden' : ''}">
-                                <div>Dengan nama Allah, Yang Maha Pengasih, Maha Penyayang</div>
-                            </div>
+    const chapterTitleElement = document.getElementById('chapter-title');
+    const bismillahContainer = document.getElementById('bismillah-container');
+    if (chapters[chapNum]) {
+        chapterTitleElement.innerHTML = `
+            Surah ${chapNum}: ${chapters[chapNum].title}  <a class="cback" href="/sura" target="_self">Back</a>
+            <div id="title-container">
+                <span style="font-family: 'Reem Kufi', sans-serif; font-size: 60px;">${arabic[chapNum].title}</span>
+                <div>
+                    <span style="font-style: italic; font-size: 0.8em;">${arabicmean[chapNum].title}</span>
+                    <div id="bismillah-container" class="${chapNum === '9' || chapNum === '1' ? 'hidden' : ''}">
+                        <hr>
+                        <div class="iarabic">أعوذ بالله من الشيطان الرجيم</div>
+                        <div class="iarabic0 ${chapNum === '9' || chapNum === '1' ? 'hidden' : ''}">
+                            <div>بسم الله الرحمن الرحيم</div>
+                        </div>
+                        <div class="ienglish">I seek refuge in Allāh from Satan being expelled from His mercy</div>
+                        <div class="ienglish0 ${chapNum === '9' || chapNum === '1' ? 'hidden' : ''}">
+                            <div>In the name of Allāh, the Most Compassionate, the Most Merciful</div>
+                        </div>
+                        <div class="indonesian">Aku berlindung kepada Allah dari setan yang terkutuk</div>
+                        <div class="indonesian0 ${chapNum === '9' || chapNum === '1' ? 'hidden' : ''}">
+                            <div>Dengan nama Allah Yang Maha Pengasih, Maha Penyayang</div>
                         </div>
                     </div>
                 </div>
-            `;
-        }
+            </div>
+        `;
+         }
 
         const loadingElement = document.getElementById('loading');
         loadingElement.style.display = 'block';
