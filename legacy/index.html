@@ -15,6 +15,39 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.7/jsmediatags.min.js"></script>
+    <script>
+        const audio = document.getElementById('audioPlayer');
+        const albumArt = document.getElementById('albumArt');
+        const title = document.getElementById('title');
+        const artist = document.getElementById('artist');
+
+        const src = audio.querySelector('source').src;
+
+        // Extract metadata using jsmediatags
+        jsmediatags.read(src, {
+            onSuccess: function(tag) {
+                const tags = tag.tags;
+
+                title.textContent = "Title: " + (tags.title || "Unknown");
+                artist.textContent = "Artist: " + (tags.artist || "Unknown");
+
+                // Display album art if available
+                if (tags.picture) {
+                    const picture = tags.picture;
+                    const base64String = picture.data.reduce((data, byte) => data + String.fromCharCode(byte), '');
+                    const base64 = "data:" + picture.format + ";base64," + btoa(base64String);
+                    albumArt.src = base64;
+                } else {
+                    albumArt.alt = "No Album Art";
+                }
+            },
+            onError: function(error) {
+                console.log('Error extracting metadata:', error.type, error.info);
+            }
+        });
+
+    </script>
     <style>
      .cback {
             display: inline-block;
