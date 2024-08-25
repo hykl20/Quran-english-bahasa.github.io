@@ -7,7 +7,7 @@
     <meta name="keywords" content="Quran,Qur'an,The Noble Quran,The Noble Qur'an,Islam,Muslim">
     <meta name="author" content="Muslim1446">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Noble Qur'an </title>
+    <title>0 The Noble Qur'an </title>
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/muslim1446/Quran-english-bahasa.github.io/master/bismillah.ico">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;500&display=swap" rel="stylesheet">
@@ -260,21 +260,7 @@ document.getElementById('audioPlayerContainer').addEventListener('click', functi
     this.classList.toggle('expanded');
 });
 
-// Check if there is a hash in the URL
-const hash = window.location.hash;
-if (hash && hash !== '#') {
-    const chapNum = hash.replace('#', ''); // Extract the chapter number from the hash
-    if (!isNaN(chapNum) && chapNum > 0 && chapNum <= 114) {
-        // If the hash is valid, don't redirect
-        // Call showChapter if the hash is a valid chapter number
-        document.addEventListener('DOMContentLoaded', () => showChapter(chapNum));
-    } else {
-        console.warn('Invalid chapter number in URL hash.');
-    }
-} else if (window.location.hostname === 'muslim1446.github.io') {
-    // Redirect to the specified URL if no valid hash and on the correct domain
-    window.location.replace('https://sites.google.com/moe-dl.edu.my/quran-english-bahasa');
-}
+
 
 const chapters = {
     1: { "title": "Al-Fatiha", "verses": 7 },
