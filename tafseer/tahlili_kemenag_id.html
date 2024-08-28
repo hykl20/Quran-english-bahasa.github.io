@@ -61,9 +61,18 @@
     </div>
 
     <script>
+        const urlFragment = window.location.hash.substring(1); // Get chapter number from URL fragment
+        const chapterNumber = parseInt(urlFragment);
+
+        if (!chapterNumber || isNaN(chapterNumber) || chapterNumber < 1 || chapterNumber > 114) {
+            alert('Invalid or missing chapter number in the URL.');
+            document.body.innerHTML = '';
+            throw new Error('Invalid chapter number.');
+        }
+
         // Number of verses per chapter
         const versesPerChapter = {
-            1: 7, 2: 286, 3: 200, 4: 176, 5: 120,
+             1: 7, 2: 286, 3: 200, 4: 176, 5: 120,
             6: 165, 7: 206, 8: 75, 9: 129, 10: 109,
             11: 123, 12: 111, 13: 43, 14: 52, 15: 99,
             16: 128, 17: 111, 18: 110, 19: 98, 20: 135,
@@ -86,6 +95,7 @@
             101: 11, 102: 8, 103: 3, 104: 9, 105: 5,
             106: 4, 107: 7, 108: 3, 109: 6, 110: 3,
             111: 5, 112: 4, 113: 5, 114: 6
+
         };
 
         // Fetch and display the content from the URL
@@ -103,10 +113,15 @@
                 if (range.includes('-')) {
                     const [start, end] = range.split('-').map(Number);
                     for (let i = start; i <= end; i++) {
-                        verseNumbers.add(i);
+                        if (i > 0 && i <= versesPerChapter[chapterNumber]) {
+                            verseNumbers.add(i);
+                        }
                     }
                 } else {
-                    verseNumbers.add(Number(range));
+                    const verse = Number(range);
+                    if (verse > 0 && verse <= versesPerChapter[chapterNumber]) {
+                        verseNumbers.add(verse);
+                    }
                 }
             });
             return [...verseNumbers].sort((a, b) => a - b);
@@ -124,7 +139,7 @@
             let resultHTML = '';
 
             selectedVerses.forEach(number => {
-                const regex = new RegExp(`\\{\\} ${number}([\\s\\S]*?)(?=\\{\\} \\d+|\\{\\} \\d+|$)`, 'g');
+                const regex = new RegExp(`\\{${chapterNumber}\\} ${number}([\\s\\S]*?)(?=\\{${chapterNumber}\\} \\d+|$)`, 'g');
                 const match = regex.exec(window.textData);
                 if (match) {
                     resultHTML += `<div class="section">${match[0].trim()}</div>`;
@@ -136,3 +151,4 @@
     </script>
 </body>
 </html>
+
