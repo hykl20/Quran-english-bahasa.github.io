@@ -726,7 +726,7 @@ async function showChapter(chapNum) {
 
         chapterTitleElement.innerHTML = `
             Surah ${chapNum}: ${chapters[chapNum].title}  <a class="cback" href="/sura" target="_self">Back</a>
-            <div id="title-container"><a class="cback" href="/tafseer/tahlili_kemenag_id.html" target="_self">Tafseer</a>
+            <div id="title-container"><a class="cback" href="/tafseer/tahlili_kemenag_id.html#${chapNum}" target="_self">Tafseer</a>
             <div id="title-container">
                 <span style="font-family: 'Reem Kufi', sans-serif; font-size: 60px;">${arabic[chapNum].title}</span>
                 <div>
