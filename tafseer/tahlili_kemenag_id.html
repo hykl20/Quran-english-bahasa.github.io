@@ -93,6 +93,12 @@
             .then(response => response.text())
             .then(data => {
                 window.textData = data;
+                // Check if there's a hash in the URL
+                const hash = window.location.hash.substring(1);
+                if (hash) {
+                    document.getElementById('searchNumber').value = hash;
+                    highlightText(); // Automatically highlight text if hash is present
+                }
             });
 
         // Function to get the selected verse numbers
