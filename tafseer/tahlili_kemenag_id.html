@@ -6,8 +6,15 @@
     <title>Tafseer: Tahlili_Kemenag</title>
     <link rel="icon" href="https://muslim1446.github.io/bismillah.ico" type="image/x-icon">
     <style>
+        @font-face {
+    font-family: 'KFGQ';
+    src: url('https://muslim1446.github.io/fonts/KFGQ.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'KFGQ', sans-serif;
             margin: 20px;
         }
         .container {
@@ -54,7 +61,7 @@
     <div class="container">
         <h2></h2>
         <div class="box">
-            <label for="searchNumber">Enter verse numbers (e.g., 1,6 or 1-10)</label>
+            <label for="searchNumber">Enter Tafseer <a href="https://muslim1446.github.io/tafseer/">numbers</a> (e.g., 1 or 1,6 or 1-10)</label>
             <input type="text" id="searchNumber" placeholder="Enter a number or range">
         </div>
         <button onclick="highlightText()">Search</button>
