@@ -126,6 +126,13 @@
             font-optical-sizing: auto;
             font-style: normal;
 }
+        /* Hide <h1> on mobile devices with a 9:16 aspect ratio */
+@media screen and (max-width: 767px) and (max-aspect-ratio: 9/16) {
+    h1 {
+        display: none;
+    }
+}
+
 
     </style>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.0/dist/fuse.min.js"></script>
