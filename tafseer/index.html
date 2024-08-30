@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00Verse Finder</title>
+    <title>Verse Finder</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -111,6 +111,16 @@
                 // Initialize Fuse.js with the chapters data
                 const fuse = new Fuse(chapters, { keys: ['number', 'name'] });
                 window.fuse = fuse; // Make it available for the search function
+
+                // Check for hash in URL and scroll to the specific verse
+                const hash = window.location.hash;
+                if (hash) {
+                    const verseId = hash.substring(1); // Remove the '#' character
+                    const verseElement = document.getElementById(`verse-${verseId}`);
+                    if (verseElement) {
+                        verseElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
             } catch (error) {
                 console.error('Error fetching or processing the data:', error);
             }
@@ -142,4 +152,3 @@
     </script>
 </body>
 </html>
-
