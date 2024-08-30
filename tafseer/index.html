@@ -126,11 +126,12 @@
             font-optical-sizing: auto;
             font-style: normal;
 }
-        /* Hide <h1> on mobile devices with a 9:16 aspect ratio */
-@media screen and (max-width: 767px) and (max-aspect-ratio: 9/16) {
+/* Target devices or windows with a width to height ratio close to 9:16 */
+@media screen and (min-width: 320px) and (max-width: 600px) and (min-height: 568px) and (max-height: 1060px) {
     h1 {
         display: none;
     }
+
 }
 
 
