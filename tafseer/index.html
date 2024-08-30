@@ -1,4 +1,4 @@
-beta-8
+beta-10
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,7 +93,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div id="content"></div>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Selector</title>
+    <style>
+        /* Basic styles for the dialog */
+        .dialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .dialog button {
+            display: block;
+            margin: 5px 0;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .dialog button:hover {
+            background-color: #0056b3;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <ul id="searchResults"></ul>
+
+    <!-- Dialog and overlay for URL selection -->
+    <div id="overlay" class="overlay"></div>
+    <div id="urlDialog" class="dialog"></div>
+
 <script>
+    // Define your list of URLs
+    const urls = [
+        { name: 'Tahlili Kemenag', url: 'https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html' },
+        { name: 'ID Wajiz Kemenag', url: 'https://muslim1446.github.io/tafseer/id_wajiz_kemenag.html' },
+    ];
+
     let chapters = [];
     const MAX_VERSE_NUMBER = 6236;
 
@@ -126,9 +185,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     // Create chapter link
                     html += `<h2 id="chapter-${chapterMatch[1]}"><a href="/tafseer/sura#${chapterMatch[1]}" class="chapter-link">Surah ${chapterMatch[1]} (${currentChapter})</a></h2>`;
-                    html += `<table><thead><tr><th>Ayahs</th><th>Tafseer Number (from 6236 ayahs in Qur'an)</th></tr></thead><tbody>`;
+                    html += `<table><thead><tr><th>Ayahs</th><th>Tafseer Number (from ${MAX_VERSE_NUMBER} ayahs in Qur'an)</th></tr></thead><tbody>`;
                 } else if (verseMatch) {
-                    html += `<tr id="verse-${verseMatch[2]}"><td>Ayah ${verseMatch[1]}</td><td><a href="https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${verseMatch[2]}" id="link-${verseMatch[2]}">${verseMatch[2]}</a></td></tr>`;
+                    html += `<tr id="verse-${verseMatch[2]}"><td>Ayah ${verseMatch[1]}</td><td><a href="#" id="link-${verseMatch[2]}" data-verse="${verseMatch[2]}">${verseMatch[2]}</a></td></tr>`;
                 }
             });
 
@@ -144,35 +203,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const fuse = new Fuse(chapters, { keys: ['number', 'name'] });
             window.fuse = fuse; // Make it available for the search function
 
-            // Check for hash in URL and redirect if it's a valid verse number or range
+            // Add click event listeners to all links
+            document.querySelectorAll('a[data-verse]').forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const verse = this.getAttribute('data-verse');
+                    const hash = `#${verse}`;
+                    showURLSelectionDialog(hash);
+                });
+            });
+
+            // Check for hash in URL and prompt the user to choose a URL
             const hash = window.location.hash.substring(1); // Remove the '#' character
-            
             if (hash) {
-                const [startVerse, endVerse] = hash.split('-');
-                const [startChapter, startRange] = startVerse.split(',');
-                const endRange = endVerse ? endVerse.split(',') : null;
-                
-                // Process the single verse or range format
-                if (startRange) {
-                    const isValidStart = !isNaN(parseInt(startRange, 10)) && parseInt(startRange, 10) >= 1 && parseInt(startRange, 10) <= MAX_VERSE_NUMBER;
-                    const isValidStartChapter = !isNaN(parseInt(startChapter, 10));
-                    
-                    if (isValidStartChapter && isValidStart) {
-                        window.location.href = `https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${startVerse}`;
-                    }
-                } else if (endRange) {
-                    const isValidEnd = !isNaN(parseInt(endRange[0], 10)) && parseInt(endRange[0], 10) >= 1 && parseInt(endRange[0], 10) <= MAX_VERSE_NUMBER;
-                    const isValidEndChapter = !isNaN(parseInt(startChapter, 10));
-                    
-                    if (isValidEnd && isValidEndChapter) {
-                        window.location.href = `https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${startVerse}-${endRange.join('-')}`;
-                    }
-                } else {
-                    const isValidHash = !isNaN(parseInt(hash, 10)) && parseInt(hash, 10) >= 1 && parseInt(hash, 10) <= MAX_VERSE_NUMBER;
-                    if (isValidHash) {
-                        window.location.href = `https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${hash}`;
-                    }
-                }
+                promptUserForURL(hash);
             }
 
             // Check for chapter in URL query parameter and scroll to it
@@ -186,6 +230,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         } catch (error) {
             console.error('Error fetching or processing the data:', error);
         }
+    }
+
+    function showURLSelectionDialog(hash) {
+        const dialog = document.getElementById('urlDialog');
+        const overlay = document.getElementById('overlay');
+        
+        // Clear previous content
+        dialog.innerHTML = '';
+
+        urls.forEach(({ name, url }) => {
+            const button = document.createElement('button');
+            button.textContent = `Go to ${name}`;
+            button.onclick = () => {
+                window.location.href = `${url}${hash}`;
+            };
+            dialog.appendChild(button);
+        });
+
+        // Show the dialog and overlay
+        dialog.style.display = 'block';
+        overlay.style.display = 'block';
+
+        // Close dialog when clicking outside
+        overlay.onclick = () => {
+            dialog.style.display = 'none';
+            overlay.style.display = 'none';
+        };
+    }
+
+    function promptUserForURL(hash) {
+        // Create a confirmation dialog
+        const userChoice = confirm("Do you want to use the 'Tahlili Kemenag' URL? Click 'Cancel' for 'ID Wajiz Kemenag'.");
+        
+        // Construct the base URL with hash
+        const baseURL = userChoice 
+            ? `https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${hash}` 
+            : `https://muslim1446.github.io/tafseer/id_wajiz_kemenag.html#${hash}`;
+        
+        // Redirect to the chosen URL
+        window.location.href = baseURL;
     }
 
     function searchChapters() {
@@ -212,6 +296,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Fetch and display the data when the page loads
     fetchAndDisplayData();
 </script>
+
+</body>
+</html>
+
 
 
 </body>
