@@ -1,78 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Noble Qur'an (Tafseer Bahasa Indonesia (Kemenag)</title>
-    <link rel="icon" href="https://muslim1446.github.io/bismillah.ico" type="image/x-icon">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            text-align: center;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-        .chapter {
-            margin-top: 30px;
-        }
-        .search-box {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .search-box input {
-            padding: 8px;
-            width: 300px;
-        }
-        .search-box ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        .search-box li {
-            cursor: pointer;
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-        }
-        .chapter-link {
-            color: blue;
-            text-decoration: none;
-        }
-        .chapter-link:hover {
-            text-decoration: underline;
-        }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.0/dist/fuse.min.js"></script>
-</head>
-<body>
-    <h1>Find Sura</h1>
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search 'Al Mulk'..." oninput="searchChapters()">
-        <ul id="searchResults"></ul>
-    </div>
-    <div id="content"></div>
-
-    <script>
+<script>
     let chapters = [];
     const MAX_VERSE_NUMBER = 6236;
 
@@ -153,6 +79,15 @@
                     }
                 }
             }
+
+            // Check for chapter in URL query parameter and scroll to it
+            const chapterParam = new URLSearchParams(window.location.search).get('chapter');
+            if (chapterParam) {
+                const chapterElement = document.getElementById(`chapter-${chapterParam}`);
+                if (chapterElement) {
+                    chapterElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
         } catch (error) {
             console.error('Error fetching or processing the data:', error);
         }
@@ -181,7 +116,4 @@
 
     // Fetch and display the data when the page loads
     fetchAndDisplayData();
-    </script>
-</body>
-</html>
-
+</script>
