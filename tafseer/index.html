@@ -1,4 +1,4 @@
-beta-10
+beta-12
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,6 +78,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .chapter-link:hover {
             text-decoration: underline;
         }
+.btitle {
+    font-size: 1.5em; /* Adjust size for the title */
+    display: block; /* Ensures the title appears on its own line */
+}
+
+.description {
+    font-size: 0.9em; /* Adjust size for the description */
+    display: block; /* Ensures the description appears on its own line */
+}
+
     </style>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.0/dist/fuse.min.js"></script>
 </head>
@@ -149,8 +159,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
     // Define your list of URLs
     const urls = [
-        { name: 'Tahlili Kemenag', url: 'https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html' },
-        { name: 'ID Wajiz Kemenag', url: 'https://muslim1446.github.io/tafseer/id_wajiz_kemenag.html' },
+        { name: 'Tahlili Kemenag (Indonesian)', url: 'https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html', description: 'Detailed, methodical, and suited for those seeking a deep and scholarly analysis of the Quran.' },
+        { name: 'Wajiz Kemenag (Indonesian)', url: 'https://muslim1446.github.io/tafseer/id_wajiz_kemenag.html', description: 'Concise, accessible, and designed for easy comprehension by a broader audience.' }
     ];
 
     let chapters = [];
@@ -237,15 +247,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const overlay = document.getElementById('overlay');
         
         // Clear previous content
-        dialog.innerHTML = '';
+dialog.innerHTML = ''; // Clear existing content
 
-        urls.forEach(({ name, url }) => {
-            const button = document.createElement('button');
-            button.textContent = `Go to ${name}`;
-            button.onclick = () => {
-                window.location.href = `${url}${hash}`;
-            };
-            dialog.appendChild(button);
+urls.forEach(({ name, url, description }) => {
+    // Create a button element
+    const button = document.createElement('button');
+    
+    // Set the innerHTML of the button with HTML tags
+    button.innerHTML = `<span class="btitle">${name}</span><br><span class="description">${description}</span>`;
+    
+    // Set the onclick event to navigate to the specified URL
+    button.onclick = () => {
+        window.location.href = `${url}${hash}`;
+    };
+    
+    // Append the button to the dialog
+    dialog.appendChild(button);
         });
 
         // Show the dialog and overlay
@@ -259,18 +276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         };
     }
 
-    function promptUserForURL(hash) {
-        // Create a confirmation dialog
-        const userChoice = confirm("Do you want to use the 'Tahlili Kemenag' URL? Click 'Cancel' for 'ID Wajiz Kemenag'.");
-        
-        // Construct the base URL with hash
-        const baseURL = userChoice 
-            ? `https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${hash}` 
-            : `https://muslim1446.github.io/tafseer/id_wajiz_kemenag.html#${hash}`;
-        
-        // Redirect to the chosen URL
-        window.location.href = baseURL;
-    }
+
 
     function searchChapters() {
         const query = document.getElementById('searchInput').value;
@@ -296,6 +302,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Fetch and display the data when the page loads
     fetchAndDisplayData();
 </script>
+
 
 </body>
 </html>
