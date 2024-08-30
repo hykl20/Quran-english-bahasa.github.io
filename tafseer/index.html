@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al-Quran (Tafseer): Bahasa Indonesia (Kemenag)</title>
+    <title>1 - Al-Quran (Tafseer): Bahasa Indonesia (Kemenag)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -95,9 +95,9 @@
                             id: `chapter-${chapterMatch[1]}`
                         });
                         html += `<h2 id="chapter-${chapterMatch[1]}">Sura ${chapterMatch[1]} (${currentChapter})</h2>`;
-                        html += `<table><thead><tr><th>Ayah</th><th>Number</th></tr></thead><tbody>`;
+                        html += `<table><thead><tr><th>Ayah</th><th>Tafseer Number (from 6236 ayahs)</th></tr></thead><tbody>`;
                     } else if (verseMatch) {
-                        html += `<tr id="verse-${verseMatch[2]}"><td>Verse ${verseMatch[1]}</td><td><a href="https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${verseMatch[2]}" id="link-${verseMatch[2]}">${verseMatch[2]}</a></td></tr>`;
+                        html += `<tr id="verse-${verseMatch[2]}"><td>Aya ${verseMatch[1]}</td><td><a href="https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${verseMatch[2]}" id="link-${verseMatch[2]}">${verseMatch[2]}</a></td></tr>`;
                     }
                 });
 
