@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al-Quran (Tafseer): Bahasa Indonesia (Kemenag)</title>
+    <title>The Noble Qur'an (Tafseer Bahasa Indonesia (Kemenag)</title>
     <link rel="icon" href="https://muslim1446.github.io/bismillah.ico" type="image/x-icon">
     <style>
         body {
@@ -54,6 +54,13 @@
             padding: 8px;
             border-bottom: 1px solid #ddd;
         }
+        .chapter-link {
+            color: blue;
+            text-decoration: none;
+        }
+        .chapter-link:hover {
+            text-decoration: underline;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.0/dist/fuse.min.js"></script>
 </head>
@@ -95,7 +102,9 @@
                         name: currentChapter,
                         id: `chapter-${chapterMatch[1]}`
                     });
-                    html += `<h2 id="chapter-${chapterMatch[1]}">Surah ${chapterMatch[1]} (${currentChapter})</h2>`;
+
+                    // Create chapter link
+                    html += `<h2 id="chapter-${chapterMatch[1]}"><a href="/sura#${chapterMatch[1]}" class="chapter-link">Surah ${chapterMatch[1]} (${currentChapter})</a></h2>`;
                     html += `<table><thead><tr><th>Ayahs</th><th>Tafseer Number (from 6236 ayahs in Qur'an)</th></tr></thead><tbody>`;
                 } else if (verseMatch) {
                     html += `<tr id="verse-${verseMatch[2]}"><td>Ayah ${verseMatch[1]}</td><td><a href="https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${verseMatch[2]}" id="link-${verseMatch[2]}">${verseMatch[2]}</a></td></tr>`;
@@ -172,7 +181,7 @@
 
     // Fetch and display the data when the page loads
     fetchAndDisplayData();
-</script>
-
+    </script>
 </body>
 </html>
+
