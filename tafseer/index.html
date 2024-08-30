@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>088Verse Finder</title>
+    <title>Al-Quran (Tafseer): Bahasa Indonesia (Kemenag)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -57,16 +57,17 @@
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.0/dist/fuse.min.js"></script>
 </head>
 <body>
-    <h1>Verse Finder</h1>
+    <h1>Find Sura</h1>
     <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search chapters..." oninput="searchChapters()">
+        <input type="text" id="searchInput" placeholder="Search 'Al Mulk'..." oninput="searchChapters()">
         <ul id="searchResults"></ul>
     </div>
     <div id="content"></div>
 
     <script>
         let chapters = [];
-        
+        const MAX_VERSE_NUMBER = 6236;
+
         async function fetchAndDisplayData() {
             try {
                 // Fetch data from the URL
@@ -93,8 +94,8 @@
                             name: currentChapter,
                             id: `chapter-${chapterMatch[1]}`
                         });
-                        html += `<h2 id="chapter-${chapterMatch[1]}">Chapter ${chapterMatch[1]} (${currentChapter})</h2>`;
-                        html += `<table><thead><tr><th>Verse</th><th>Number</th></tr></thead><tbody>`;
+                        html += `<h2 id="chapter-${chapterMatch[1]}">Sura ${chapterMatch[1]} (${currentChapter})</h2>`;
+                        html += `<table><thead><tr><th>Ayah</th><th>Number</th></tr></thead><tbody>`;
                     } else if (verseMatch) {
                         html += `<tr id="verse-${verseMatch[2]}"><td>Verse ${verseMatch[1]}</td><td><a href="https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${verseMatch[2]}" id="link-${verseMatch[2]}">${verseMatch[2]}</a></td></tr>`;
                     }
@@ -112,14 +113,12 @@
                 const fuse = new Fuse(chapters, { keys: ['number', 'name'] });
                 window.fuse = fuse; // Make it available for the search function
 
-                // Check for hash in URL and scroll to the specific verse
-                const hash = window.location.hash;
-                if (hash) {
-                    const verseId = hash.substring(1); // Remove the '#' character
-                    const verseElement = document.getElementById(`verse-${verseId}`);
-                    if (verseElement) {
-                        verseElement.scrollIntoView({ behavior: 'smooth' });
-                    }
+                // Check for hash in URL and redirect if it's a valid verse number
+                const hash = window.location.hash.substring(1); // Remove the '#' character
+                const verseNumber = parseInt(hash, 10);
+
+                if (!isNaN(verseNumber) && verseNumber >= 1 && verseNumber <= MAX_VERSE_NUMBER) {
+                    window.location.href = `https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${verseNumber}`;
                 }
             } catch (error) {
                 console.error('Error fetching or processing the data:', error);
@@ -138,7 +137,7 @@
             results.forEach(result => {
                 const chapter = result.item;
                 const listItem = document.createElement('li');
-                listItem.textContent = `Chapter ${chapter.number} (${chapter.name})`;
+                listItem.textContent = `Sura ${chapter.number} (${chapter.name})`;
                 listItem.style.cursor = 'pointer';
                 listItem.onclick = () => {
                     document.getElementById(chapter.id).scrollIntoView({ behavior: 'smooth' });
