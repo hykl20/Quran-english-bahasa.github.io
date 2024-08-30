@@ -174,11 +174,9 @@
                             id: `chapter-${chapterMatch[1]}`
                         });
 
-                        html += `<h2 id="chapter-${chapterMatch[1]}"><a href="/tafseer/sura#${chapterMatch[1]}" class="chapter-link">Surah ${chapterMatch[1]} (${currentChapter})</a></h2>`;
-                        html += `<table><thead><tr><th>Ayahs</th><th>Tafseer Number (from ${MAX_VERSE_NUMBER} ayahs in Qur'an)</th></tr></thead><tbody>`;
-                    } else if (verseMatch) {
-                        html += `<tr id="verse-${verseMatch[2]}"><td>Ayah ${verseMatch[1]}</td><td><a href="#" id="link-${verseMatch[2]}" data-verse="${verseMatch[2]}">${verseMatch[2]}</a></td></tr>`;
-                    }
+                        html += `<h2 id="chapter-${chapterMatch[1]}"><a href="https://muslim1446.github.io/asbabun_nuzul/#${chapterMatch[1]}" class="chapter-link">Surah ${chapterMatch[1]} (${currentChapter})</a></h2>`;
+                        
+ 
                 });
 
                 if (currentChapter) {
