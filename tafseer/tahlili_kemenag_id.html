@@ -1,4 +1,3 @@
-beta-1
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,9 +67,8 @@ beta-1
         <button onclick="highlightText()">Search</button>
         <div id="content"></div>
     </div>
-    
 
-  <script>
+    <script>
         // Number of verses per chapter
         const versesPerChapter = {
             1: 7, 2: 286, 3: 200, 4: 176, 5: 120,
@@ -103,7 +101,6 @@ beta-1
             .then(response => response.text())
             .then(data => {
                 window.textData = data;
-                document.getElementById('text').innerHTML = data;
                 // Check if there's a hash in the URL
                 const hash = window.location.hash.substring(1);
                 if (hash) {
@@ -142,32 +139,14 @@ beta-1
 
             selectedVerses.forEach(number => {
                 const regex = new RegExp(`\\{\\} ${number}([\\s\\S]*?)(?=\\{\\} \\d+|\\{\\} \\d+|$)`, 'g');
-                let match;
-                while ((match = regex.exec(window.textData)) !== null) {
+                const match = regex.exec(window.textData);
+                if (match) {
                     resultHTML += `<div class="section">${match[0].trim()}</div>`;
                 }
             });
 
             document.getElementById('content').innerHTML = resultHTML || 'No results found.';
         }
-
-        // Highlight search terms in the displayed text
-        function highlightSearchTerms() {
-            const input = document.getElementById('searchInput').value;
-            const textElement = document.getElementById('text');
-            let text = textElement.innerHTML;
-            const highlightedText = text.replace(new RegExp(input, 'gi'), match => `<span class="highlight">${match}</span>`);
-            textElement.innerHTML = highlightedText;
-        }
-
-        // Listen for 'Enter' key press in the search input field
-        document.getElementById('searchInput').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault(); // Prevent form submission if it's inside a form
-                highlightSearchTerms();
-            }
-        });
     </script>
-    
-    </body>
+</body>
 </html>
