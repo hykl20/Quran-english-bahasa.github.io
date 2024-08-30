@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2 - Al-Quran (Tafseer): Bahasa Indonesia (Kemenag)</title>
+    <title>Al-Quran (Tafseer): Bahasa Indonesia (Kemenag)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,55 +65,55 @@
     <div id="content"></div>
 
     <script>
-        let chapters = [];
-        const MAX_VERSE_NUMBER = 6236;
+    let chapters = [];
+    const MAX_VERSE_NUMBER = 6236;
 
-        async function fetchAndDisplayData() {
-            try {
-                // Fetch data from the URL
-                const response = await fetch('https://muslim1446.github.io/tafseer/per6326name.txt');
-                const text = await response.text();
+    async function fetchAndDisplayData() {
+        try {
+            // Fetch data from the URL
+            const response = await fetch('https://muslim1446.github.io/tafseer/per6326name.txt');
+            const text = await response.text();
 
-                // Split text by lines and process it
-                const lines = text.trim().split('\n');
-                let html = '';
-                let currentChapter = '';
-                chapters = [];
+            // Split text by lines and process it
+            const lines = text.trim().split('\n');
+            let html = '';
+            let currentChapter = '';
+            chapters = [];
 
-                lines.forEach(line => {
-                    const chapterMatch = line.match(/^Chapter (\d+) \((.+)\):$/);
-                    const verseMatch = line.match(/^  Verse (\d+): (\d+)$/);
+            lines.forEach(line => {
+                const chapterMatch = line.match(/^Chapter (\d+) \((.+)\):$/);
+                const verseMatch = line.match(/^  Verse (\d+): (\d+)$/);
 
-                    if (chapterMatch) {
-                        if (currentChapter) {
-                            html += '</tbody></table>';
-                        }
-                        currentChapter = chapterMatch[2];
-                        chapters.push({
-                            number: chapterMatch[1],
-                            name: currentChapter,
-                            id: `chapter-${chapterMatch[1]}`
-                        });
-                        html += `<h2 id="chapter-${chapterMatch[1]}">Sura ${chapterMatch[1]} (${currentChapter})</h2>`;
-                        html += `<table><thead><tr><th>Ayah</th><th>Tafseer Number (from 6236 ayahs)</th></tr></thead><tbody>`;
-                    } else if (verseMatch) {
-                        html += `<tr id="verse-${verseMatch[2]}"><td>Aya ${verseMatch[1]}</td><td><a href="https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${verseMatch[2]}" id="link-${verseMatch[2]}">${verseMatch[2]}</a></td></tr>`;
+                if (chapterMatch) {
+                    if (currentChapter) {
+                        html += '</tbody></table>';
                     }
-                });
-
-                // Close the last table
-                if (currentChapter) {
-                    html += '</tbody></table>';
+                    currentChapter = chapterMatch[2];
+                    chapters.push({
+                        number: chapterMatch[1],
+                        name: currentChapter,
+                        id: `chapter-${chapterMatch[1]}`
+                    });
+                    html += `<h2 id="chapter-${chapterMatch[1]}">Surah ${chapterMatch[1]} (${currentChapter})</h2>`;
+                    html += `<table><thead><tr><th>Ayahs</th><th>Tafseer Number (from 6236 ayahs in Qur'an)</th></tr></thead><tbody>`;
+                } else if (verseMatch) {
+                    html += `<tr id="verse-${verseMatch[2]}"><td>Ayah ${verseMatch[1]}</td><td><a href="https://muslim1446.github.io/tafseer/tahlili_kemenag_id.html#${verseMatch[2]}" id="link-${verseMatch[2]}">${verseMatch[2]}</a></td></tr>`;
                 }
+            });
 
-                // Insert HTML into the content div
-                document.getElementById('content').innerHTML = html;
+            // Close the last table
+            if (currentChapter) {
+                html += '</tbody></table>';
+            }
 
-                // Initialize Fuse.js with the chapters data
-                const fuse = new Fuse(chapters, { keys: ['number', 'name'] });
-                window.fuse = fuse; // Make it available for the search function
+            // Insert HTML into the content div
+            document.getElementById('content').innerHTML = html;
 
-                // Check for hash in URL and redirect if it's a valid verse number
+            // Initialize Fuse.js with the chapters data
+            const fuse = new Fuse(chapters, { keys: ['number', 'name'] });
+            window.fuse = fuse; // Make it available for the search function
+
+            // Check for hash in URL and redirect if it's a valid verse number or range
             const hash = window.location.hash.substring(1); // Remove the '#' character
             
             if (hash) {
@@ -148,8 +148,30 @@
         }
     }
 
-        // Fetch and display the data when the page loads
-        fetchAndDisplayData();
-    </script>
+    function searchChapters() {
+        const query = document.getElementById('searchInput').value;
+        const results = window.fuse.search(query);
+        const searchResults = document.getElementById('searchResults');
+        
+        // Clear previous results
+        searchResults.innerHTML = '';
+
+        // Display search results
+        results.forEach(result => {
+            const chapter = result.item;
+            const listItem = document.createElement('li');
+            listItem.textContent = `Surah ${chapter.number} (${chapter.name})`;
+            listItem.style.cursor = 'pointer';
+            listItem.onclick = () => {
+                document.getElementById(chapter.id).scrollIntoView({ behavior: 'smooth' });
+            };
+            searchResults.appendChild(listItem);
+        });
+    }
+
+    // Fetch and display the data when the page loads
+    fetchAndDisplayData();
+</script>
+
 </body>
 </html>
