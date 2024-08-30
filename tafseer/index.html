@@ -1,4 +1,4 @@
-// v7
+beta-8
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,7 +156,7 @@
             }
 
             // Check for chapter in URL query parameter and scroll to it
-            const chapterParam = new URLSearchParams(window.location.search).get('chapter');
+            const chapterParam = new URLSearchParams(window.location.search).get('sura');
             if (chapterParam) {
                 const chapterElement = document.getElementById(`chapter-${chapterParam}`);
                 if (chapterElement) {
