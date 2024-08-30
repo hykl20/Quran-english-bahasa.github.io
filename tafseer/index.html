@@ -1,4 +1,4 @@
-// v1
+// v2
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -125,16 +125,31 @@
             window.fuse = fuse; // Make it available for the search function
 
             // Navigate to section based on hash or query parameter
-            const hash = window.location.hash.substring(1); // Remove the '#' character
-            const chapterParam = new URLSearchParams(window.location.search).get('chapter');
-
-            if (chapterParam) {
-                location.hash = `chapter-${chapterParam}`;
-            } else if (hash) {
-                location.hash = hash;
-            }
+            navigateToSection();
         } catch (error) {
             console.error('Error fetching or processing the data:', error);
+        }
+    }
+
+    function navigateToSection() {
+        // Check URL hash or query parameter for navigation
+        const hash = window.location.hash.substring(1); // Remove the '#' character
+        const chapterParam = new URLSearchParams(window.location.search).get('chapter');
+
+        let targetId = '';
+
+        if (chapterParam) {
+            targetId = `chapter-${chapterParam}`;
+        } else if (hash) {
+            targetId = hash;
+        }
+
+        // If a target ID is set, scroll to it
+        if (targetId) {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     }
 
@@ -154,14 +169,20 @@
             listItem.style.cursor = 'pointer';
             listItem.onclick = () => {
                 location.hash = chapter.id;
+                navigateToSection(); // Ensure we scroll after setting the hash
             };
             searchResults.appendChild(listItem);
         });
     }
 
     // Fetch and display the data when the page loads
-    fetchAndDisplayData();
+    window.onload = () => {
+        fetchAndDisplayData();
+        // Ensure we navigate after content is loaded
+        setTimeout(navigateToSection, 100);
+    };
 </script>
+
 
 </body>
 </html>
