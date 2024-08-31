@@ -1,4 +1,4 @@
-<script>
+
 document.getElementById('audioPlayerContainer').addEventListener('click', function() {
     this.classList.toggle('expanded');
 });
@@ -713,7 +713,7 @@ async function showChapter(chapNum) {
             localStorage.setItem('sidebarHidden', 'true');  // default "localStorage.removeItem('sidebarHidden');"
         }
     });
-</script>
+
 
 
 
