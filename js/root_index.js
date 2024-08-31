@@ -650,7 +650,7 @@ function setAudioSource(chapNum) {
     114: "https://archive.org/download/Quran-English-Bahasa/114%20An-Nas.mp3",
         // Add more audio sources here as needed
     };
-
+    
     const audioSource = document.getElementById('audioSource');
     const audioPlayer = document.getElementById('audioPlayer');
 
@@ -662,9 +662,12 @@ function setAudioSource(chapNum) {
         // Save audio path to localStorage
         localStorage.setItem('audio-path', audioSource.src);
 
-        // Save audio progress and playing status to localStorage when paused or ended
+        // Save audio progress and playing status to localStorage
         audioPlayer.addEventListener('pause', saveAudioProgress);
         audioPlayer.addEventListener('ended', saveAudioProgress);
+
+        // Save audio progress and playing status when the page is unloaded
+        window.addEventListener('beforeunload', saveAudioProgress);
 
         function saveAudioProgress() {
             localStorage.setItem('audio-time', audioPlayer.currentTime);
@@ -677,6 +680,7 @@ function setAudioSource(chapNum) {
 
 document.addEventListener('DOMContentLoaded', generateChapterList);
 document.addEventListener('resize', adjustImageSize);
+
 
 // Sidebar visibility management based on screen size and user preference
 document.addEventListener('DOMContentLoaded', () => {
