@@ -536,7 +536,7 @@ function setAudioSource(chapNum) {
     const audioSources = {
         1: "https://archive.org/download/Quran-English-Bahasa/001%20Al-Fatiha.mp3",
         2: "https://archive.org/download/Quran-English-Bahasa/002%20Al-Baqara.mp3",
-         3: "https://archive.org/download/Quran-English-Bahasa/003%20Aal-E-Imran.mp3",
+            3: "https://archive.org/download/Quran-English-Bahasa/003%20Aal-E-Imran.mp3",
     4: "https://archive.org/download/Quran-English-Bahasa/004%20An-Nisa.mp3",
     5: "https://archive.org/download/Quran-English-Bahasa/005%20Al-Ma-idah.mp3",
     6: "https://archive.org/download/Quran-English-Bahasa/006%20Al-Anaam.mp3",
@@ -648,7 +648,6 @@ function setAudioSource(chapNum) {
     112: "https://archive.org/download/Quran-English-Bahasa/112%20Al-Ikhlas.mp3",
     113: "https://archive.org/download/Quran-English-Bahasa/113%20Al-Falaq.mp3",
     114: "https://archive.org/download/Quran-English-Bahasa/114%20An-Nas.mp3",
-                // Add links for all chapters up to 114
         // Add more audio sources here as needed
     };
 
@@ -663,12 +662,13 @@ function setAudioSource(chapNum) {
         // Save audio path to localStorage
         localStorage.setItem('audio-path', audioSource.src);
 
-        // Save audio progress to localStorage when paused or ended
+        // Save audio progress and playing status to localStorage when paused or ended
         audioPlayer.addEventListener('pause', saveAudioProgress);
         audioPlayer.addEventListener('ended', saveAudioProgress);
 
         function saveAudioProgress() {
             localStorage.setItem('audio-time', audioPlayer.currentTime);
+            localStorage.setItem('audio-playing', audioPlayer.paused ? 'false' : 'true');
         }
     } else {
         console.warn('Audio source not found for chapter', chapNum);
