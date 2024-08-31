@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedAudioSource) {
         audioSource.src = savedAudioSource;
 
-        // Ensure the audio player loads the source and sets the current time correctly
-        audioPlayer.addEventListener('loadeddata', () => {
+        // Ensure the audio player loads the source and initializes correctly
+        audioPlayer.addEventListener('loadedmetadata', () => {
             // Retrieve the saved time from localStorage
             const savedTime = localStorage.getItem('audio-time');
             if (savedTime) {
@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Start playback if it was playing before
             const wasPlaying = localStorage.getItem('audio-playing') === 'true';
             if (wasPlaying) {
-                audioPlayer.play();
+                audioPlayer.play().catch(error => {
+                    console.error('Error attempting to play audio:', error);
+                });
             }
         });
 
@@ -26,24 +28,32 @@ document.addEventListener('DOMContentLoaded', () => {
         audioPlayer.addEventListener('pause', () => {
             const wasPlaying = localStorage.getItem('audio-playing') === 'true';
             if (wasPlaying) {
-                audioPlayer.play();
+                audioPlayer.play().catch(error => {
+                    console.error('Error attempting to play audio:', error);
+                });
             }
         });
 
         // Prevent pausing when the player is clicked
         audioPlayer.addEventListener('click', (e) => {
             e.preventDefault();
-            audioPlayer.play();
+            audioPlayer.play().catch(error => {
+                console.error('Error attempting to play audio:', error);
+            });
         });
 
         // Prevent pausing when any part of the document is clicked
         document.addEventListener('click', () => {
-            audioPlayer.play();
+            audioPlayer.play().catch(error => {
+                console.error('Error attempting to play audio:', error);
+            });
         });
 
         // Ensure the audio resumes even after any interaction
         document.addEventListener('touchend', () => {
-            audioPlayer.play();
+            audioPlayer.play().catch(error => {
+                console.error('Error attempting to play audio:', error);
+            });
         });
 
         // Save audio progress to localStorage
