@@ -15,13 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 audioPlayer.currentTime = parseFloat(savedTime);
             }
 
+            // Start playback if it was playing before
             const wasPlaying = localStorage.getItem('audio-playing') === 'true';
             if (wasPlaying) {
                 audioPlayer.play();
             }
         });
 
-        // Ensure the audio player continues to play even with interaction
+        // Handle play/pause interactions
         audioPlayer.addEventListener('pause', () => {
             const wasPlaying = localStorage.getItem('audio-playing') === 'true';
             if (wasPlaying) {
