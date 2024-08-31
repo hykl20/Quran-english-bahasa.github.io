@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap" rel="stylesheet">
+    <script src="https://muslim1446.github.io/js/sub_audio.js"></script>
     <title>Choose Tafseer</title>
     <style>
         body {
@@ -63,6 +64,12 @@
     </style>
 </head>
 <body>
+    <div id="audioPlayerContainer" class="audio-player-container">
+    <audio id="audioPlayer" controls autoplay>
+        <source id="audioSource" src="">
+        Your browser does not support the audio element.
+    </audio>
+</div>
     <h1></h1>
     <p id="info"></p>
     <div id="buttons-container"></div>
