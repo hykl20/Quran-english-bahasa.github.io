@@ -651,18 +651,49 @@ async function showChapter(chapNum) {
             };
 
             function setAudioSource(chapNum) {
-                const audioSource = document.getElementById('audioSource');
-                const audioPlayer = document.getElementById('audioPlayer');
-                if (audioSources[chapNum]) {
-                    audioSource.src = audioSources[chapNum];
-                    audioPlayer.load(); // Load the new source
-                    audioPlayer.play(); // Optionally play the audio immediately
-                } else {
-                    console.log('Audio source not found for chapter:', chapNum);
-                }
-            }
+        const audioSource = document.getElementById('audioSource');
+        const audioPlayer = document.getElementById('audioPlayer');
+        if (audioSources[chapNum]) {
+            audioSource.src = audioSources[chapNum];
+            audioPlayer.load(); // Load the new source
+            audioPlayer.play(); // Optionally play the audio immediately
+        } else {
+            console.log('Audio source not found for chapter:', chapNum);
+        }
+    }
 
-            setAudioSource(chapNum);
+    // Example usage
+    
+    setAudioSource(chapNum);
+
+    const audio = document.getElementById('audioPlayer');
+    const source = document.getElementById('audioSource');
+
+    // Save the audio path to localStorage
+    localStorage.setItem('audio-path', source.src);
+
+    // Load previous time if it exists
+    if (localStorage.getItem('audio-time')) {
+        audio.currentTime = localStorage.getItem('audio-time');
+    }
+
+    // Start playing automatically if it was playing before
+    if (localStorage.getItem('audio-playing') === 'true') {
+        audio.play();
+    }
+
+    // Save current time and playing status to localStorage
+    audio.ontimeupdate = () => {
+        localStorage.setItem('audio-time', audio.currentTime);
+    };
+
+    audio.onplay = () => {
+        localStorage.setItem('audio-playing', 'true');
+    };
+
+    audio.onpause = () => {
+        localStorage.setItem('audio-playing', 'false');
+    
 
         } catch (error) {
             console.error('Error loading translations:', error);
