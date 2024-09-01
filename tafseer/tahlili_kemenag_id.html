@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BR6YH9S6MS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BR6YH9S6MS');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BR6YH9S6MS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BR6YH9S6MS');
+    </script>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-54DDMRW8');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-54DDMRW8');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tafseer: Tahlili_Kemenag</title>
-    <link rel="canonical" href="https://muslim1446.github.io/tafseer/tahlili_kemenag_id/">
+    <title>Tafseer ibn Kathir (English) [undefined_tafseer_number] | muslim1446.github.io</title>
+    <link rel="canonical" href="https://muslim1446.github.io/tafseer/en_ibn-kathir_Quran/">
     <link rel="icon" href="https://muslim1446.github.io/bismillah.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap" rel="stylesheet">
+   <script src="https://muslim1446.github.io/js/sub_audio.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-
-
         body {
             font-family: "Noto Naskh Arabic", serif;
             font-optical-sizing: auto;
@@ -71,6 +71,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .section {
             margin-bottom: 10px;
         }
+        .prt {
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 10px; /* Optional: adds some space from the edges */
+            z-index: 1000; /* Ensures it's on top of other elements */
+        }
+        .prt button {
+            border: none; /* Optional: removes default button border */
+            cursor: pointer; /* Changes cursor to a pointer on hover */
+        }
     </style>
 </head>
 <body>
@@ -78,6 +89,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54DDMRW8"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+   <div id="audioPlayerContainer" class="audio-player-container">
+<audio id="audioPlayer" controls autoplay>
+<source id="audioSource" src="">
+Your browser does not support the audio element.
+</audio>
+</div>
     <div class="container">
         <h2></h2>
         <div class="box">
@@ -86,6 +103,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <button onclick="highlightText()">Search</button>
         <div id="content"></div>
+         <div class="prt">
+        <button onclick="printContent()"><i class="fas fa-print"></i></button>
+    </div>
+
     </div>
 
     <script>
@@ -167,6 +188,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             document.getElementById('content').innerHTML = resultHTML || 'No results found.';
         }
+        // Function to print only the content of the div
+function printContent() {
+    const content = document.getElementById('content').innerHTML;
+
+    // Create an iframe and append it to the body
+    const iframe = document.createElement('iframe');
+    iframe.style.position = 'absolute';
+    iframe.style.width = '0px';
+    iframe.style.height = '0px';
+    iframe.style.border = 'none';
+    document.body.appendChild(iframe);
+
+    // Get the iframe's document
+    const doc = iframe.contentDocument || iframe.contentWindow.document;
+
+    // Write the content and styles into the iframe document
+    doc.open();
+    doc.write('<html><head><title>Tafseer ibn Kathir (English) [undefined_tafseer_number] | muslim1446.github.io</title>');
+    doc.write('<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap" rel="stylesheet">');
+    doc.write('<style type="text/css" media="print">');
+    doc.write(`
+        @page {
+            size: A4;
+            margin: 16.8mm 16.8mm 23.76mm 16.8mm; /* Margins: top right bottom left */
+        }
+        /* Hide elements with specific IDs or classes for date, clock, and page numbers */
+        #date, 
+        #clock, 
+        .page-number {
+            display: none !important;
+        }
+        body {
+            width: 100%;
+            margin: 0; /* Ensure body has no extra margin */
+            white-space: pre-wrap; /* Preserve whitespace and line breaks */
+            text-align: left; /* Align text to the left */
+        }
+        #content {
+            font-family: "Noto Naskh Arabic", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            margin-top: 0; /* Remove extra margin from content */
+        }
+    `);
+    doc.write('</style></head><body>');
+    doc.write(content);
+    doc.write('</body></html>');
+    doc.close();
+
+    // Wait for the iframe to load before triggering print
+    iframe.onload = function() {
+        iframe.contentWindow.focus();
+        iframe.contentWindow.print();
+
+        // Remove the iframe after printing
+        document.body.removeChild(iframe);
+    };
+}
+
     </script>
 </body>
 </html>
