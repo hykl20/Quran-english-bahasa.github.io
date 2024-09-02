@@ -95,7 +95,7 @@ async function fetchTafseerData(chapNum) {
             tafseerData.forEach(tafsir => {
                 const tafseerTextDiv = document.getElementById(`tafseer-text-${tafsir.ayat}`);
                 if (tafseerTextDiv) {
-                    tafseerTextDiv.innerHTML = `<p>${tafsir.teks}</p>`;
+                    tafseerTextDiv.innerHTML = `<p>${tafsir.teks} <a href="https://muslim1446.github.io/tafseer/?sura=${chapNum}">Other Tafseer (Indonesia/English)</a></p>`;
                 }
             });
         } else {
@@ -205,7 +205,7 @@ async function showChapter(chapNum) {
 
             // Create a paragraph element with a link to toggle Tafseer text
             const toggleLink = document.createElement('p');
-            toggleLink.innerHTML = `<a href="#" onclick="toggleTafseerText(${verseNum})">View Tafseer</a>`;
+            toggleLink.innerHTML = `<a href="#" onclick="toggleTafseerText(${verseNum})">See Tafseer</a>`;
             verseDiv.appendChild(toggleLink);
 
             // Create a div for the Tafseer text
