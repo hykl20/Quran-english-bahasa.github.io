@@ -233,20 +233,22 @@ async function fetchAndDisplayData() {
             const [chapNum, verseNum] = chapterParam.split('-');
             const chapterElement = document.getElementById(`chapter-${chapNum}`);
             if (chapterElement) {
+                // Scroll to chapter
                 chapterElement.scrollIntoView({ behavior: 'smooth' });
                 console.log(`Scrolled to chapter ${chapNum}`);
-                // Delay for smooth scrolling to chapter
+                
+                // Ensure verse is scrolled into view after chapter
                 setTimeout(() => {
                     if (verseNum) {
                         const verseElement = document.getElementById(`verse-${verseNum}`);
                         if (verseElement) {
-                            verseElement.scrollIntoView({ behavior: 'smooth' });
+                            verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
                             console.log(`Scrolled to verse ${verseNum}`);
                         } else {
                             console.warn(`Verse ${verseNum} not found`);
                         }
                     }
-                }, 1000); // Delay to ensure chapter scroll completes
+                }, 500); // Adjust delay if needed
             } else {
                 console.warn(`Chapter ${chapNum} not found`);
             }
