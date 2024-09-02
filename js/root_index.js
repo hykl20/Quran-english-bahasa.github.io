@@ -106,10 +106,38 @@ async function fetchTafseerData(chapNum) {
     }
 }
 
+async function fetchTafseerENData(chapNum) {
+    try {
+        const response = await fetch(`https://raw.githubusercontent.com/spa5k/tafsir_api/main/tafsir/en-tafisr-ibn-kathir/${chapNum}/${verseNum}.json`);
+        const data = await response.json();
+
+        if (data.code === 200) {
+            const tafseerENData = data.data.tafsirEN;
+            tafseerENData.forEach(tafsirEN => {
+                const tafseerENTextDiv = document.getElementById(`tafseerEN-text-${text}`);
+                if (tafseerENTextDiv) {
+                    tafseerENTextDiv.innerHTML = `<p>${text}</p>`;
+                }
+            });
+        } else {
+            console.error('TafseerEN data not available.');
+        }
+    } catch (error) {
+        console.error('Error fetching tafseerEN data:', error);
+    }
+}
+
 function toggleTafseerText(ayatNumber) {
     const tafseerText = document.getElementById(`tafseer-text-${ayatNumber}`);
     if (tafseerText) {
         tafseerText.style.display = tafseerText.style.display === 'none' || tafseerText.style.display === '' ? 'block' : 'none';
+    }
+}
+
+function toggleTafseerENText(text) {
+    const tafseerENText = document.getElementById(`tafseerEN-text-${text}`);
+    if (tafseerENText) {
+        tafseerENText.style.display = tafseerENText.style.display === 'none' || tafseerENText.style.display === '' ? 'block' : 'none';
     }
 }
 
@@ -217,11 +245,27 @@ async function showChapter(chapNum) {
             // Append the Tafseer text div to the verseDiv
             verseDiv.appendChild(tafseerDiv);
 
+            // Create a paragraph element with a link to toggle TafseerEN text
+            const toggleLink = document.createElement('p');
+            toggleLink.innerHTML = `<a href="#" onclick="toggleTafseerENText(${verseNum})">View TafseerEN</a>`;
+            verseDiv.appendChild(toggleLink);
+
+            // Create a div for the Tafseer text
+            const tafseerDiv = document.createElement('div');
+            tafseerENDiv.id = `tafseerEN-text-${verseNum}`;
+            tafseerENDiv.classList.add('tafseerEN-text');
+            tafseerENDiv.style.display = 'none'; // Initially hidden
+
+            // Append the Tafseer text div to the verseDiv
+            verseDiv.appendChild(tafseerENDiv);
+
             verseContainer.appendChild(verseDiv);
         }
 
         // Fetch Tafseer data
         await fetchTafseerData(chapNum);
+        // Fetch Tafseer data
+        await fetchTafseerData(chapNum)(verseNum);
 
         // Set and play audio for the chapter
         setAudioSource(chapNum);
