@@ -168,6 +168,7 @@
 
     <script>
         // Define your list of URLs
+// Define your list of URLs
 const urls = [
     { name: 'Tafsir Tahlili (Indonesian)', url: 'https://muslim1446.github.io/tafseer/tahlili_kemenag_id', description: 'Detailed, methodical, and suited for those seeking a deep and scholarly analysis of the Quran.' },
     { name: 'Tafsir Wajiz Kemenag (Indonesian)', url: 'https://muslim1446.github.io/tafseer/id_wajiz_kemenag', description: 'Concise, accessible, and designed for easy comprehension by a broader audience.' },
@@ -202,7 +203,7 @@ async function fetchAndDisplayData() {
                     id: `chapter-${chapterMatch[1]}`
                 });
 
-                html += `<h2 id="chapter-${chapterMatch[1]}"><a href="#chapter-${chapterMatch[1]}" class="chapter-link">Surah ${chapterMatch[1]} (${currentChapter})</a></h2>`;
+                html += `<h2 id="chapter-${chapterMatch[1]}"><a href="/tafseer/sura#${chapterMatch[1]}" class="chapter-link">Surah ${chapterMatch[1]} (${currentChapter})</a></h2>`;
                 html += `<table><thead><tr><th>Ayahs</th><th>Tafseer Number (from ${MAX_VERSE_NUMBER} ayahs in Qur'an)</th></tr></thead><tbody>`;
             } else if (verseMatch) {
                 html += `<tr id="verse-${verseMatch[2]}"><td>Ayah ${verseMatch[1]}</td><td><a href="#" id="link-${verseMatch[2]}" data-verse="${verseMatch[2]}">${verseMatch[2]}</a></td></tr>`;
@@ -222,46 +223,36 @@ async function fetchAndDisplayData() {
             link.addEventListener('click', function (event) {
                 event.preventDefault();
                 const verse = this.getAttribute('data-verse');
-                const hash = `#verse-${verse}`;
+                const hash = `#${verse}`;
                 showURLSelectionDialog(hash);
             });
         });
 
-        handleURLParams();
-    } catch (error) {
-        console.error('Error fetching or processing the data:', error);
-    }
-}
-
-function handleURLParams() {
-    const params = new URLSearchParams(window.location.search);
-    const chapterParam = params.get('sura');
-    if (chapterParam) {
-        const [chapNum, verseNum] = chapterParam.split('-');
-        const chapterElement = document.getElementById(`chapter-${chapNum}`);
-        const verseElement = document.getElementById(`verse-${verseNum}`);
-
-        // Ensure the content is fully loaded before scrolling
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                if (chapterElement) {
-                    chapterElement.scrollIntoView({ behavior: 'smooth' });
-                    console.log(`Scrolled to chapter ${chapNum}`);
-                    
-                    // Scroll to verse after chapter has scrolled into view
+        // Handle URL parameters for chapter and verse
+        const chapterParam = new URLSearchParams(window.location.search).get('sura');
+        if (chapterParam) {
+            const [chapNum, verseNum] = chapterParam.split('-');
+            const chapterElement = document.getElementById(`chapter-${chapNum}`);
+            if (chapterElement) {
+                chapterElement.scrollIntoView({ behavior: 'smooth' });
+                console.log(`Scrolled to chapter ${chapNum}`);
+                if (verseNum) {
                     setTimeout(() => {
+                        const verseElement = document.getElementById(`verse-${verseNum}`);
                         if (verseElement) {
-                            verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            verseElement.scrollIntoView({ behavior: 'smooth' });
                             console.log(`Scrolled to verse ${verseNum}`);
                         } else {
                             console.warn(`Verse ${verseNum} not found`);
                         }
-                    }, 500); // Adjust this delay if necessary
-                } else {
-                    console.warn(`Chapter ${chapNum} not found`);
+                    }, 500); // Delay to ensure chapter scroll completes
                 }
-            }, 500); // Adjust this delay if necessary
-        });
+            } else {
+                console.warn(`Chapter ${chapNum} not found`);
+            }
+        }
+    } catch (error) {
+        console.error('Error fetching or processing the data:', error);
     }
 }
 
