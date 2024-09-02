@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- 1000Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BR6YH9S6MS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -262,22 +262,20 @@
             }
         }
 
-        // Extract chapter number and verse number from the URL hash
-        function getChapterAndVerse() {
-            const hash = window.location.hash.substring(1);
-            const parts = hash.split('-');
-            if (parts.length === 1) {
-                return { chapNum: parts[0], verseNum: null };
-            } else if (parts.length === 2) {
-                return { chapNum: parts[0], verseNum: parts[1] };
-            } else {
-                return null;
+        // Extract chapter number and verse number from the URL parameters
+        function getChapterAndVerseFromParams() {
+            const params = new URLSearchParams(window.location.search);
+            const sura = params.get('sura');
+            if (sura) {
+                const [chapNum, verseNum] = sura.split('-');
+                return { chapNum, verseNum: verseNum || null };
             }
+            return null;
         }
 
         // Main execution
         document.addEventListener('DOMContentLoaded', () => {
-            const { chapNum, verseNum } = getChapterAndVerse();
+            const { chapNum, verseNum } = getChapterAndVerseFromParams();
             if (chapNum) {
                 handleRedirection(chapNum, verseNum);
             } else {
