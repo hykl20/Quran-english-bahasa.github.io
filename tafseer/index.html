@@ -243,24 +243,22 @@ function handleURLParams() {
 
         // Ensure the content is fully loaded before scrolling
         window.addEventListener('load', () => {
-            setTimeout(() => {
-                if (chapterElement) {
-                    chapterElement.scrollIntoView({ behavior: 'smooth' });
-                    console.log(`Scrolled to chapter ${chapNum}`);
-                    
-                    // Scroll to verse after chapter has scrolled into view
-                    setTimeout(() => {
-                        if (verseElement) {
-                            verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            console.log(`Scrolled to verse ${verseNum}`);
-                        } else {
-                            console.warn(`Verse ${verseNum} not found`);
-                        }
-                    }, 500); // Adjust this delay if necessary
-                } else {
-                    console.warn(`Chapter ${chapNum} not found`);
-                }
-            }, 500); // Adjust this delay if necessary
+            // Ensure chapter is visible first
+            if (chapterElement) {
+                chapterElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // Ensure a delay to allow the chapter to fully scroll into view
+                setTimeout(() => {
+                    if (verseElement) {
+                        verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        console.log(`Scrolled to chapter ${chapNum} and verse ${verseNum}`);
+                    } else {
+                        console.warn(`Verse ${verseNum} not found`);
+                    }
+                }, 500); // Adjust this delay if necessary
+            } else {
+                console.warn(`Chapter ${chapNum} not found`);
+            }
         });
     }
 }
@@ -309,6 +307,7 @@ function searchChapters() {
 }
 
 fetchAndDisplayData();
+
 
 
     </script>
