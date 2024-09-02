@@ -232,26 +232,27 @@ async function fetchAndDisplayData() {
         if (chapterParam) {
             const [chapNum, verseNum] = chapterParam.split('-');
             const chapterElement = document.getElementById(`chapter-${chapNum}`);
-            if (chapterElement) {
-                // Scroll to chapter
-                chapterElement.scrollIntoView({ behavior: 'smooth' });
-                console.log(`Scrolled to chapter ${chapNum}`);
-                
-                // Ensure verse is scrolled into view after chapter
-                setTimeout(() => {
-                    if (verseNum) {
-                        const verseElement = document.getElementById(`verse-${verseNum}`);
+            const verseElement = document.getElementById(`verse-${verseNum}`);
+
+            // Ensure the content is fully loaded before scrolling
+            setTimeout(() => {
+                if (chapterElement) {
+                    chapterElement.scrollIntoView({ behavior: 'smooth' });
+                    console.log(`Scrolled to chapter ${chapNum}`);
+                    
+                    // Scroll to verse after chapter has scrolled into view
+                    setTimeout(() => {
                         if (verseElement) {
                             verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
                             console.log(`Scrolled to verse ${verseNum}`);
                         } else {
                             console.warn(`Verse ${verseNum} not found`);
                         }
-                    }
-                }, 500); // Adjust delay if needed
-            } else {
-                console.warn(`Chapter ${chapNum} not found`);
-            }
+                    }, 500); // Adjust this delay if necessary
+                } else {
+                    console.warn(`Chapter ${chapNum} not found`);
+                }
+            }, 500); // Adjust this delay if necessary
         }
     } catch (error) {
         console.error('Error fetching or processing the data:', error);
