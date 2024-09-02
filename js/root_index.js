@@ -1,7 +1,3 @@
-document.getElementById('audioPlayerContainer').addEventListener('click', function() {
-    this.classList.toggle('expanded');
-});
-
 document.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash.replace('#', '');
     if (hash && !isNaN(hash) && hash > 0 && hash <= 114) {
@@ -11,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Define chapters and translations
 const chapters = {
     1: { title: "Al-Fatiha", verses: 7 },
     2: { title: "Al-Baqarah", verses: 286 },
@@ -29,6 +26,7 @@ const arabicmean = {
     // Add other chapters as needed
 };
 
+// URLs for XML data
 const englishXMLUrl = 'https://blue-carlina-25.tiiny.site/quran_xml/en-sahih.xml';
 const indonesianXMLUrl = 'https://blue-carlina-25.tiiny.site/quran_xml/id-indonesian.xml';
 
@@ -42,7 +40,6 @@ function generateChapterList() {
         chapterDiv.innerText = `${chapNum}. ${chapter.title} (${chapter.verses} ayahs)`;
         chapterDiv.addEventListener('click', () => showChapter(chapNum));
 
-        // Apply styles
         Object.assign(chapterDiv.style, {
             fontFamily: "'Young Serif', serif",
             borderRadius: '10px',
@@ -55,6 +52,7 @@ function generateChapterList() {
     });
 }
 
+// Fetch XML data
 async function fetchXML(url) {
     try {
         const response = await fetch(url);
@@ -68,6 +66,7 @@ async function fetchXML(url) {
     }
 }
 
+// Parse XML data into a usable format
 function parseXML(xml) {
     const translations = {};
     if (!xml) return translations;
@@ -85,11 +84,11 @@ function parseXML(xml) {
     return translations;
 }
 
+// Fetch Tafseer data
 async function fetchTafseerData(chapNum) {
     try {
         const response = await fetch(`https://equran.id/api/v2/tafsir/${chapNum}`);
         const data = await response.json();
-
         if (data.code === 200) {
             data.data.tafsir.forEach(tafsir => {
                 const tafseerTextDiv = document.getElementById(`tafseer-text-${tafsir.ayat}`);
@@ -105,6 +104,7 @@ async function fetchTafseerData(chapNum) {
     }
 }
 
+// Fetch TafseerEN data
 async function fetchTafseerENData(chapNum) {
     try {
         for (let verseNum = 1; verseNum <= chapters[chapNum].verses; verseNum++) {
@@ -128,6 +128,7 @@ async function fetchTafseerENData(chapNum) {
     }
 }
 
+// Toggle text visibility
 function toggleText(id) {
     const textElement = document.getElementById(id);
     if (textElement) {
@@ -135,14 +136,16 @@ function toggleText(id) {
     }
 }
 
+// Adjust image size based on viewport width
 function adjustImageSize() {
     const images = document.querySelectorAll('.arabic-image');
     images.forEach(img => {
         img.style.width = window.innerWidth < 768 ? '100%' : 'auto';
-        img.style.height = 'auto'; // Maintain aspect ratio
+        img.style.height = 'auto';
     });
 }
 
+// Show chapter details
 async function showChapter(chapNum) {
     const chapterTitleElement = document.getElementById('chapter-title');
     const verseContainer = document.getElementById('verse-container');
@@ -153,7 +156,6 @@ async function showChapter(chapNum) {
         return;
     }
 
-    // Update the page title and chapter title
     document.title = `Surah ${chapters[chapNum].title} - The Noble Qur'an`;
     chapterTitleElement.innerHTML = `
         Surah ${chapNum}: ${chapters[chapNum].title} <a class="cback" href="/sura" target="_self">Back</a>
@@ -183,11 +185,9 @@ async function showChapter(chapNum) {
         </div>
     `;
 
-    // Display loading indicator
     loadingElement.style.display = 'block';
 
     try {
-        // Fetch and parse translations
         const [englishXML, indonesianXML] = await Promise.all([
             fetchXML(englishXMLUrl),
             fetchXML(indonesianXMLUrl)
@@ -198,7 +198,6 @@ async function showChapter(chapNum) {
 
         verseContainer.innerHTML = '';
 
-        // Display verses
         for (let verseNum = 1; verseNum <= chapters[chapNum].verses; verseNum++) {
             const verseDiv = document.createElement('div');
             verseDiv.classList.add('verse');
@@ -225,54 +224,43 @@ async function showChapter(chapNum) {
             indonesianDiv.innerText = indonesianText;
             verseDiv.appendChild(indonesianDiv);
 
-            // Create a paragraph element with a link to toggle Tafseer text
+            // Tafseer Links
             const toggleLink = document.createElement('p');
             toggleLink.innerHTML = `<a href="#" onclick="toggleText('tafseer-text-${verseNum}')">View Tafseer</a>`;
             verseDiv.appendChild(toggleLink);
 
-            // Create a div for the Tafseer text
             const tafseerDiv = document.createElement('div');
             tafseerDiv.id = `tafseer-text-${verseNum}`;
             tafseerDiv.classList.add('tafseer-text');
-            tafseerDiv.style.display = 'none'; // Initially hidden
-
-            // Append the Tafseer text div to the verseDiv
+            tafseerDiv.style.display = 'none';
             verseDiv.appendChild(tafseerDiv);
 
-            // Create a paragraph element with a link to toggle TafseerEN text
             const toggleLinkEN = document.createElement('p');
             toggleLinkEN.innerHTML = `<a href="#" onclick="toggleText('tafseerEN-text-${verseNum}')">View TafseerEN</a>`;
             verseDiv.appendChild(toggleLinkEN);
 
-            // Create a div for the TafseerEN text
             const tafseerENDiv = document.createElement('div');
             tafseerENDiv.id = `tafseerEN-text-${verseNum}`;
             tafseerENDiv.classList.add('tafseerEN-text');
-            tafseerENDiv.style.display = 'none'; // Initially hidden
-
-            // Append the Tafseer text div to the verseDiv
+            tafseerENDiv.style.display = 'none';
             verseDiv.appendChild(tafseerENDiv);
 
             verseContainer.appendChild(verseDiv);
         }
 
-        // Fetch Tafseer data
         await fetchTafseerData(chapNum);
         await fetchTafseerENData(chapNum);
-
-        // Set and play audio for the chapter
         setAudioSource(chapNum);
 
     } catch (error) {
         console.error('Error loading translations:', error);
     } finally {
-        // Hide loading indicator
         loadingElement.style.display = 'none';
-        // Adjust image sizes after loading
         adjustImageSize();
     }
 }
 
+// Set audio source and playback
 function setAudioSource(chapNum) {
     const audioSources = {
         1: "https://archive.org/download/Quran-English-Bahasa/001%20Al-Fatiha.mp3",
@@ -288,7 +276,6 @@ function setAudioSource(chapNum) {
         audioPlayer.load();
         audioPlayer.play();
 
-        // Save audio path and progress to localStorage
         localStorage.setItem('audio-path', audioSource.src);
 
         audioPlayer.addEventListener('pause', saveAudioProgress);
@@ -301,3 +288,8 @@ function setAudioSource(chapNum) {
         }
     }
 }
+
+// Expand audio player container
+document.getElementById('audioPlayerContainer').addEventListener('click', function() {
+    this.classList.toggle('expanded');
+});
