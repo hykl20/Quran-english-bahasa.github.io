@@ -65,11 +65,11 @@
 </head>
 <body>
     <div id="audioPlayerContainer" class="audio-player-container">
-    <audio id="audioPlayer" controls autoplay>
-        <source id="audioSource" src="">
-        Your browser does not support the audio element.
-    </audio>
-</div>
+        <audio id="audioPlayer" controls autoplay>
+            <source id="audioSource" src="">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
     <h1></h1>
     <p id="info"></p>
     <div id="buttons-container"></div>
@@ -77,6 +77,7 @@
     <script>
         // Database of chapter ranges
         const chapterRanges = {
+            // Existing chapter ranges...
             '1': '1-7',
             '2': '8-293',
             '3': '294-493',
@@ -213,7 +214,7 @@
         ];
 
         // Function to handle the redirection
-        function handleRedirection(chapNum) {
+        function handleRedirection(chapNum, verseNum) {
             const range = chapterRanges[chapNum];
             if (!range) {
                 document.getElementById('info').textContent = "Invalid chapter number.";
@@ -240,8 +241,13 @@
                     button.textContent = 'Select';
                     button.className = 'modern-button';
 
+                    let url = `${link.url}#${range}`;
+                    if (verseNum) {
+                        url += `-${verseNum}`;
+                    }
+                    
                     button.onclick = () => {
-                        window.location.href = `${link.url}#${range}`;
+                        window.location.href = url;
                     };
                     
                     linkContainer.appendChild(title);
@@ -256,17 +262,24 @@
             }
         }
 
-        // Extract chapter number from the URL hash
-        function getChapterNumber() {
+        // Extract chapter number and verse number from the URL hash
+        function getChapterAndVerse() {
             const hash = window.location.hash.substring(1);
-            return hash.match(/^\d+$/) ? hash : null;
+            const parts = hash.split('-');
+            if (parts.length === 1) {
+                return { chapNum: parts[0], verseNum: null };
+            } else if (parts.length === 2) {
+                return { chapNum: parts[0], verseNum: parts[1] };
+            } else {
+                return null;
+            }
         }
 
         // Main execution
         document.addEventListener('DOMContentLoaded', () => {
-            const chapNum = getChapterNumber();
+            const { chapNum, verseNum } = getChapterAndVerse();
             if (chapNum) {
-                handleRedirection(chapNum);
+                handleRedirection(chapNum, verseNum);
             } else {
                 document.getElementById('info').textContent = "No chapter number found in URL.";
             }
