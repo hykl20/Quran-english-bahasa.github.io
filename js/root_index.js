@@ -95,7 +95,7 @@ async function fetchTafseerData(chapNum) {
             tafseerData.forEach(tafsir => {
                 const tafseerTextDiv = document.getElementById(`tafseer-text-${tafsir.ayat}`);
                 if (tafseerTextDiv) {
-                    tafseerTextDiv.innerHTML = `<p><strong>${chapNum} : ${verseNum}</strong> ${tafsir.teks} <i>(Tafsir Tahlili-Kemenag)</i></p>`;
+                    tafseerTextDiv.innerHTML = `<p>${tafsir.teks}</p>`;
                 }
             });
         } else {
