@@ -419,6 +419,45 @@ function parseXML(xml) {
             translations[index][verseIndex] = text;
         }
     }
+    // Ensure fetchTafseerData is called after content is ready
+document.addEventListener('DOMContentLoaded', () => {
+    fetchTafseerData();
+});
+
+// Fetch Tafseer Data
+async function fetchTafseerData() {
+    try {
+        const response = await fetch(`https://equran.id/api/v2/tafsir/${chapNum}`);
+        const data = await response.json();
+
+        if (data.code === 200) {
+            const tafseerData = data.data.tafsir;
+            tafseerData.forEach(tafsir => {
+                const tafseerTextDiv = document.getElementById(`tafseer-text-${tafsir.ayat}`);
+                if (tafseerTextDiv) {
+                    tafseerTextDiv.innerHTML = `
+                        <p><strong>Tafseer:</strong> ${tafsir.teks}</p>
+                    `;
+                }
+            });
+        } else {
+            console.error('Tafseer data not available.');
+            document.body.innerHTML = '<p>Data not available.</p>';
+        }
+    } catch (error) {
+        console.error('Error fetching tafseer data:', error);
+        document.body.innerHTML = '<p>Error fetching data. Please try again later.</p>';
+    }
+}
+
+// Toggle Tafseer Text Visibility
+function toggleTafseerText(ayatNumber) {
+    const tafseerText = document.getElementById(`tafseer-text-${ayatNumber}`);
+    if (tafseerText) {
+        tafseerText.style.display = tafseerText.style.display === 'none' || tafseerText.style.display === '' ? 'block' : 'none';
+    }
+}
+
     return translations;
 }
 
@@ -515,6 +554,21 @@ async function showChapter(chapNum) {
             indonesianDiv.classList.add('translation', 'indonesian');
             indonesianDiv.innerText = indonesianText;
             verseDiv.appendChild(indonesianDiv);
+
+            // Create a paragraph element with a link to toggle Tafseer text
+const toggleLink = document.createElement('p');
+toggleLink.innerHTML = `<a href="#" onclick="toggleTafseerText(${verseNum})">View Tafseer for Ayat ${verseNum}</a>`;
+
+// Append the paragraph with the link to the verseDiv
+verseDiv.appendChild(toggleLink);
+
+// Create a div for the Tafseer text
+const tafseerDiv = document.createElement('div');
+tafseerDiv.id = `tafseer-text-${verseNum}`;
+tafseerDiv.classList.add('tafseer-text');
+
+// Append the Tafseer text div to the verseDiv
+verseDiv.appendChild(tafseerDiv);
 
             verseContainer.appendChild(verseDiv);
         }
