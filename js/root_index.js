@@ -2,7 +2,6 @@ document.getElementById('audioPlayerContainer').addEventListener('click', functi
     this.classList.toggle('expanded');
 });
 
-// Handle URL hash to show the appropriate chapter
 document.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash.replace('#', '');
     if (hash && !isNaN(hash) && hash > 0 && hash <= 114) {
@@ -13,20 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const chapters = {
-    1: { "title": "Al-Fatiha", "verses": 7 },
-    2: { "title": "Al-Baqarah", "verses": 286 },
+    1: { title: "Al-Fatiha", verses: 7 },
+    2: { title: "Al-Baqarah", verses: 286 },
     // Add other chapters as needed
 };
 
 const arabic = {
-    "1": { "title": "الفاتِحة" },
-    "2": { "title": "البَقَرَة" },
+    "1": { title: "الفاتِحة" },
+    "2": { title: "البَقَرَة" },
     // Add other chapters as needed
 };
 
 const arabicmean = {
-    1: { "title": "The Opening" },
-    2: { "title": "The Cow" },
+    1: { title: "The Opening" },
+    2: { title: "The Cow" },
     // Add other chapters as needed
 };
 
@@ -41,14 +40,16 @@ function generateChapterList() {
         const chapterDiv = document.createElement('div');
         chapterDiv.classList.add('chapter');
         chapterDiv.innerText = `${chapNum}. ${chapter.title} (${chapter.verses} ayahs)`;
-        chapterDiv.onclick = () => showChapter(chapNum);
+        chapterDiv.addEventListener('click', () => showChapter(chapNum));
 
         // Apply styles
-        chapterDiv.style.fontFamily = "'Young Serif', serif";
-        chapterDiv.style.borderRadius = '10px';
-        chapterDiv.style.color = '#ffffff';
-        chapterDiv.style.padding = '10px';
-        chapterDiv.style.margin = '5px 0';
+        Object.assign(chapterDiv.style, {
+            fontFamily: "'Young Serif', serif",
+            borderRadius: '10px',
+            color: '#ffffff',
+            padding: '10px',
+            margin: '5px 0'
+        });
 
         chaptersList.appendChild(chapterDiv);
     });
@@ -59,7 +60,6 @@ async function fetchXML(url) {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const text = await response.text();
-        console.log(`Fetched XML from ${url}`);
         const parser = new DOMParser();
         return parser.parseFromString(text, 'text/xml');
     } catch (error) {
@@ -91,10 +91,9 @@ async function fetchTafseerData(chapNum) {
         const data = await response.json();
 
         if (data.code === 200) {
-            const tafseerData = data.data.tafsir;
-            tafseerData.forEach(tafsir => {
+            data.data.tafsir.forEach(tafsir => {
                 const tafseerTextDiv = document.getElementById(`tafseer-text-${tafsir.ayat}`);
-                if (tafseerTextDiv) {
+                if (tafsseerTextDiv) {
                     tafseerTextDiv.innerHTML = `<p>${tafsir.teks}</p>`;
                 }
             });
@@ -108,36 +107,31 @@ async function fetchTafseerData(chapNum) {
 
 async function fetchTafseerENData(chapNum) {
     try {
-        const response = await fetch(`https://raw.githubusercontent.com/spa5k/tafsir_api/main/tafsir/en-tafisr-ibn-kathir/${chapNum}/${verseNum}.json`);
-        const data = await response.json();
-
-        if (data.code === 200) {
-            const tafseerENData = data.data.tafsirEN;
-            tafseerENData.forEach(tafsirEN => {
-                const tafseerENTextDiv = document.getElementById(`tafseerEN-text-${text}`);
-                if (tafseerENTextDiv) {
-                    tafseerENTextDiv.innerHTML = `<p>${text}</p>`;
+        for (let verseNum = 1; verseNum <= chapters[chapNum].verses; verseNum++) {
+            const response = await fetch(`https://raw.githubusercontent.com/spa5k/tafsir_api/main/tafsir/en-tafisr-ibn-kathir/${chapNum}/${verseNum}.json`);
+            if (response.ok) {
+                const data = await response.json();
+                if (data.ayah) {
+                    const tafseerENTextDiv = document.getElementById(`tafseerEN-text-${verseNum}`);
+                    if (tafsseerENTextDiv) {
+                        tafseerENTextDiv.innerHTML = `<p>${data.text}</p>`;
+                    }
+                } else {
+                    console.error(`TafseerEN data not available for verse ${verseNum}.`);
                 }
-            });
-        } else {
-            console.error('TafseerEN data not available.');
+            } else {
+                console.error(`Error fetching TafseerEN data for verse ${verseNum}:`, response.status);
+            }
         }
     } catch (error) {
-        console.error('Error fetching tafseerEN data:', error);
+        console.error('Error fetching TafseerEN data:', error);
     }
 }
 
-function toggleTafseerText(ayatNumber) {
-    const tafseerText = document.getElementById(`tafseer-text-${ayatNumber}`);
-    if (tafseerText) {
-        tafseerText.style.display = tafseerText.style.display === 'none' || tafseerText.style.display === '' ? 'block' : 'none';
-    }
-}
-
-function toggleTafseerENText(text) {
-    const tafseerENText = document.getElementById(`tafseerEN-text-${text}`);
-    if (tafseerENText) {
-        tafseerENText.style.display = tafseerENText.style.display === 'none' || tafseerENText.style.display === '' ? 'block' : 'none';
+function toggleText(id) {
+    const textElement = document.getElementById(id);
+    if (textElement) {
+        textElement.style.display = textElement.style.display === 'none' || textElement.style.display === '' ? 'block' : 'none';
     }
 }
 
@@ -233,7 +227,7 @@ async function showChapter(chapNum) {
 
             // Create a paragraph element with a link to toggle Tafseer text
             const toggleLink = document.createElement('p');
-            toggleLink.innerHTML = `<a href="#" onclick="toggleTafseerText(${verseNum})">View Tafseer</a>`;
+            toggleLink.innerHTML = `<a href="#" onclick="toggleText('tafseer-text-${verseNum}')">View Tafseer</a>`;
             verseDiv.appendChild(toggleLink);
 
             // Create a div for the Tafseer text
@@ -246,12 +240,12 @@ async function showChapter(chapNum) {
             verseDiv.appendChild(tafseerDiv);
 
             // Create a paragraph element with a link to toggle TafseerEN text
-            const toggleLink = document.createElement('p');
-            toggleLink.innerHTML = `<a href="#" onclick="toggleTafseerENText(${verseNum})">View TafseerEN</a>`;
-            verseDiv.appendChild(toggleLink);
+            const toggleLinkEN = document.createElement('p');
+            toggleLinkEN.innerHTML = `<a href="#" onclick="toggleText('tafseerEN-text-${verseNum}')">View TafseerEN</a>`;
+            verseDiv.appendChild(toggleLinkEN);
 
-            // Create a div for the Tafseer text
-            const tafseerDiv = document.createElement('div');
+            // Create a div for the TafseerEN text
+            const tafseerENDiv = document.createElement('div');
             tafseerENDiv.id = `tafseerEN-text-${verseNum}`;
             tafseerENDiv.classList.add('tafseerEN-text');
             tafseerENDiv.style.display = 'none'; // Initially hidden
@@ -264,8 +258,7 @@ async function showChapter(chapNum) {
 
         // Fetch Tafseer data
         await fetchTafseerData(chapNum);
-        // Fetch Tafseer data
-        await fetchTafseerData(chapNum)(verseNum);
+        await fetchTafseerENData(chapNum);
 
         // Set and play audio for the chapter
         setAudioSource(chapNum);
@@ -286,48 +279,25 @@ function setAudioSource(chapNum) {
         2: "https://archive.org/download/Quran-English-Bahasa/002%20Al-Baqara.mp3",
         // Add more audio sources here as needed
     };
-    
+
     const audioSource = document.getElementById('audioSource');
     const audioPlayer = document.getElementById('audioPlayer');
 
     if (audioSources[chapNum]) {
         audioSource.src = audioSources[chapNum];
-        audioPlayer.load(); // Load the new source
-        audioPlayer.play(); // Optionally play the audio immediately
+        audioPlayer.load();
+        audioPlayer.play();
 
-        // Save audio path to localStorage
+        // Save audio path and progress to localStorage
         localStorage.setItem('audio-path', audioSource.src);
 
-        // Save audio progress and playing status to localStorage
         audioPlayer.addEventListener('pause', saveAudioProgress);
         audioPlayer.addEventListener('ended', saveAudioProgress);
-
-        // Save audio progress and playing status when the page is unloaded
         window.addEventListener('beforeunload', saveAudioProgress);
 
         function saveAudioProgress() {
             localStorage.setItem('audio-time', audioPlayer.currentTime);
             localStorage.setItem('audio-playing', audioPlayer.paused ? 'false' : 'true');
         }
-    } else {
-        console.warn('Audio source not found for chapter', chapNum);
     }
 }
-
-document.addEventListener('DOMContentLoaded', generateChapterList);
-document.addEventListener('resize', adjustImageSize);
-
-// Sidebar visibility management based on screen size and user preference
-document.addEventListener('DOMContentLoaded', () => {
-    const sidebar = document.getElementById('sidebar');
-    const sidebarVisible = localStorage.getItem('sidebar-visible') !== 'false';
-
-    if (window.innerWidth >= 992) {
-        sidebar.style.display = sidebarVisible ? 'block' : 'none';
-    }
-
-    document.getElementById('toggleSidebar').addEventListener('click', () => {
-        sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
-        localStorage.setItem('sidebar-visible', sidebar.style.display === 'block');
-    });
-});
