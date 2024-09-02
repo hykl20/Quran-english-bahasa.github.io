@@ -95,7 +95,7 @@ async function fetchTafseerData(chapNum) {
             tafseerData.forEach(tafsir => {
                 const tafseerTextDiv = document.getElementById(`tafseer-text-${tafsir.ayat}`);
                 if (tafseerTextDiv) {
-                    tafseerTextDiv.innerHTML = `<p><strong>Tafseer:</strong> ${tafsir.teks}</p>`;
+                    tafseerTextDiv.innerHTML = `<p><strong>${chapNum} : ${verseNum}</strong> ${tafsir.teks} <i>(Tafsir Tahlili-Kemenag)</i></p>`;
                 }
             });
         } else {
@@ -205,7 +205,7 @@ async function showChapter(chapNum) {
 
             // Create a paragraph element with a link to toggle Tafseer text
             const toggleLink = document.createElement('p');
-            toggleLink.innerHTML = `<a href="#" onclick="toggleTafseerText(${verseNum})">View Tafseer for Ayat ${verseNum}</a>`;
+            toggleLink.innerHTML = `<a href="#" onclick="toggleTafseerText(${verseNum})">View Tafseer</a>`;
             verseDiv.appendChild(toggleLink);
 
             // Create a div for the Tafseer text
