@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 <channel>
     <title>Your Podcast Title</title>
     <link>https://yourpodcast.com</link>
     <description>Your podcast description.</description>
+    <itunes:author>Muslim</itunes:author>
+    <itunes:owner>
+        <itunes:name>Muslim</itunes:name>
+        <itunes:email>m-11105557@moe-dl.edu.my</itunes:email>
+    </itunes:owner>
+    <image>
+        <url>https://ia600101.us.archive.org/29/items/Quran-Indonesia/1.png</url>
+        <title>Your Podcast Title</title>
+        <link>https://yourpodcast.com</link>
+    </image>
     
             <item>
                 <title>Al-Fatiha | Bahasa (Indonesia) </title>
@@ -12,6 +22,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/001.mp3" length="2065979" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode001</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/1.png" />
             </item>
              
             <item>
@@ -21,6 +32,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/002.mp3" length="281901832" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode002</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/2.png" />
             </item>
              
             <item>
@@ -30,6 +42,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/003.mp3" length="142417749" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode003</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/3.png" />
             </item>
              
             <item>
@@ -39,6 +52,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/004.mp3" length="145724912" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode004</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/4.png" />
             </item>
              
             <item>
@@ -48,6 +62,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/005.mp3" length="113448651" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode005</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/5.png" />
             </item>
              
             <item>
@@ -57,6 +72,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/006.mp3" length="147212812" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode006</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/6.png" />
             </item>
              
             <item>
@@ -66,6 +82,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/007.mp3" length="139264456" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode007</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/7.png" />
             </item>
              
             <item>
@@ -75,6 +92,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/008.mp3" length="54766320" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode008</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/8.png" />
             </item>
              
             <item>
@@ -84,6 +102,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/009.mp3" length="108229443" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode009</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/9.png" />
             </item>
              
             <item>
@@ -93,6 +112,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/010.mp3" length="78645690" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode010</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/10.png" />
             </item>
              
             <item>
@@ -102,6 +122,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/011.mp3" length="83469605" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode011</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/11.png" />
             </item>
              
             <item>
@@ -111,6 +132,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/012.mp3" length="75712977" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode012</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/12.png" />
             </item>
              
             <item>
@@ -120,6 +142,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/013.mp3" length="36454502" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode013</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/13.png" />
             </item>
              
             <item>
@@ -129,6 +152,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/014.mp3" length="38298090" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode014</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/14.png" />
             </item>
              
             <item>
@@ -138,6 +162,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/015.mp3" length="31020250" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode015</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/15.png" />
             </item>
              
             <item>
@@ -147,6 +172,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/016.mp3" length="79034179" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode016</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/16.png" />
             </item>
              
             <item>
@@ -156,15 +182,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/017.mp3" length="63263401" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode017</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
-            </item>
-             
-            <item>
-                <title>Al-Kahf | Bahasa (Indonesia) </title>
-                <link>https://yourpodcast.com/episode018 (production_2)</link>
-                <description>Episode 018 (production_2)</description>
-                <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/018 (production_2).mp3" length="58981437" type="audio/mpeg" />
-                <guid>https://yourpodcast.com/episode018 (production_2)</guid>
-                <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/17.png" />
             </item>
              
             <item>
@@ -174,6 +192,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/018.mp3" length="60785875" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode018</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/18.png" />
             </item>
              
             <item>
@@ -183,6 +202,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/019.mp3" length="42803059" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode019</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/19.png" />
             </item>
              
             <item>
@@ -192,6 +212,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/020.mp3" length="56317417" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode020</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/20.png" />
             </item>
              
             <item>
@@ -201,6 +222,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/021.mp3" length="51427453" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode021</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/21.png" />
             </item>
              
             <item>
@@ -210,6 +232,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/022.mp3" length="56435653" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode022</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/22.png" />
             </item>
              
             <item>
@@ -219,6 +242,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/023.mp3" length="47620024" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode023</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/23.png" />
             </item>
              
             <item>
@@ -228,6 +252,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/024.mp3" length="59714967" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode024</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/24.png" />
             </item>
              
             <item>
@@ -237,6 +262,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/025.mp3" length="39267600" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode025</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/25.png" />
             </item>
              
             <item>
@@ -246,6 +272,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/026.mp3" length="64480169" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode026</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/26.png" />
             </item>
              
             <item>
@@ -255,6 +282,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/027.mp3" length="54029656" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode027</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/27.png" />
             </item>
              
             <item>
@@ -264,6 +292,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/028.mp3" length="64360414" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode028</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/28.png" />
             </item>
              
             <item>
@@ -273,6 +302,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/029.mp3" length="43354547" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode029</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/29.png" />
             </item>
              
             <item>
@@ -282,6 +312,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/030.mp3" length="37078019" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode030</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/30.png" />
             </item>
              
             <item>
@@ -291,6 +322,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/031.mp3" length="23265203" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode031</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/31.png" />
             </item>
              
             <item>
@@ -300,6 +332,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/032.mp3" length="17012640" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode032</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/32.png" />
             </item>
              
             <item>
@@ -309,6 +342,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/033.mp3" length="53579052" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode033</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/33.png" />
             </item>
              
             <item>
@@ -318,6 +352,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/034.mp3" length="36766706" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode034</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/34.png" />
             </item>
              
             <item>
@@ -327,6 +362,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/035.mp3" length="32807128" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode035</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/35.png" />
             </item>
              
             <item>
@@ -336,6 +372,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/036.mp3" length="32691862" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode036</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/36.png" />
             </item>
              
             <item>
@@ -345,6 +382,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/037.mp3" length="46508035" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode037</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/37.png" />
             </item>
              
             <item>
@@ -354,6 +392,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/038.mp3" length="35389708" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode038</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/38.png" />
             </item>
              
             <item>
@@ -363,6 +402,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/039.mp3" length="22951012" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode039</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/39.png" />
             </item>
              
             <item>
@@ -372,6 +412,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/040.mp3" length="50238715" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode040</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/40.png" />
             </item>
              
             <item>
@@ -381,6 +422,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/041.mp3" length="35409278" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode041</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/41.png" />
             </item>
              
             <item>
@@ -390,6 +432,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/042.mp3" length="35916154" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode042</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/42.png" />
             </item>
              
             <item>
@@ -399,6 +442,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/043.mp3" length="38254471" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode043</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/43.png" />
             </item>
              
             <item>
@@ -408,6 +452,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/044.mp3" length="17795405" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode044</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/44.png" />
             </item>
              
             <item>
@@ -417,6 +462,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/045.mp3" length="21542420" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode045</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/45.png" />
             </item>
              
             <item>
@@ -426,6 +472,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/046.mp3" length="29110573" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode046</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/46.png" />
             </item>
              
             <item>
@@ -435,6 +482,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/047.mp3" length="24350929" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode047</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/47.png" />
             </item>
              
             <item>
@@ -444,6 +492,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/048.mp3" length="24357353" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode048</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/48.png" />
             </item>
              
             <item>
@@ -453,6 +502,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/049.mp3" length="16575771" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode049</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/49.png" />
             </item>
              
             <item>
@@ -462,6 +512,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/050.mp3" length="18186559" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode050</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/50.png" />
             </item>
              
             <item>
@@ -471,6 +522,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/051.mp3" length="18441182" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode051</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/51.png" />
             </item>
              
             <item>
@@ -480,6 +532,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/052.mp3" length="16292743" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode052</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/52.png" />
             </item>
              
             <item>
@@ -489,6 +542,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/053.mp3" length="16856560" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode053</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/53.png" />
             </item>
              
             <item>
@@ -498,6 +552,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/054.mp3" length="17537241" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode054</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/54.png" />
             </item>
              
             <item>
@@ -507,6 +562,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/055.mp3" length="19707964" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode055</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/55.png" />
             </item>
              
             <item>
@@ -516,6 +572,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/056.mp3" length="21303656" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode056</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/56.png" />
             </item>
              
             <item>
@@ -525,6 +582,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/057.mp3" length="25872798" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode057</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/57.png" />
             </item>
              
             <item>
@@ -534,6 +592,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/058.mp3" length="21151902" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode058</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/58.png" />
             </item>
              
             <item>
@@ -543,6 +602,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/059.mp3" length="20426804" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode059</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/59.png" />
             </item>
              
             <item>
@@ -552,6 +612,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/060.mp3" length="15326315" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode060</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/60.png" />
             </item>
              
             <item>
@@ -561,6 +622,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/061.mp3" length="9724624" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode061</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/61.png" />
             </item>
              
             <item>
@@ -570,6 +632,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/062.mp3" length="7675074" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode062</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/62.png" />
             </item>
              
             <item>
@@ -579,6 +642,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/063.mp3" length="8928409" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode063</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/63.png" />
             </item>
              
             <item>
@@ -588,6 +652,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/064.mp3" length="11165875" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode064</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/64.png" />
             </item>
              
             <item>
@@ -597,6 +662,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/065.mp3" length="12066562" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode065</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/65.png" />
             </item>
              
             <item>
@@ -606,15 +672,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/066.mp3" length="11754788" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode066</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
-            </item>
-             
-            <item>
-                <title>Al-Mulk | Bahasa (Indonesia) </title>
-                <link>https://yourpodcast.com/episode067 (production_2)</link>
-                <description>Episode 067 (production_2)</description>
-                <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/067 (production_2).mp3" length="38973657" type="audio/mpeg" />
-                <guid>https://yourpodcast.com/episode067 (production_2)</guid>
-                <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/66.png" />
             </item>
              
             <item>
@@ -624,6 +682,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/067.mp3" length="15003131" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode067</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/67.png" />
             </item>
              
             <item>
@@ -633,6 +692,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/068.mp3" length="15329413" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode068</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/68.png" />
             </item>
              
             <item>
@@ -642,6 +702,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/069.mp3" length="12871278" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode069</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/69.png" />
             </item>
              
             <item>
@@ -651,6 +712,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/070.mp3" length="10581588" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode070</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/70.png" />
             </item>
              
             <item>
@@ -660,6 +722,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/071.mp3" length="10341690" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode071</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/71.png" />
             </item>
              
             <item>
@@ -669,6 +732,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/072.mp3" length="12595749" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode072</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/72.png" />
             </item>
              
             <item>
@@ -678,6 +742,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/073.mp3" length="8948509" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode073</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/73.png" />
             </item>
              
             <item>
@@ -687,6 +752,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/074.mp3" length="11733833" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode074</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/74.png" />
             </item>
              
             <item>
@@ -696,6 +762,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/075.mp3" length="7500164" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode075</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/75.png" />
             </item>
              
             <item>
@@ -705,6 +772,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/076.mp3" length="11462900" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode076</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/76.png" />
             </item>
              
             <item>
@@ -714,6 +782,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/077.mp3" length="10486396" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode077</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/77.png" />
             </item>
              
             <item>
@@ -723,6 +792,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/078.mp3" length="9464354" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode078</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/78.png" />
             </item>
              
             <item>
@@ -732,6 +802,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/079.mp3" length="9294139" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode079</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/79.png" />
             </item>
              
             <item>
@@ -741,15 +812,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/080.mp3" length="7494152" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode080</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
-            </item>
-             
-            <item>
-                <title>At-Takwir | Bahasa (Indonesia) </title>
-                <link>https://yourpodcast.com/episode081 (production_2)</link>
-                <description>Episode 081 (production_2)</description>
-                <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/081 (production_2).mp3" length="5804857" type="audio/mpeg" />
-                <guid>https://yourpodcast.com/episode081 (production_2)</guid>
-                <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/80.png" />
             </item>
              
             <item>
@@ -759,6 +822,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/081.mp3" length="5446308" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode081</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/81.png" />
             </item>
              
             <item>
@@ -768,6 +832,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/082.mp3" length="4666584" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode082</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/82.png" />
             </item>
              
             <item>
@@ -777,6 +842,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/083.mp3" length="9567052" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode083</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/83.png" />
             </item>
              
             <item>
@@ -786,6 +852,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/084.mp3" length="5787076" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode084</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/84.png" />
             </item>
              
             <item>
@@ -795,6 +862,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/085.mp3" length="6191677" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode085</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/85.png" />
             </item>
              
             <item>
@@ -804,6 +872,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/086.mp3" length="4024431" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode086</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/86.png" />
             </item>
              
             <item>
@@ -813,6 +882,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/087.mp3" length="4365632" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode087</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/87.png" />
             </item>
              
             <item>
@@ -822,6 +892,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/088.mp3" length="4936525" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode088</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/88.png" />
             </item>
              
             <item>
@@ -831,6 +902,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/089.mp3" length="7071466" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode089</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/89.png" />
             </item>
              
             <item>
@@ -840,6 +912,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/090.mp3" length="4574321" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode090</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/90.png" />
             </item>
              
             <item>
@@ -849,6 +922,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/091.mp3" length="3618386" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode091</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/91.png" />
             </item>
              
             <item>
@@ -858,6 +932,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/092.mp3" length="4546842" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode092</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/92.png" />
             </item>
              
             <item>
@@ -867,6 +942,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/093.mp3" length="3111663" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode093</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/93.png" />
             </item>
              
             <item>
@@ -876,6 +952,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/094.mp3" length="1603362" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode094</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/94.png" />
             </item>
              
             <item>
@@ -885,6 +962,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/095.mp3" length="2711902" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode095</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/95.png" />
             </item>
              
             <item>
@@ -894,6 +972,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/096.mp3" length="4309732" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode096</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/96.png" />
             </item>
              
             <item>
@@ -903,6 +982,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/097.mp3" length="2125981" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode097</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/97.png" />
             </item>
              
             <item>
@@ -912,6 +992,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/098.mp3" length="4727995" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode098</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/98.png" />
             </item>
              
             <item>
@@ -921,6 +1002,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/099.mp3" length="2802575" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode099</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/99.png" />
             </item>
              
             <item>
@@ -930,6 +1012,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/100.mp3" length="3049042" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode100</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/100.png" />
             </item>
              
             <item>
@@ -939,6 +1022,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/101.mp3" length="2643134" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode101</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/101.png" />
             </item>
              
             <item>
@@ -948,6 +1032,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/102.mp3" length="2688640" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode102</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/102.png" />
             </item>
              
             <item>
@@ -957,6 +1042,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/103.mp3" length="1719703" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode103</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/103.png" />
             </item>
              
             <item>
@@ -966,6 +1052,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/104.mp3" length="2545136" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode104</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/104.png" />
             </item>
              
             <item>
@@ -975,6 +1062,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/105.mp3" length="2170269" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode105</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/105.png" />
             </item>
              
             <item>
@@ -984,6 +1072,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/106.mp3" length="1987441" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode106</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/106.png" />
             </item>
              
             <item>
@@ -993,6 +1082,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/107.mp3" length="2231269" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode107</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/107.png" />
             </item>
              
             <item>
@@ -1002,6 +1092,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/108.mp3" length="1691920" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode108</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/108.png" />
             </item>
              
             <item>
@@ -1011,6 +1102,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/109.mp3" length="2209770" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode109</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/109.png" />
             </item>
              
             <item>
@@ -1020,6 +1112,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/110.mp3" length="1796494" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode110</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/110.png" />
             </item>
              
             <item>
@@ -1029,6 +1122,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/111.mp3" length="2024478" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode111</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/111.png" />
             </item>
              
             <item>
@@ -1038,6 +1132,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/112.mp3" length="1553280" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode112</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/112.png" />
             </item>
              
             <item>
@@ -1047,6 +1142,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/113.mp3" length="1880774" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode113</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/113.png" />
             </item>
              
             <item>
@@ -1056,6 +1152,7 @@
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/114.mp3" length="2026192" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode114</guid>
                 <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/114.png" />
             </item>
             
 </channel>
