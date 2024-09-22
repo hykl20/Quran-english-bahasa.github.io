@@ -6,9 +6,12 @@
 <description>
             <![CDATA[
             The Noble Quran recitation by Mishary Alafasy along with Bahasa Indonesia meaning (Kementerian Agama RI) <br />
-            muslim1446.github.io | © Timings VerseByVerseQuran.com | muhdayin (archive.org) <br />
-                <i>for the sake of Allah</i>
-            <a href="https://muslim1446.github.io/report">REPORT</a> <br />
+            muslim1446.github.io <br />
+   © Timings VerseByVerseQuran.com <br />
+    muhdayin (archive.org) <br />
+      nurulalim.blogspot.com <br />
+                <i><b>for the sake of Allah<b></i>
+            <a href="https://muslim1446.github.io/report" style="text-decoration: underline;">REPORT</a> <br />
             ]]>
         </description>
 
@@ -841,25 +844,26 @@
                 <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/80.png" />
             </item>
              
-            <item>
-                <title>At-Takwir | Bahasa (Indonesia) </title>
-                <link>https://muslim1446.github.com/pod/episode081</link>
-                <description>Sura At-Takwir | Bahasa (Indonesia)  [081]</description>
-                <enclosure url="https://ia600101.us.archive.org/29/items/Quran-Indonesia/081%20%28production_2%29.mp3" length="0000321" type="audio/mpeg" />
-                <guid>https://yourpodcast.com/episode081</guid>
-                <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
-                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/81.png" />
-            </item>
-                
+
+ <item>
+        <title>At-Takwir | Bahasa (Indonesia)</title>
+        <link>https://muslim1446.github.com/pod/episode081</link>
+        <description>Sura At-Takwir | Bahasa (Indonesia) [081]</description>
+        <enclosure url="https://ia600101.us.archive.org/29/items/Quran-Indonesia/081%20%28production_2%29.mp3" length="0000321" type="audio/mpeg" />
+        <guid>https://yourpodcast.com/episode081</guid>
+        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/81.png" />
+    </item>
+
     <item>
-                <title>At-Takwir | Bahasa (Indonesia) </title>
-                <link>https://muslim1446.github.com/pod/episode081</link>
-                <description>Sura At-Takwir (1419ھ) | Bahasa (Indonesia)  [081]</description>
-                <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/081.mp3" length="5446308" type="audio/mpeg" />
-                <guid>https://yourpodcast.com/episode081</guid>
-                <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
-                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/81.png" />
-            </item>
+        <title>At-Takwir | Bahasa (Indonesia)</title>
+        <link>https://muslim1446.github.com/pod/episode081</link>
+        <description>Sura At-Takwir (1419ھ) | Bahasa (Indonesia) [081]</description>
+        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/081.mp3" length="5446308" type="audio/mpeg" />
+        <guid>https://yourpodcast.com/episode081</guid>
+        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/81.png" />
+    </item>
              
             <item>
                 <title>Al-Infitar | Bahasa (Indonesia) </title>
