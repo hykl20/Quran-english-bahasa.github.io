@@ -3,7 +3,15 @@
 <channel>
     <title>al-Quran terjemahan Bahasa Indonesia</title>
     <link>https://muslim1446.github.com/pod</link>
-    <description>The Noble Quran recitation with Bahasa Indonesia meaning (Kementerian Agama)</description>
+<description>
+            <![CDATA[
+            The Noble Quran recitation by Mishary Alafasy along with Bahasa Indonesia meaning (Kementerian Agama RI) <br />
+            muslim1446.github.io | © Timings VerseByVerseQuran.com | muhdayin (archive.org) <br />
+                <i>for the sake of Allah</i>
+            <a href="https://muslim1446.github.io/report">REPORT</a> <br />
+            ]]>
+        </description>
+
     <itunes:author>Muslim</itunes:author>
     <itunes:owner>
         <itunes:name>Muslim</itunes:name>
@@ -194,6 +202,15 @@
                 <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
                 <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/18.png" />
             </item>
+     <item>
+                <title>Al-Kahf | Bahasa (Indonesia) </title>
+                <link>https://muslim1446.github.com/pod/episode18_2</link>
+                <description>Sura Al-Kahf (nurulalim.blogspot.com) | Bahasa (Indonesia)  [67]</description>
+                <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/018%20%28production_2%29.mp3" length="0100360" type="audio/mpeg" />
+                <guid>https://yourpodcast.com/episode18_2</guid>
+                <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/18.png" />
+            </item>
              
             <item>
                 <title>Maryam | Bahasa (Indonesia) </title>
@@ -684,6 +701,15 @@
                 <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
                 <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/67.png" />
             </item>
+     <item>
+                <title>Al-Mulk | Bahasa (Indonesia) </title>
+                <link>https://muslim1446.github.com/pod/episode67_2</link>
+                <description>Sura Al-Mulk (studio) | Bahasa (Indonesia)  [67]</description>
+                <enclosure url="https://archive.org/download/Quran-English-Bahasa/067%20Al-Mulk%20%28Studio%29.mp3" length="the" type="audio/mpeg" />
+                <guid>https://yourpodcast.com/episode67_2</guid>
+                <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/67.png" />
+            </item>
              
             <item>
                 <title>Al-Qalam | Bahasa (Indonesia) </title>
@@ -819,6 +845,16 @@
                 <title>At-Takwir | Bahasa (Indonesia) </title>
                 <link>https://muslim1446.github.com/pod/episode081</link>
                 <description>Sura At-Takwir | Bahasa (Indonesia)  [081]</description>
+                <enclosure url="https://ia600101.us.archive.org/29/items/Quran-Indonesia/081%20%28production_2%29.mp3" length="0000321" type="audio/mpeg" />
+                <guid>https://yourpodcast.com/episode081</guid>
+                <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/81.png" />
+            </item>
+                
+    <item>
+                <title>At-Takwir | Bahasa (Indonesia) </title>
+                <link>https://muslim1446.github.com/pod/episode081</link>
+                <description>Sura At-Takwir (1419ھ) | Bahasa (Indonesia)  [081]</description>
                 <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/081.mp3" length="5446308" type="audio/mpeg" />
                 <guid>https://yourpodcast.com/episode081</guid>
                 <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
