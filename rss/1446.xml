@@ -3,7 +3,7 @@
 <channel>
     <title>al-Quran terjemahan Bahasa Indonesia</title>
     <link>https://muslim1446.github.com/pod</link>
-    <description>The Noble Quran recitation by Mishary Alafasy along with Bahasa Indonesia meaning (Kementerian Agama RI) | muslim1446.github.io - © Timings VerseByVerseQuran.com - muhdayin (archive.org) | ...for the sake of Allah</description>
+    <description>The Noble Quran recitation with Bahasa Indonesia meaning (Kementerian Agama)</description>
     <itunes:author>Muslim</itunes:author>
     <itunes:owner>
         <itunes:name>Muslim</itunes:name>
@@ -194,16 +194,6 @@
                 <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
                 <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/18.png" />
             </item>
-                 
-            <item>
-                <title>Al-Kahf | Bahasa (Indonesia) </title>
-                <link>https://muslim1446.github.com/pod/episode18_2</link>
-                <description>Sura Al-Kahf (versi·²) | Bahasa (Indonesia)  [67]</description>
-                <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/018%20%28production_2%29.mp3" length="0100360" type="audio/mpeg" />
-                <guid>https://yourpodcast.com/episode18_2</guid>
-                <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
-                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/18.png" />
-            </item>
              
             <item>
                 <title>Maryam | Bahasa (Indonesia) </title>
@@ -694,17 +684,7 @@
                 <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
                 <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/67.png" />
             </item>
-                          
-            <item>
-                <title>Al-Mulk | Bahasa (Indonesia) </title>
-                <link>https://muslim1446.github.com/pod/episode67_2</link>
-                <description>Sura Al-Mulk (versi studio) | Bahasa (Indonesia)  [67]</description>
-                <enclosure url="https://archive.org/download/Quran-English-Bahasa/067%20Al-Mulk%20%28Studio%29.mp3" length="the" type="audio/mpeg" />
-                <guid>https://yourpodcast.com/episode67_2</guid>
-                <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
-                <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/67.png" />
-            </item>
-            
+             
             <item>
                 <title>Al-Qalam | Bahasa (Indonesia) </title>
                 <link>https://muslim1446.github.com/pod/episode068</link>
@@ -1176,4 +1156,1165 @@
             </item>
             
 </channel>
+<playlists>
+    
+                <playlist>
+                    <title>Sura 1 to 38</title>
+                    <description>Chapters from 1 to 38 of the Noble Quran.</description>
+                    
+                    <item>
+                        <title>001 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode001</link>
+                        <description>Sura 001 | Bahasa (Indonesia) [001]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/001.mp3" length="2065979" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode001</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/001.png" />
+                    </item>
+                     
+                    <item>
+                        <title>002 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode002</link>
+                        <description>Sura 002 | Bahasa (Indonesia) [002]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/002.mp3" length="281901832" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode002</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/002.png" />
+                    </item>
+                     
+                    <item>
+                        <title>003 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode003</link>
+                        <description>Sura 003 | Bahasa (Indonesia) [003]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/003.mp3" length="142417749" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode003</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/003.png" />
+                    </item>
+                     
+                    <item>
+                        <title>004 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode004</link>
+                        <description>Sura 004 | Bahasa (Indonesia) [004]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/004.mp3" length="145724912" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode004</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/004.png" />
+                    </item>
+                     
+                    <item>
+                        <title>005 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode005</link>
+                        <description>Sura 005 | Bahasa (Indonesia) [005]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/005.mp3" length="113448651" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode005</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/005.png" />
+                    </item>
+                     
+                    <item>
+                        <title>006 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode006</link>
+                        <description>Sura 006 | Bahasa (Indonesia) [006]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/006.mp3" length="147212812" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode006</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/006.png" />
+                    </item>
+                     
+                    <item>
+                        <title>007 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode007</link>
+                        <description>Sura 007 | Bahasa (Indonesia) [007]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/007.mp3" length="139264456" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode007</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/007.png" />
+                    </item>
+                     
+                    <item>
+                        <title>008 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode008</link>
+                        <description>Sura 008 | Bahasa (Indonesia) [008]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/008.mp3" length="54766320" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode008</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/008.png" />
+                    </item>
+                     
+                    <item>
+                        <title>009 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode009</link>
+                        <description>Sura 009 | Bahasa (Indonesia) [009]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/009.mp3" length="108229443" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode009</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/009.png" />
+                    </item>
+                     
+                    <item>
+                        <title>010 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode010</link>
+                        <description>Sura 010 | Bahasa (Indonesia) [010]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/010.mp3" length="78645690" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode010</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/010.png" />
+                    </item>
+                     
+                    <item>
+                        <title>011 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode011</link>
+                        <description>Sura 011 | Bahasa (Indonesia) [011]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/011.mp3" length="83469605" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode011</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/011.png" />
+                    </item>
+                     
+                    <item>
+                        <title>012 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode012</link>
+                        <description>Sura 012 | Bahasa (Indonesia) [012]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/012.mp3" length="75712977" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode012</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/012.png" />
+                    </item>
+                     
+                    <item>
+                        <title>013 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode013</link>
+                        <description>Sura 013 | Bahasa (Indonesia) [013]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/013.mp3" length="36454502" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode013</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/013.png" />
+                    </item>
+                     
+                    <item>
+                        <title>014 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode014</link>
+                        <description>Sura 014 | Bahasa (Indonesia) [014]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/014.mp3" length="38298090" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode014</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/014.png" />
+                    </item>
+                     
+                    <item>
+                        <title>015 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode015</link>
+                        <description>Sura 015 | Bahasa (Indonesia) [015]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/015.mp3" length="31020250" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode015</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/015.png" />
+                    </item>
+                     
+                    <item>
+                        <title>016 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode016</link>
+                        <description>Sura 016 | Bahasa (Indonesia) [016]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/016.mp3" length="79034179" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode016</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/016.png" />
+                    </item>
+                     
+                    <item>
+                        <title>017 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode017</link>
+                        <description>Sura 017 | Bahasa (Indonesia) [017]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/017.mp3" length="63263401" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode017</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/017.png" />
+                    </item>
+                     
+                    <item>
+                        <title>018 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode018</link>
+                        <description>Sura 018 | Bahasa (Indonesia) [018]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/018.mp3" length="60785875" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode018</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/018.png" />
+                    </item>
+                     
+                    <item>
+                        <title>019 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode019</link>
+                        <description>Sura 019 | Bahasa (Indonesia) [019]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/019.mp3" length="42803059" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode019</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/019.png" />
+                    </item>
+                     
+                    <item>
+                        <title>020 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode020</link>
+                        <description>Sura 020 | Bahasa (Indonesia) [020]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/020.mp3" length="56317417" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode020</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/020.png" />
+                    </item>
+                     
+                    <item>
+                        <title>021 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode021</link>
+                        <description>Sura 021 | Bahasa (Indonesia) [021]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/021.mp3" length="51427453" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode021</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/021.png" />
+                    </item>
+                     
+                    <item>
+                        <title>022 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode022</link>
+                        <description>Sura 022 | Bahasa (Indonesia) [022]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/022.mp3" length="56435653" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode022</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/022.png" />
+                    </item>
+                     
+                    <item>
+                        <title>023 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode023</link>
+                        <description>Sura 023 | Bahasa (Indonesia) [023]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/023.mp3" length="47620024" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode023</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/023.png" />
+                    </item>
+                     
+                    <item>
+                        <title>024 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode024</link>
+                        <description>Sura 024 | Bahasa (Indonesia) [024]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/024.mp3" length="59714967" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode024</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/024.png" />
+                    </item>
+                     
+                    <item>
+                        <title>025 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode025</link>
+                        <description>Sura 025 | Bahasa (Indonesia) [025]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/025.mp3" length="39267600" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode025</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/025.png" />
+                    </item>
+                     
+                    <item>
+                        <title>026 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode026</link>
+                        <description>Sura 026 | Bahasa (Indonesia) [026]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/026.mp3" length="64480169" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode026</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/026.png" />
+                    </item>
+                     
+                    <item>
+                        <title>027 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode027</link>
+                        <description>Sura 027 | Bahasa (Indonesia) [027]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/027.mp3" length="54029656" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode027</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/027.png" />
+                    </item>
+                     
+                    <item>
+                        <title>028 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode028</link>
+                        <description>Sura 028 | Bahasa (Indonesia) [028]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/028.mp3" length="64360414" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode028</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/028.png" />
+                    </item>
+                     
+                    <item>
+                        <title>029 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode029</link>
+                        <description>Sura 029 | Bahasa (Indonesia) [029]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/029.mp3" length="43354547" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode029</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/029.png" />
+                    </item>
+                     
+                    <item>
+                        <title>030 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode030</link>
+                        <description>Sura 030 | Bahasa (Indonesia) [030]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/030.mp3" length="37078019" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode030</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/030.png" />
+                    </item>
+                     
+                    <item>
+                        <title>031 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode031</link>
+                        <description>Sura 031 | Bahasa (Indonesia) [031]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/031.mp3" length="23265203" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode031</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/031.png" />
+                    </item>
+                     
+                    <item>
+                        <title>032 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode032</link>
+                        <description>Sura 032 | Bahasa (Indonesia) [032]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/032.mp3" length="17012640" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode032</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/032.png" />
+                    </item>
+                     
+                    <item>
+                        <title>033 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode033</link>
+                        <description>Sura 033 | Bahasa (Indonesia) [033]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/033.mp3" length="53579052" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode033</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/033.png" />
+                    </item>
+                     
+                    <item>
+                        <title>034 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode034</link>
+                        <description>Sura 034 | Bahasa (Indonesia) [034]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/034.mp3" length="36766706" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode034</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/034.png" />
+                    </item>
+                     
+                    <item>
+                        <title>035 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode035</link>
+                        <description>Sura 035 | Bahasa (Indonesia) [035]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/035.mp3" length="32807128" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode035</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/035.png" />
+                    </item>
+                     
+                    <item>
+                        <title>036 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode036</link>
+                        <description>Sura 036 | Bahasa (Indonesia) [036]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/036.mp3" length="32691862" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode036</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/036.png" />
+                    </item>
+                     
+                    <item>
+                        <title>037 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode037</link>
+                        <description>Sura 037 | Bahasa (Indonesia) [037]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/037.mp3" length="46508035" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode037</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/037.png" />
+                    </item>
+                     
+                    <item>
+                        <title>038 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode038</link>
+                        <description>Sura 038 | Bahasa (Indonesia) [038]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/038.mp3" length="35389708" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode038</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/038.png" />
+                    </item>
+                    
+                </playlist>
+                 
+                <playlist>
+                    <title>Sura 39 to 76</title>
+                    <description>Chapters from 39 to 76 of the Noble Quran.</description>
+                    
+                    <item>
+                        <title>039 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode039</link>
+                        <description>Sura 039 | Bahasa (Indonesia) [039]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/039.mp3" length="22951012" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode039</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/039.png" />
+                    </item>
+                     
+                    <item>
+                        <title>040 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode040</link>
+                        <description>Sura 040 | Bahasa (Indonesia) [040]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/040.mp3" length="50238715" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode040</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/040.png" />
+                    </item>
+                     
+                    <item>
+                        <title>041 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode041</link>
+                        <description>Sura 041 | Bahasa (Indonesia) [041]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/041.mp3" length="35409278" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode041</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/041.png" />
+                    </item>
+                     
+                    <item>
+                        <title>042 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode042</link>
+                        <description>Sura 042 | Bahasa (Indonesia) [042]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/042.mp3" length="35916154" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode042</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/042.png" />
+                    </item>
+                     
+                    <item>
+                        <title>043 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode043</link>
+                        <description>Sura 043 | Bahasa (Indonesia) [043]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/043.mp3" length="38254471" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode043</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/043.png" />
+                    </item>
+                     
+                    <item>
+                        <title>044 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode044</link>
+                        <description>Sura 044 | Bahasa (Indonesia) [044]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/044.mp3" length="17795405" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode044</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/044.png" />
+                    </item>
+                     
+                    <item>
+                        <title>045 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode045</link>
+                        <description>Sura 045 | Bahasa (Indonesia) [045]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/045.mp3" length="21542420" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode045</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/045.png" />
+                    </item>
+                     
+                    <item>
+                        <title>046 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode046</link>
+                        <description>Sura 046 | Bahasa (Indonesia) [046]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/046.mp3" length="29110573" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode046</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/046.png" />
+                    </item>
+                     
+                    <item>
+                        <title>047 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode047</link>
+                        <description>Sura 047 | Bahasa (Indonesia) [047]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/047.mp3" length="24350929" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode047</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/047.png" />
+                    </item>
+                     
+                    <item>
+                        <title>048 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode048</link>
+                        <description>Sura 048 | Bahasa (Indonesia) [048]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/048.mp3" length="24357353" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode048</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/048.png" />
+                    </item>
+                     
+                    <item>
+                        <title>049 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode049</link>
+                        <description>Sura 049 | Bahasa (Indonesia) [049]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/049.mp3" length="16575771" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode049</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/049.png" />
+                    </item>
+                     
+                    <item>
+                        <title>050 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode050</link>
+                        <description>Sura 050 | Bahasa (Indonesia) [050]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/050.mp3" length="18186559" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode050</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/050.png" />
+                    </item>
+                     
+                    <item>
+                        <title>051 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode051</link>
+                        <description>Sura 051 | Bahasa (Indonesia) [051]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/051.mp3" length="18441182" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode051</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/051.png" />
+                    </item>
+                     
+                    <item>
+                        <title>052 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode052</link>
+                        <description>Sura 052 | Bahasa (Indonesia) [052]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/052.mp3" length="16292743" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode052</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/052.png" />
+                    </item>
+                     
+                    <item>
+                        <title>053 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode053</link>
+                        <description>Sura 053 | Bahasa (Indonesia) [053]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/053.mp3" length="16856560" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode053</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/053.png" />
+                    </item>
+                     
+                    <item>
+                        <title>054 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode054</link>
+                        <description>Sura 054 | Bahasa (Indonesia) [054]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/054.mp3" length="17537241" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode054</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/054.png" />
+                    </item>
+                     
+                    <item>
+                        <title>055 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode055</link>
+                        <description>Sura 055 | Bahasa (Indonesia) [055]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/055.mp3" length="19707964" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode055</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/055.png" />
+                    </item>
+                     
+                    <item>
+                        <title>056 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode056</link>
+                        <description>Sura 056 | Bahasa (Indonesia) [056]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/056.mp3" length="21303656" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode056</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/056.png" />
+                    </item>
+                     
+                    <item>
+                        <title>057 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode057</link>
+                        <description>Sura 057 | Bahasa (Indonesia) [057]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/057.mp3" length="25872798" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode057</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/057.png" />
+                    </item>
+                     
+                    <item>
+                        <title>058 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode058</link>
+                        <description>Sura 058 | Bahasa (Indonesia) [058]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/058.mp3" length="21151902" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode058</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/058.png" />
+                    </item>
+                     
+                    <item>
+                        <title>059 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode059</link>
+                        <description>Sura 059 | Bahasa (Indonesia) [059]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/059.mp3" length="20426804" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode059</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/059.png" />
+                    </item>
+                     
+                    <item>
+                        <title>060 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode060</link>
+                        <description>Sura 060 | Bahasa (Indonesia) [060]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/060.mp3" length="15326315" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode060</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/060.png" />
+                    </item>
+                     
+                    <item>
+                        <title>061 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode061</link>
+                        <description>Sura 061 | Bahasa (Indonesia) [061]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/061.mp3" length="9724624" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode061</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/061.png" />
+                    </item>
+                     
+                    <item>
+                        <title>062 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode062</link>
+                        <description>Sura 062 | Bahasa (Indonesia) [062]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/062.mp3" length="7675074" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode062</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/062.png" />
+                    </item>
+                     
+                    <item>
+                        <title>063 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode063</link>
+                        <description>Sura 063 | Bahasa (Indonesia) [063]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/063.mp3" length="8928409" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode063</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/063.png" />
+                    </item>
+                     
+                    <item>
+                        <title>064 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode064</link>
+                        <description>Sura 064 | Bahasa (Indonesia) [064]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/064.mp3" length="11165875" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode064</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/064.png" />
+                    </item>
+                     
+                    <item>
+                        <title>065 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode065</link>
+                        <description>Sura 065 | Bahasa (Indonesia) [065]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/065.mp3" length="12066562" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode065</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/065.png" />
+                    </item>
+                     
+                    <item>
+                        <title>066 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode066</link>
+                        <description>Sura 066 | Bahasa (Indonesia) [066]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/066.mp3" length="11754788" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode066</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/066.png" />
+                    </item>
+                     
+                    <item>
+                        <title>067 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode067</link>
+                        <description>Sura 067 | Bahasa (Indonesia) [067]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/067.mp3" length="15003131" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode067</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/067.png" />
+                    </item>
+                     
+                    <item>
+                        <title>068 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode068</link>
+                        <description>Sura 068 | Bahasa (Indonesia) [068]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/068.mp3" length="15329413" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode068</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/068.png" />
+                    </item>
+                     
+                    <item>
+                        <title>069 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode069</link>
+                        <description>Sura 069 | Bahasa (Indonesia) [069]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/069.mp3" length="12871278" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode069</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/069.png" />
+                    </item>
+                     
+                    <item>
+                        <title>070 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode070</link>
+                        <description>Sura 070 | Bahasa (Indonesia) [070]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/070.mp3" length="10581588" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode070</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/070.png" />
+                    </item>
+                     
+                    <item>
+                        <title>071 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode071</link>
+                        <description>Sura 071 | Bahasa (Indonesia) [071]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/071.mp3" length="10341690" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode071</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/071.png" />
+                    </item>
+                     
+                    <item>
+                        <title>072 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode072</link>
+                        <description>Sura 072 | Bahasa (Indonesia) [072]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/072.mp3" length="12595749" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode072</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/072.png" />
+                    </item>
+                     
+                    <item>
+                        <title>073 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode073</link>
+                        <description>Sura 073 | Bahasa (Indonesia) [073]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/073.mp3" length="8948509" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode073</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/073.png" />
+                    </item>
+                     
+                    <item>
+                        <title>074 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode074</link>
+                        <description>Sura 074 | Bahasa (Indonesia) [074]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/074.mp3" length="11733833" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode074</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/074.png" />
+                    </item>
+                     
+                    <item>
+                        <title>075 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode075</link>
+                        <description>Sura 075 | Bahasa (Indonesia) [075]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/075.mp3" length="7500164" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode075</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/075.png" />
+                    </item>
+                     
+                    <item>
+                        <title>076 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode076</link>
+                        <description>Sura 076 | Bahasa (Indonesia) [076]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/076.mp3" length="11462900" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode076</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/076.png" />
+                    </item>
+                    
+                </playlist>
+                 
+                <playlist>
+                    <title>Sura 77 to 114</title>
+                    <description>Chapters from 77 to 114 of the Noble Quran.</description>
+                    
+                    <item>
+                        <title>077 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode077</link>
+                        <description>Sura 077 | Bahasa (Indonesia) [077]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/077.mp3" length="10486396" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode077</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/077.png" />
+                    </item>
+                     
+                    <item>
+                        <title>078 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode078</link>
+                        <description>Sura 078 | Bahasa (Indonesia) [078]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/078.mp3" length="9464354" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode078</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/078.png" />
+                    </item>
+                     
+                    <item>
+                        <title>079 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode079</link>
+                        <description>Sura 079 | Bahasa (Indonesia) [079]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/079.mp3" length="9294139" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode079</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/079.png" />
+                    </item>
+                     
+                    <item>
+                        <title>080 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode080</link>
+                        <description>Sura 080 | Bahasa (Indonesia) [080]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/080.mp3" length="7494152" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode080</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/080.png" />
+                    </item>
+                     
+                    <item>
+                        <title>081 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode081</link>
+                        <description>Sura 081 | Bahasa (Indonesia) [081]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/081.mp3" length="5446308" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode081</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/081.png" />
+                    </item>
+                     
+                    <item>
+                        <title>082 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode082</link>
+                        <description>Sura 082 | Bahasa (Indonesia) [082]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/082.mp3" length="4666584" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode082</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/082.png" />
+                    </item>
+                     
+                    <item>
+                        <title>083 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode083</link>
+                        <description>Sura 083 | Bahasa (Indonesia) [083]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/083.mp3" length="9567052" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode083</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/083.png" />
+                    </item>
+                     
+                    <item>
+                        <title>084 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode084</link>
+                        <description>Sura 084 | Bahasa (Indonesia) [084]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/084.mp3" length="5787076" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode084</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/084.png" />
+                    </item>
+                     
+                    <item>
+                        <title>085 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode085</link>
+                        <description>Sura 085 | Bahasa (Indonesia) [085]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/085.mp3" length="6191677" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode085</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/085.png" />
+                    </item>
+                     
+                    <item>
+                        <title>086 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode086</link>
+                        <description>Sura 086 | Bahasa (Indonesia) [086]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/086.mp3" length="4024431" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode086</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/086.png" />
+                    </item>
+                     
+                    <item>
+                        <title>087 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode087</link>
+                        <description>Sura 087 | Bahasa (Indonesia) [087]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/087.mp3" length="4365632" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode087</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/087.png" />
+                    </item>
+                     
+                    <item>
+                        <title>088 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode088</link>
+                        <description>Sura 088 | Bahasa (Indonesia) [088]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/088.mp3" length="4936525" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode088</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/088.png" />
+                    </item>
+                     
+                    <item>
+                        <title>089 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode089</link>
+                        <description>Sura 089 | Bahasa (Indonesia) [089]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/089.mp3" length="7071466" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode089</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/089.png" />
+                    </item>
+                     
+                    <item>
+                        <title>090 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode090</link>
+                        <description>Sura 090 | Bahasa (Indonesia) [090]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/090.mp3" length="4574321" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode090</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/090.png" />
+                    </item>
+                     
+                    <item>
+                        <title>091 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode091</link>
+                        <description>Sura 091 | Bahasa (Indonesia) [091]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/091.mp3" length="3618386" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode091</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/091.png" />
+                    </item>
+                     
+                    <item>
+                        <title>092 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode092</link>
+                        <description>Sura 092 | Bahasa (Indonesia) [092]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/092.mp3" length="4546842" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode092</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/092.png" />
+                    </item>
+                     
+                    <item>
+                        <title>093 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode093</link>
+                        <description>Sura 093 | Bahasa (Indonesia) [093]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/093.mp3" length="3111663" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode093</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/093.png" />
+                    </item>
+                     
+                    <item>
+                        <title>094 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode094</link>
+                        <description>Sura 094 | Bahasa (Indonesia) [094]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/094.mp3" length="1603362" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode094</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/094.png" />
+                    </item>
+                     
+                    <item>
+                        <title>095 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode095</link>
+                        <description>Sura 095 | Bahasa (Indonesia) [095]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/095.mp3" length="2711902" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode095</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/095.png" />
+                    </item>
+                     
+                    <item>
+                        <title>096 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode096</link>
+                        <description>Sura 096 | Bahasa (Indonesia) [096]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/096.mp3" length="4309732" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode096</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/096.png" />
+                    </item>
+                     
+                    <item>
+                        <title>097 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode097</link>
+                        <description>Sura 097 | Bahasa (Indonesia) [097]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/097.mp3" length="2125981" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode097</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/097.png" />
+                    </item>
+                     
+                    <item>
+                        <title>098 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode098</link>
+                        <description>Sura 098 | Bahasa (Indonesia) [098]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/098.mp3" length="4727995" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode098</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/098.png" />
+                    </item>
+                     
+                    <item>
+                        <title>099 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode099</link>
+                        <description>Sura 099 | Bahasa (Indonesia) [099]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/099.mp3" length="2802575" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode099</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/099.png" />
+                    </item>
+                     
+                    <item>
+                        <title>100 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode100</link>
+                        <description>Sura 100 | Bahasa (Indonesia) [100]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/100.mp3" length="3049042" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode100</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/100.png" />
+                    </item>
+                     
+                    <item>
+                        <title>101 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode101</link>
+                        <description>Sura 101 | Bahasa (Indonesia) [101]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/101.mp3" length="2643134" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode101</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/101.png" />
+                    </item>
+                     
+                    <item>
+                        <title>102 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode102</link>
+                        <description>Sura 102 | Bahasa (Indonesia) [102]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/102.mp3" length="2688640" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode102</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/102.png" />
+                    </item>
+                     
+                    <item>
+                        <title>103 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode103</link>
+                        <description>Sura 103 | Bahasa (Indonesia) [103]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/103.mp3" length="1719703" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode103</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/103.png" />
+                    </item>
+                     
+                    <item>
+                        <title>104 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode104</link>
+                        <description>Sura 104 | Bahasa (Indonesia) [104]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/104.mp3" length="2545136" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode104</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/104.png" />
+                    </item>
+                     
+                    <item>
+                        <title>105 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode105</link>
+                        <description>Sura 105 | Bahasa (Indonesia) [105]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/105.mp3" length="2170269" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode105</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/105.png" />
+                    </item>
+                     
+                    <item>
+                        <title>106 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode106</link>
+                        <description>Sura 106 | Bahasa (Indonesia) [106]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/106.mp3" length="1987441" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode106</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/106.png" />
+                    </item>
+                     
+                    <item>
+                        <title>107 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode107</link>
+                        <description>Sura 107 | Bahasa (Indonesia) [107]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/107.mp3" length="2231269" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode107</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/107.png" />
+                    </item>
+                     
+                    <item>
+                        <title>108 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode108</link>
+                        <description>Sura 108 | Bahasa (Indonesia) [108]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/108.mp3" length="1691920" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode108</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/108.png" />
+                    </item>
+                     
+                    <item>
+                        <title>109 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode109</link>
+                        <description>Sura 109 | Bahasa (Indonesia) [109]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/109.mp3" length="2209770" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode109</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/109.png" />
+                    </item>
+                     
+                    <item>
+                        <title>110 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode110</link>
+                        <description>Sura 110 | Bahasa (Indonesia) [110]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/110.mp3" length="1796494" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode110</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/110.png" />
+                    </item>
+                     
+                    <item>
+                        <title>111 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode111</link>
+                        <description>Sura 111 | Bahasa (Indonesia) [111]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/111.mp3" length="2024478" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode111</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/111.png" />
+                    </item>
+                     
+                    <item>
+                        <title>112 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode112</link>
+                        <description>Sura 112 | Bahasa (Indonesia) [112]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/112.mp3" length="1553280" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode112</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/112.png" />
+                    </item>
+                     
+                    <item>
+                        <title>113 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode113</link>
+                        <description>Sura 113 | Bahasa (Indonesia) [113]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/113.mp3" length="1880774" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode113</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/113.png" />
+                    </item>
+                     
+                    <item>
+                        <title>114 | Bahasa (Indonesia)</title>
+                        <link>https://muslim1446.github.com/pod/episode114</link>
+                        <description>Sura 114 | Bahasa (Indonesia) [114]</description>
+                        <enclosure url="https://ia800101.us.archive.org/29/items/Quran-Indonesia/114.mp3" length="2026192" type="audio/mpeg" />
+                        <guid>https://yourpodcast.com/episode114</guid>
+                        <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+                        <itunes:image href="https://ia600101.us.archive.org/29/items/Quran-Indonesia/114.png" />
+                    </item>
+                    
+                </playlist>
+                
+</playlists>
 </rss>
