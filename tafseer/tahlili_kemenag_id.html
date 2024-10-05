@@ -26,6 +26,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap" rel="stylesheet">
    <script src="https://muslim1446.github.io/js/sub_audio.js"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <style>
         body {
@@ -188,64 +191,74 @@ Your browser does not support the audio element.
 
             document.getElementById('content').innerHTML = resultHTML || 'No results found.';
         }
-        // Function to print only the content of the div
+// Function to print or download PDF
 function printContent() {
-    const content = document.getElementById('content').innerHTML;
+    const content = document.getElementById('content').innerHTML; // Get the HTML content
+    const searchNumber = document.getElementById('searchNumber').value; // Get the search number
 
-    // Create an iframe and append it to the body
-    const iframe = document.createElement('iframe');
-    iframe.style.position = 'absolute';
-    iframe.style.width = '0px';
-    iframe.style.height = '0px';
-    iframe.style.border = 'none';
-    document.body.appendChild(iframe);
+    // Ask the user whether to print or download as PDF
+const action = confirm("Choose \"Save as PDF\" to download this");
 
-    // Get the iframe's document
-    const doc = iframe.contentDocument || iframe.contentWindow.document;
 
-    // Write the content and styles into the iframe document
-    doc.open();
-    doc.write('<html><head><title>Tafseer Tahlili-KEMENAG (Indonesian) [undefined_tafseer_number] | muslim1446.github.io</title>');
-    doc.write('<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap" rel="stylesheet">');
-    doc.write('<style type="text/css" media="print">');
-    doc.write(`
-        @page {
-            size: A4;
-            margin: 16.8mm 16.8mm 23.76mm 16.8mm; /* Margins: top right bottom left */
-        }
-        /* Hide elements with specific IDs or classes for date, clock, and page numbers */
-        #date, 
-        #clock, 
-        .page-number {
-            display: none !important;
-        }
-        body {
-            width: 100%;
-            margin: 0; /* Ensure body has no extra margin */
-            white-space: pre-wrap; /* Preserve whitespace and line breaks */
-            text-align: left; /* Align text to the left */
-        }
-        #content {
-            font-family: "Noto Naskh Arabic", serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-            margin-top: 0; /* Remove extra margin from content */
-        }
-    `);
-    doc.write('</style></head><body>');
-    doc.write(content);
-    doc.write('</body></html>');
-    doc.close();
+    if (action) {
+        // User chose to print
+        const iframe = document.createElement('iframe');
+        iframe.style.position = 'absolute';
+        iframe.style.width = '0px';
+        iframe.style.height = '0px';
+        iframe.style.border = 'none';
+        document.body.appendChild(iframe);
 
-    // Wait for the iframe to load before triggering print
-    iframe.onload = function() {
-        iframe.contentWindow.focus();
-        iframe.contentWindow.print();
+        // Get the iframe's document
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
 
-        // Remove the iframe after printing
-        document.body.removeChild(iframe);
-    };
+        // Write the content and styles into the iframe document
+        doc.open();
+        doc.write('<html><head><title>Tafseer Tahlili KEMENAG (Indonesian) ' + searchNumber + ' | muslim1446.github.io</title>'); 
+        doc.write('<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap" rel="stylesheet">');
+        doc.write('<style type="text/css" media="print">');
+        doc.write(`
+            @page {
+                size: A4;
+                margin: 16.8mm 16.8mm 23.76mm 16.8mm; /* Margins: top right bottom left */
+            }
+            /* Hide elements with specific IDs or classes for date, clock, and page numbers */
+            #date, 
+            #clock, 
+            .page-number {
+                display: none !important;
+            }
+            body {
+                width: 100%;
+                margin: 0; /* Ensure body has no extra margin */
+                white-space: pre-wrap; /* Preserve whitespace and line breaks */
+                text-align: left; /* Align text to the left */
+                font-family: "Noto Naskh Arabic", serif; /* Set the custom font */
+            }
+            #content {
+                font-family: "Noto Naskh Arabic", serif; /* Fallback to serif if Noto Naskh Arabic fails */
+                font-optical-sizing: auto;
+                font-style: normal;
+                margin-top: 0; /* Remove extra margin from content */
+            }
+        `);
+        doc.write('</style></head><body>');
+        doc.write(content);
+        doc.write('</body></html>');
+        doc.close();
+
+        // Wait for the iframe to load before printing
+        iframe.onload = function() {
+            iframe.contentWindow.focus();
+            iframe.contentWindow.print();
+            document.body.removeChild(iframe); // Remove the iframe after printing
+        };
+    } else {
+
+    }
 }
+
+
 
     </script>
 </body>
