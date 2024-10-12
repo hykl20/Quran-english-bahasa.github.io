@@ -8,7 +8,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-BR6YH9S6MS');
     </script>
     <!-- Google Tag Manager -->
@@ -31,8 +30,6 @@
     <!-- Open Graph Meta Tags for Image -->
     <meta property="og:image" content="https://muslim1446.github.io/Q00.png" />
 
-
-
     <meta charset="UTF-8">
     <link rel="canonical" href="https://muslim1446.github.io/">
     <meta name="description" content="al-Quran terjemahan Bahasa Indonesia  © Timings VerseByVerseQuran.com">
@@ -50,68 +47,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
 
     <style>
- 
-                a {
-                display: none;
-            font-family: "Sofia Sans Semi Condensed", sans-serif;
-            font-size: 2vw;
-            color: white;
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+            position: relative;
         }
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Prevent scrolling */
-}
 
-body {
-    background-image: url('https://muslim1446.github.io/Q00.png');
-    background-size: cover; /* Ensure the image covers the entire background */
-    background-position: center top; /* Center the image horizontally and align it to the top */
-    background-repeat: no-repeat; /* Prevent tiling */
-}
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the video covers the entire background */
+            z-index: -1; /* Place the video behind other content */
+        }
 
-/* Media query for screens with a 9:16 aspect ratio */
-@media screen and (max-aspect-ratio: 9/16) {
-    body {
-        background-image: url('https://muslim1446.github.io/Q2.png');
-        background-position: center center; /* Center the image for 9:16 devices */
-    }
-    }
+        body {
+            color: white;
+            font-family: "Sofia Sans Semi Condensed", sans-serif;
+        }
 
-
-
-
-
-
-
-
-
-
+        a {
+            display: none; /* Make them visible */
+            font-size: 2vw;
+            text-align: center; /* Center the text */
+        }
     </style>
 </head>
 
 <body>
+    <video id="background-video" autoplay muted onended="window.location.href='https://open.spotify.com/show/1mQhW5efXIqaKkOsThDmQq';">
+        <source id="video-source" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
+    <a>[AUDIO] al-Quran terjemahan Bahasa Indonesia © Timings VerseByVerseQuran.com</a>
+    <a>The Noble Quran recitation by Mishary Alafasy along with Bahasa Indonesia meaning (Kementerian Agama RI)</a>
 
-
-
-
-
-            <a>[AUDIO] al-Quran terjemahan Bahasa Indonesia © Timings VerseByVerseQuran.com</a>
-            <br>
-            <a>The Noble Quran recitation by Mishary Alafasy along with Bahasa Indonesia meaning (Kementerian Agama RI)</a>
-        </div>
-
-    <!-- Redirect after 3 seconds -->
     <script>
-        setTimeout(function() {
-            window.location.href = "https://open.spotify.com/show/1mQhW5efXIqaKkOsThDmQq";
-        }, 3000); // 3 seconds delay
+        // Determine the aspect ratio and set the appropriate video source
+        const video = document.getElementById('background-video');
+        const source = document.getElementById('video-source');
+
+        function setVideoSource() {
+            const aspectRatio = window.innerWidth / window.innerHeight;
+
+            if (aspectRatio > 1) { // 16:9 or wider
+                source.src = 'https://muslim1446.github.io/QV0.mp4';
+            } else { // 9:16
+                source.src = 'https://muslim1446.github.io/QV1.mp4';
+            }
+
+            video.load();
+        }
+
+        // Set the video source on page load
+        setVideoSource();
+
+        // Optional: Update the video source on window resize
+        window.addEventListener('resize', setVideoSource);
     </script>
 </body>
 
