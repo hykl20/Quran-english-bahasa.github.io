@@ -132,7 +132,7 @@ body {
     let currentChapterIndex = 0;  // To track the current chapter index
 
     // Fetch JSON data for chapters (2TM.json)
-    fetch('2TM.json')
+    fetch('https://muslim1446.github.io/beta/2TM.json')
       .then(response => response.json())
       .then(data => {
         jsonData = data;
@@ -141,7 +141,7 @@ body {
       .catch(error => console.error('Error fetching JSON:', error));
 
     // Fetch translation data (3TM.json)
-    fetch('3TM.json')
+    fetch('https://muslim1446.github.io/beta/3TM.json')
       .then(response => response.json())
       .then(data => {
         translationData = data;
