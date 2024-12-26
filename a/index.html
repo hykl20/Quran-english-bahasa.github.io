@@ -7,7 +7,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
-  <style> @font-face { font-family: Verdana, Geneva, Arial, sans-serif; } body { font-family: Verdana, Geneva, Arial, sans-serif; background-color: white; color: black; transition: background-color 3s, color 3s; } .chapterSelect, .verseSelect { font-family: 'Noto Sans Arabic', sans-serif; padding: 12px; background-color: #f0f0f0; border: 1px solid #ccc; font-size: 16px; border-radius: 8px; /* Slightly less rounded */ width: 100%; direction: rtl; /* For right-to-left alignment for Arabic text */ } .parentContainer { display: flex; flex-direction: column; align-items: flex-start; width: 50%; /* Adjust as needed */ margin: 0 auto; /* Center the container */ margin-left: 10%; /* Start from the left with 10% margin */ } label { font-size: 18px; margin-bottom: 5px; } .dark-mode { background-color: black; color: white; } #verseImageContainer { min-height: 200px; /* Set a minimum height to prevent collapsing */ display: flex; /* Enable flex for alignment */ justify-content: center; /* Center content horizontally */ align-items: center; /* Center content vertically */ } #verseImageContainer img { max-width: 80%; /* Default for wide screens (PC, TV, laptops) */ margin-top: 10px; margin-left: 10%; /* Centers the image horizontally */ margin-right: 10%; /* Centers the image horizontally */ display: block; transform: scale(0.95); /* Slightly scaled down for a smoother animation */ transition: opacity 1s ease-in-out, transform 1s ease-in-out, filter 2s ease-in-out; } .dark-mode #verseImageContainer img { filter: invert(1); /* Invert colors for dark mode */ transition: opacity 1s ease-in-out, filter 2s ease-in-out, transform 1s ease-in-out; } /* Adjust for tall, narrow screens like 9:16 */ @media screen and (aspect-ratio: 9/16), screen and (max-width: 768px) { #verseImageContainer img { max-width: 100%; /* Allow full width for smaller or tall screens */ height: auto; /* Maintain aspect ratio without cropping */ margin-left: 0; /* No left margin to avoid cutoff */ margin-right: 0; /* No right margin to avoid cutoff */ } } /* Adjust for ultra-wide screens (e.g., TVs) */ @media screen and (min-width: 1920px) { #verseImageContainer img { max-width: 70%; /* Reduce width further for ultra-wide displays */ height: auto; /* Maintain aspect ratio */ margin-left: 15%; /* Add safe margins for overscan */ margin-right: 15%; /* Add safe margins for overscan */ } } #darkModeToggle { position: fixed; top: 550px; left: 10px; padding: 10px 20px; background-color: gray; color: white; border: none; cursor: pointer; font-size: 16px; border-radius: 5px; } .dark-mode #darkModeToggle { background-color: #333; color: white; } #darkModeToggle i { font-size: 20px; } #report { font-family: 'Inter', sans-serif;  /* Specify Inter font */ font-size: 12px; font-weight: bold; height: 100%; /* Reduce height by 10% */ position: absolute; /* Position the element relative to its nearest positioned ancestor */ top: 0%; /* Start 10% from the top */ right: 5%; /* Start 10% from the left */ max-width: 80%; /* Ensure content fits on zoomed screens */ margin-right: 10%; /* Safe margin to avoid cutoff on zoomed TVs */ margin-left: 0; /* No extra margin on the left since it's already defined */ transition: opacity 1s ease-in-out, filter 2s ease-in-out; } #audio { position: absolute; /* or fixed if you want it to stay fixed */ bottom: 0; /* Align to the bottom */ left: 0; /* Align to the left edge */ width: 100%; /* Full width */ border-radius: 0; /* Remove any rounded corners */ background: none; /* Optional: removes any background */ outline: none; /* Optional: removes any outline for focus */ appearance: none; /* Optional: removes default styling */ padding: 0; /* Optional: removes default padding */ } .translation { margin-top: 10px; font-size: 1.2em; color: #000000; padding: 10px; border-top: 1px solid #ddd; max-width: 80%; /* Reduce max-width to ensure content fits on zoomed screens */ margin-right: 10%; /* Safe margin to avoid cutoff on zoomed TVs */ margin-left: 10%;  /* Safe margin for left alignment */ transition: opacity 1s ease-in-out, filter 2s ease-in-out; } .dark-mode .translation { color: #FFFFFF; margin-right: 10%; /* Same safe margin for zoomed TVs */ margin-left: 10%;  /* Same safe margin for zoomed TVs */ transition: opacity 1s ease-in-out, filter 2s ease-in-out; } #translation { margin-top: 10px; font-size: 1.2em; padding: 10px; border-top: 1px solid #ddd; margin-right: 10%; /* Same safe margin */ margin-left: 10%;  /* Same safe margin */ } body { transition: background-color 0.3s, color 0.3s; /* Smooth transition */ } /* Dark mode styles */ .dark-mode { background-color: #333; color: white; } </style>
+  <style> @font-face { font-family: Verdana, Geneva, Arial, sans-serif; } body { font-family: Verdana, Geneva, Arial, sans-serif; background-color: white; color: black; transition: background-color 3s, color 3s; } .chapterSelect, .verseSelect { font-family: 'Noto Sans Arabic', sans-serif; padding: 12px; background-color: #f0f0f0; border: 1px solid #ccc; font-size: 16px; border-radius: 8px; /* Slightly less rounded */ width: 100%; direction: rtl; /* For right-to-left alignment for Arabic text */ } .parentContainer { display: flex; flex-direction: column; align-items: flex-start; width: 50%; /* Adjust as needed */ margin: 0 auto; /* Center the container */ margin-left: 10%; /* Start from the left with 10% margin */ } label { font-size: 18px; margin-bottom: 5px; } .dark-mode { background-color: black; color: white; } #verseImageContainer { min-height: 200px; /* Set a minimum height to prevent collapsing */ display: flex; /* Enable flex for alignment */ justify-content: center; /* Center content horizontally */ align-items: center; /* Center content vertically */ } #verseImageContainer img { max-width: 80%; /* Default for wide screens (PC, TV, laptops) */ margin-top: 10px; margin-left: 10%; /* Centers the image horizontally */ margin-right: 10%; /* Centers the image horizontally */ display: block; transform: scale(0.95); /* Slightly scaled down for a smoother animation */ transition: opacity 1s ease-in-out, transform 1s ease-in-out, filter 2s ease-in-out; } .dark-mode #verseImageContainer img { filter: invert(1); /* Invert colors for dark mode */ transition: opacity 1s ease-in-out, filter 2s ease-in-out, transform 1s ease-in-out; } /* Adjust for tall, narrow screens like 9:16 */ @media screen and (aspect-ratio: 9/16), screen and (max-width: 768px) { #verseImageContainer img { max-width: 100%; /* Allow full width for smaller or tall screens */ height: auto; /* Maintain aspect ratio without cropping */ margin-left: 0; /* No left margin to avoid cutoff */ margin-right: 0; /* No right margin to avoid cutoff */ } } /* Adjust for ultra-wide screens (e.g., TVs) */ @media screen and (min-width: 1920px) { #verseImageContainer img { max-width: 70%; /* Reduce width further for ultra-wide displays */ height: auto; /* Maintain aspect ratio */ margin-left: 15%; /* Add safe margins for overscan */ margin-right: 15%; /* Add safe margins for overscan */ } } #darkModeToggle { position: fixed; top: 550px; left: 10px; padding: 10px 20px; background-color: gray; color: white; border: none; cursor: pointer; font-size: 16px; border-radius: 5px; } .dark-mode #darkModeToggle { background-color: #333; color: white; } #darkModeToggle i { font-size: 20px; } #report { font-family: 'Inter', sans-serif;  /* Specify Inter font */ font-size: 19px; font-weight: bold; height: 100%; /* Reduce height by 10% */ position: absolute; /* Position the element relative to its nearest positioned ancestor */ top: 0%; /* Start 10% from the top */ right: 5%; /* Start 10% from the left */ max-width: 80%; /* Ensure content fits on zoomed screens */ margin-right: 10%; /* Safe margin to avoid cutoff on zoomed TVs */ margin-left: 0; /* No extra margin on the left since it's already defined */ transition: opacity 1s ease-in-out, filter 2s ease-in-out; } #audio { position: absolute; /* or fixed if you want it to stay fixed */ bottom: 0; /* Align to the bottom */ left: 0; /* Align to the left edge */ width: 100%; /* Full width */ border-radius: 0; /* Remove any rounded corners */ background: none; /* Optional: removes any background */ outline: none; /* Optional: removes any outline for focus */ appearance: none; /* Optional: removes default styling */ padding: 0; /* Optional: removes default padding */ } .translation { margin-top: 10px; font-size: 1.2em; color: #000000; padding: 10px; border-top: 1px solid #ddd; max-width: 80%; /* Reduce max-width to ensure content fits on zoomed screens */ margin-right: 10%; /* Safe margin to avoid cutoff on zoomed TVs */ margin-left: 10%;  /* Safe margin for left alignment */ transition: opacity 1s ease-in-out, filter 2s ease-in-out; } .dark-mode .translation { color: #FFFFFF; margin-right: 10%; /* Same safe margin for zoomed TVs */ margin-left: 10%;  /* Same safe margin for zoomed TVs */ transition: opacity 1s ease-in-out, filter 2s ease-in-out; } #translation { margin-top: 10px; font-size: 1.2em; padding: 10px; border-top: 1px solid #ddd; margin-right: 10%; /* Same safe margin */ margin-left: 10%;  /* Same safe margin */ } body { transition: background-color 0.3s, color 0.3s; /* Smooth transition */ } /* Dark mode styles */ .dark-mode { background-color: #333; color: white; } </style>
 </head>
 
 <body>
@@ -44,27 +44,6 @@
     Your browser does not support the audio element.
   </audio>
 </div>
-
-<script>
-  const audioElement = document.getElementById('audio');
-  const audioContainer = document.getElementById('audio-container');
-
-  // Simple check if the audio is at 0 seconds and is not playing yet
-  function checkAudioState() {
-    if (audioElement.currentTime === 0 && !audioElement.paused) {
-      audioContainer.classList.add('loading');
-    } else {
-      audioContainer.classList.remove('loading');
-    }
-  }
-
-  // Initial check when the page loads
-  checkAudioState();
-
-  // Continuously check the audio state in case the time changes
-  setInterval(checkAudioState, 500);  // Check every 500ms
-
-</script>
 
   <div id="report"></div>
 
@@ -168,15 +147,21 @@ function loadChapterAudio(index) {
   const chapter = jsonData.chapters[index];
   const audioSource = document.getElementById('audioSource');
   audioSource.src = chapter.audioURL;
+  
   const audioPlayer = document.getElementById('audio');
-  audioPlayer.load();
+  audioPlayer.load(); // Begin loading metadata
   audioPlayer.play();
+
   currentChapterData = chapter;
   currentChapterIndex = index;
   updateVerseSelect();
-  displayVersePNG(chapter.chapterNumber, 1);
-  displayTranslation(chapter.chapterNumber, 1);
-  
+
+  // Show the first verse image and translation right after the audio starts
+  audioPlayer.addEventListener('canplaythrough', () => {
+    displayVersePNG(chapter.chapterNumber, 1);  // Show the first verse image
+    displayTranslation(chapter.chapterNumber, 1);  // Show translation for the first verse
+  });
+
   // Save the chapter and ayat in localStorage
   localStorage.setItem('currentChapterIndex', index);
   localStorage.setItem('currentAyatIndex', 1); // Default to 1 for now
@@ -198,7 +183,7 @@ function updateVerseSelect() {
 
 function displayVersePNG(chapNum, verseNum) {
   const verseImageContainer = document.getElementById('verseImageContainer');
-  verseImageContainer.innerHTML = '';
+  verseImageContainer.innerHTML = ''; // Clear any existing images
 
   const arabicImg = document.createElement('img');
   arabicImg.src = `https://everyayah.com/data/quranpngs/${chapNum}_${verseNum}.png`;
@@ -208,7 +193,7 @@ function displayVersePNG(chapNum, verseNum) {
 
 function displayTranslation(chapNum, verseNum) {
   const translationContainer = document.getElementById('translation');
-  translationContainer.innerHTML = '';
+  translationContainer.innerHTML = ''; // Clear existing translation
 
   if (translationData && translationData[chapNum]) {
     const translation = translationData[chapNum].data_ayat.data.find(item => item.aya_number === verseNum);
@@ -240,8 +225,8 @@ function updateRealTimeReport() {
           <strong style="font-size: 50%;">${verse.startTime}</strong>
         `;
         reportDiv.innerHTML = reportText;
-        displayVersePNG(currentChapterData.chapterNumber, verse.verseNumber);
-        displayTranslation(currentChapterData.chapterNumber, verse.verseNumber);
+        displayVersePNG(currentChapterData.chapterNumber, verse.verseNumber);  // Update the verse image
+        displayTranslation(currentChapterData.chapterNumber, verse.verseNumber);  // Update translation
       }
     });
   }
@@ -280,6 +265,8 @@ document.getElementById('audio').addEventListener('ended', function() {
 
 // Retrieve stored Surah and Ayat on page load
 window.onload = function() {
+  alert("Audio loading takes less than a minute for the fastest connection.");
+
   const storedChapterIndex = localStorage.getItem('currentChapterIndex');
   const storedAyatIndex = localStorage.getItem('currentAyatIndex');
 
@@ -291,6 +278,9 @@ window.onload = function() {
   }
 }
 </script>
+
+
+
 
 </body>
 </html>
