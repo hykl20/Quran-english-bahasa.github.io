@@ -189,7 +189,7 @@ let currentChapterData = null;
 let currentChapterIndex = 0;
 
 // Fetch JSON data for chapters (2TM.json)
-fetch('https://muslim1446.github.io/beta/2TM.json')
+fetch('https://muslim1446.github.io/a/2TM.json')
   .then(response => response.json())
   .then(data => {
     jsonData = data;
@@ -199,7 +199,7 @@ fetch('https://muslim1446.github.io/beta/2TM.json')
   .catch(error => console.error('Error fetching JSON:', error));
 
 // Fetch translation data (3TM.json)
-fetch('https://muslim1446.github.io/beta/3TM.json')
+fetch('https://muslim1446.github.io/a/3TM.json')
   .then(response => response.json())
   .then(data => {
     translationData = data;
