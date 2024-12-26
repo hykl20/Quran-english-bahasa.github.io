@@ -1,96 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ <!--mudayin - archive.org-->
+ <!--*everyAyah.com*-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qur'an</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
     @font-face {
       font-family: 'NeuropoliticalRg';
       src: url('file:///C:/Users/May22/Downloads/neuropolitical/Neuropolitical%20Rg.otf') format('opentype');
     }
 
-body {
-  font-family: 'NeuropoliticalRg', sans-serif;
-  background-color: white;
-  color: black;
-  transition: background-color 0.5s, color 0.5s;
-}
+    body {
+      font-family: 'NeuropoliticalRg', sans-serif;
+      background-color: white;
+      color: black;
+      transition: background-color 0.5s, color 0.5s;
+    }
 
-.dark-mode {
-  background-color: black;
-  color: white;
-}
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
 
-#verseImageContainer img {
-  max-width: 100%;
-  margin-top: 20px;
-  transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
-  display: block;
-}
+    #verseImageContainer img {
+      max-width: 100%;
+      margin-top: 20px;
+      transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+      display: block;
+    }
 
-.dark-mode #verseImageContainer img {
-  filter: invert(1); /* Inverts black to white */
-}
+    .dark-mode #verseImageContainer img {
+      filter: invert(1); /* Inverts black to white */
+    }
 
-#darkModeToggle {
-  position: fixed;
-  top: 550px;
-  left: 10px;
-  padding: 10px 20px;
-  background-color: gray;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-}
+    #darkModeToggle {
+      position: fixed;
+      top: 550px;
+      left: 10px;
+      padding: 10px 20px;
+      background-color: gray;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
 
-.dark-mode #darkModeToggle {
-  background-color: #333;
-  color: white;
-}
+    .dark-mode #darkModeToggle {
+      background-color: #333;
+      color: white;
+    }
 
-#report {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 20px;
-}
+    #darkModeToggle i {
+      font-size: 20px;
+    }
 
-#audio {
-  margin-top: 20px;
-  width: 100%;
-}
+    #report {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
 
-/* Light mode - translation text is black */
-.translation {
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: #000000; /* Black for light mode */
-  padding: 10px;
-  border-top: 1px solid #ddd;
-}
+    #audio {
+      margin-top: 20px;
+      width: 100%;
+    }
 
-/* Dark mode - translation text is white */
-.dark-mode .translation {
-  color: #FFFFFF; /* White for dark mode */
-}
+    .translation {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #000000;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+    }
 
-/* Remove color styling from #translation */
-#translation {
-  margin-top: 10px;
-  font-size: 1.2em;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-}
+    .dark-mode .translation {
+      color: #FFFFFF;
+    }
 
+    #translation {
+      margin-top: 10px;
+      font-size: 1.2em;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+    }
 
+    body {
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    }
 
+    /* Dark mode styles */
+    .dark-mode {
+      background-color: #333;
+      color: white;
+    }
   </style>
 </head>
+
 <body>
 
-  <button id="darkModeToggle">Dark Mode</button>
+  <button id="darkModeToggle">
+    <i class="fas fa-sun"></i> <!-- Sun icon for light mode -->
+    <i class="fas fa-moon" style="display: none;"></i> <!-- Moon icon for dark mode -->
+  </button>
 
   <h1></h1>
 
@@ -110,188 +125,245 @@ body {
 
   <br>
 
-  <!-- Verse Image (First) -->
+  <!-- Verse Image -->
   <div id="verseImageContainer"></div>
 
-  <!-- Translation (Second) -->
+  <!-- Translation -->
   <div id="translation" class="translation"></div>
 
-  <!-- Audio Box (Third) -->
+  <!-- Audio Box -->
   <audio id="audio" controls>
     <source id="audioSource" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
 
-  <!-- Report (Fourth) -->
+  <!-- Report -->
   <div id="report"></div>
 
-  <script>
-    let jsonData = null;
-    let translationData = null;  // To store translation data
-    let currentChapterData = null; // To store the currently selected chapter data
-    let currentChapterIndex = 0;  // To track the current chapter index
+<script>
+const toggleButton = document.getElementById('darkModeToggle');
+const sunIcon = toggleButton.querySelector('.fa-sun');
+const moonIcon = toggleButton.querySelector('.fa-moon');
 
-    // Fetch JSON data for chapters (2TM.json)
-    fetch('https://muslim1446.github.io/beta/2TM.json')
-      .then(response => response.json())
-      .then(data => {
-        jsonData = data;
-        populateChapterSelect();
-      })
-      .catch(error => console.error('Error fetching JSON:', error));
+// Function to force dark mode based on system preference and fragment identifier
+function forceDarkMode() {
+  const fragment = window.location.hash;
+  
+  // Exclude light mode if #0 is present or button is clicked
+  if (fragment === "#0") {
+    document.body.classList.add('light-mode'); // Apply light mode
+    sunIcon.style.display = 'none'; // Hide the sun icon for light mode
+    moonIcon.style.display = 'inline-block'; // Show the moon icon for light mode
+  } else {
+    document.body.classList.add('dark-mode');
+    document.body.classList.remove('light-mode');
+    sunIcon.style.display = 'inline-block'; // Show the sun icon for dark mode
+    moonIcon.style.display = 'none'; // Hide the moon icon for dark mode
+  }
+}
 
-    // Fetch translation data (3TM.json)
-    fetch('https://muslim1446.github.io/beta/3TM.json')
-      .then(response => response.json())
-      .then(data => {
-        translationData = data;
-      })
-      .catch(error => console.error('Error fetching translation JSON:', error));
+// Initialize dark mode based on system preference and fragment identifier
+forceDarkMode(); // Always apply dark mode unless #0 is present or button click forces light mode
 
-    // Function to populate Chapter select dropdown
-    function populateChapterSelect() {
-      const chapterSelect = document.getElementById('chapterSelect');
-      jsonData.chapters.forEach((chapter, index) => {
-        const option = document.createElement('option');
-        option.value = index; // Use index as value for easier navigation
-        option.textContent = ' (' + chapter.chapterNumber + ') ' + chapter.title + ' ';
-        chapterSelect.appendChild(option);
-      });
+// Listen for clicks to toggle dark mode manually
+toggleButton.addEventListener('click', () => {
+  const isDarkMode = document.body.classList.contains('dark-mode');
+  
+  // If button is clicked, apply light mode and prevent dark mode
+  if (!isDarkMode) {
+    document.body.classList.remove('dark-mode');
+    document.body.classList.add('light-mode');
+    sunIcon.style.display = 'none'; // Hide the sun icon for light mode
+    moonIcon.style.display = 'inline-block'; // Show the moon icon for light mode
+  }
+});
+
+// Listen for changes in system theme preference and force dark mode
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', forceDarkMode);
+</script>
+
+<script>
+let jsonData = null;
+let translationData = null;
+let currentChapterData = null;
+let currentChapterIndex = 0;
+
+// Fetch JSON data for chapters (2TM.json)
+fetch('https://muslim1446.github.io/beta/2TM.json')
+  .then(response => response.json())
+  .then(data => {
+    jsonData = data;
+    populateChapterSelect();
+    checkUrlParams(); // Check URL params for Surah and Ayat
+  })
+  .catch(error => console.error('Error fetching JSON:', error));
+
+// Fetch translation data (3TM.json)
+fetch('https://muslim1446.github.io/beta/3TM.json')
+  .then(response => response.json())
+  .then(data => {
+    translationData = data;
+  })
+  .catch(error => console.error('Error fetching translation JSON:', error));
+
+// Function to populate Chapter select dropdown
+function populateChapterSelect() {
+  const chapterSelect = document.getElementById('chapterSelect');
+  jsonData.chapters.forEach((chapter, index) => {
+    const option = document.createElement('option');
+    option.value = index;
+    option.textContent = ` (${chapter.chapterNumber}) ${chapter.title} `;
+    chapterSelect.appendChild(option);
+  });
+}
+
+// Function to check URL parameters and load corresponding Surah and Ayat
+function checkUrlParams() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const surah = urlParams.get('surah');
+  const ayat = urlParams.get('ayat');
+
+  if (surah) {
+    document.getElementById('chapterSelect').value = surah - 1;
+    loadChapterAudio(surah - 1); // Adjusting for 1-based index
+  }
+
+  if (ayat) {
+    const verseSelect = document.getElementById('verseSelect');
+    verseSelect.value = ayat;
+    seekToSelectedVerse();
+  }
+
+  // Check if there's a fragment identifier (e.g., #0) and apply light mode
+  const fragment = window.location.hash;
+  if (fragment === "#0") {
+    document.body.classList.add('light-mode'); // Apply light mode
+  }
+}
+
+// Function to load the selected chapter's audio
+function loadAudio() {
+  const chapterSelect = document.getElementById('chapterSelect');
+  const selectedChapterIndex = chapterSelect.value;
+
+  if (selectedChapterIndex !== "") {
+    loadChapterAudio(selectedChapterIndex);
+  }
+}
+
+// Function to load the chapter's audio based on index
+function loadChapterAudio(index) {
+  const chapter = jsonData.chapters[index];
+  const audioSource = document.getElementById('audioSource');
+  audioSource.src = chapter.audioURL;
+  const audioPlayer = document.getElementById('audio');
+  audioPlayer.load();
+  audioPlayer.play();
+  currentChapterData = chapter;
+  currentChapterIndex = index;
+  updateVerseSelect();
+  displayVersePNG(chapter.chapterNumber, 1); // Default to first verse
+  displayTranslation(chapter.chapterNumber, 1); // Display translation for first verse
+}
+
+// Function to populate Verse select dropdown based on selected chapter
+function updateVerseSelect() {
+  const verseSelect = document.getElementById('verseSelect');
+  verseSelect.innerHTML = '<option value="">-AYAT</option>';
+
+  if (currentChapterData) {
+    currentChapterData.verses.forEach(verse => {
+      const option = document.createElement('option');
+      option.value = verse.verseNumber;
+      option.textContent = `Ayat ${verse.verseNumber}`;
+      verseSelect.appendChild(option);
+    });
+  }
+}
+
+// Function to display the Quran verse PNG
+function displayVersePNG(chapNum, verseNum) {
+  const verseImageContainer = document.getElementById('verseImageContainer');
+  verseImageContainer.innerHTML = '';
+
+  const arabicImg = document.createElement('img');
+  arabicImg.src = `https://everyayah.com/data/quranpngs/${chapNum}_${verseNum}.png`;
+  arabicImg.alt = `Arabic Verse ${verseNum}`;
+  verseImageContainer.appendChild(arabicImg);
+}
+
+// Function to display the translation below the verse
+function displayTranslation(chapNum, verseNum) {
+  const translationContainer = document.getElementById('translation');
+  translationContainer.innerHTML = '';
+
+  if (translationData && translationData[chapNum]) {
+    const translation = translationData[chapNum].data_ayat.data.find(item => item.aya_number === verseNum);
+    if (translation) {
+      const translationText = document.createElement('div');
+      translationText.textContent = translation.translation_aya_text;
+      translationContainer.appendChild(translationText);
     }
+  }
+}
 
-    // Function to load the selected chapter's audio
-    function loadAudio() {
-      const chapterSelect = document.getElementById('chapterSelect');
-      const selectedChapterIndex = chapterSelect.value;
+// Function to update the real-time report as audio plays
+function updateRealTimeReport() {
+  const audio = document.getElementById('audio');
+  const currentTime = audio.currentTime;
 
-      if (selectedChapterIndex !== "") {
-        currentChapterIndex = selectedChapterIndex;  // Set the current chapter index
-        loadChapterAudio(currentChapterIndex);
+  if (currentChapterData) {
+    currentChapterData.verses.forEach(verse => {
+      const startTimeParts = verse.startTime.split(':').map(Number);
+      const endTimeParts = verse.endTime.split(':').map(Number);
+
+      const startTotalSeconds = startTimeParts[0] * 3600 + startTimeParts[1] * 60 + startTimeParts[2];
+      const endTotalSeconds = endTimeParts[0] * 3600 + endTimeParts[1] * 60 + endTimeParts[2];
+
+      if (currentTime >= startTotalSeconds && currentTime <= endTotalSeconds) {
+        const reportDiv = document.getElementById('report');
+        const reportText = `
+          <strong></strong><br>
+          Surah ${currentChapterData.title} (${currentChapterData.chapterNumber}) | Ayat ${verse.verseNumber}<br>
+          <strong style="font-size: 50%;">${verse.startTime}</strong>
+        `;
+        reportDiv.innerHTML = reportText;
+        displayVersePNG(currentChapterData.chapterNumber, verse.verseNumber);
+        displayTranslation(currentChapterData.chapterNumber, verse.verseNumber);
       }
-    }
+    });
+  }
+}
 
-    // Function to load the chapter's audio based on index
-    function loadChapterAudio(index) {
-      const chapter = jsonData.chapters[index];
-      const audioSource = document.getElementById('audioSource');
-      audioSource.src = chapter.audioURL; // Set the audio source from JSON data
-      const audioPlayer = document.getElementById('audio');
-      audioPlayer.load(); // Reload the audio player with new source
-      audioPlayer.play(); // Play the audio immediately after loading
-      currentChapterData = chapter; // Store the currently selected chapter data
-      updateVerseSelect();
-      displayVersePNG(chapter.chapterNumber, 1); // Default to first verse
-      displayTranslation(chapter.chapterNumber, 1); // Display translation for first verse
-    }
+// Function to seek to the selected verse
+function seekToSelectedVerse() {
+  const verseSelect = document.getElementById('verseSelect');
+  const verseNum = verseSelect.value;
 
-    // Function to populate Verse select dropdown based on selected chapter
-    function updateVerseSelect() {
-      const verseSelect = document.getElementById('verseSelect');
-      verseSelect.innerHTML = '<option value="">-AYAT</option>'; // Reset verse options
-
-      if (currentChapterData) {
-        currentChapterData.verses.forEach(verse => {
-          const option = document.createElement('option');
-          option.value = verse.verseNumber;
-          option.textContent = 'Ayat ' + verse.verseNumber;
-          verseSelect.appendChild(option);
-        });
-      }
-    }
-
-    // Function to update the real-time report as audio plays
-    function updateRealTimeReport() {
+  if (verseNum !== "") {
+    const verseData = currentChapterData.verses.find(v => v.verseNumber == verseNum);
+    if (verseData) {
       const audio = document.getElementById('audio');
-      const currentTime = audio.currentTime;
-
-      if (currentChapterData) {
-        currentChapterData.verses.forEach(verse => {
-          const startTimeParts = verse.startTime.split(':').map(Number);
-          const endTimeParts = verse.endTime.split(':').map(Number);
-
-          const startTotalSeconds = startTimeParts[0] * 3600 + startTimeParts[1] * 60 + startTimeParts[2];
-          const endTotalSeconds = endTimeParts[0] * 3600 + endTimeParts[1] * 60 + endTimeParts[2];
-
-          if (currentTime >= startTotalSeconds && currentTime <= endTotalSeconds) {
-            const reportDiv = document.getElementById('report');
-            const reportText = `
-              <strong></strong><br>
-              Surah ${currentChapterData.title} (${currentChapterData.chapterNumber}) | Ayat ${verse.verseNumber}<br>
-<strong style="font-size: 50%;">${verse.startTime}</strong> 
-
-
-            `;
-            reportDiv.innerHTML = reportText;
-            displayVersePNG(currentChapterData.chapterNumber, verse.verseNumber);
-            displayTranslation(currentChapterData.chapterNumber, verse.verseNumber);
-          }
-        });
-      }
+      const startTimeParts = verseData.startTime.split(':').map(Number);
+      const startTotalSeconds = startTimeParts[0] * 3600 + startTimeParts[1] * 60 + startTimeParts[2];
+      audio.currentTime = startTotalSeconds;
     }
+  }
+}
 
-    // Function to seek to the selected verse when the user selects a verse
-    function seekToSelectedVerse() {
-      const verseSelect = document.getElementById('verseSelect');
-      const selectedVerseNumber = verseSelect.value;
+// Add event listener for audio playing
+document.getElementById('audio').addEventListener('timeupdate', updateRealTimeReport);
 
-      if (selectedVerseNumber && currentChapterData) {
-        const verse = currentChapterData.verses.find(v => v.verseNumber == selectedVerseNumber);
+// Automatically go to the next Surah when the current one finishes
+document.getElementById('audio').addEventListener('ended', function() {
+  if (currentChapterIndex < jsonData.chapters.length - 1) {
+    currentChapterIndex++; // Move to the next chapter
+    loadChapterAudio(currentChapterIndex); // Load the next chapter's audio
+  } else {
+    alert('You have reached the last chapter.');
+  }
+});
+</script>
 
-        if (verse) {
-          const startTimeParts = verse.startTime.split(':').map(Number);
-          const totalSeconds = startTimeParts[0] * 3600 + startTimeParts[1] * 60 + startTimeParts[2];
-
-          const audio = document.getElementById('audio');
-          audio.currentTime = totalSeconds; // Seek to the start time of the selected verse
-          audio.play(); // Start playing the audio from the selected verse
-        }
-      }
-    }
-
-    // Function to display the Quran verse PNG
-    function displayVersePNG(chapNum, verseNum) {
-      const verseImageContainer = document.getElementById('verseImageContainer');
-      verseImageContainer.innerHTML = ''; // Clear the container
-
-      const arabicImg = document.createElement('img');
-      arabicImg.src = `https://everyayah.com/data/quranpngs/${chapNum}_${verseNum}.png`;
-      arabicImg.alt = `Arabic Verse ${verseNum}`;
-      verseImageContainer.appendChild(arabicImg);
-    }
-
-    // Function to display the translation below the verse
-    function displayTranslation(chapNum, verseNum) {
-      const translationContainer = document.getElementById('translation');
-      translationContainer.innerHTML = ''; // Clear the container
-
-      if (translationData && translationData[chapNum]) {
-        const translation = translationData[chapNum].data_ayat.data.find(item => item.aya_number === verseNum);
-        if (translation) {
-          const translationText = document.createElement('div');
-          translationText.textContent = translation.translation_aya_text;
-          translationContainer.appendChild(translationText);
-        }
-      }
-    }
-
-    // Add event listener to update the report while audio is playing
-    document.getElementById('audio').addEventListener('timeupdate', updateRealTimeReport);
-
-    // Add event listener to detect when the current audio finishes and load next chapter
-    document.getElementById('audio').addEventListener('ended', function() {
-      if (currentChapterIndex < jsonData.chapters.length - 1) {
-        currentChapterIndex++; // Move to the next chapter
-        loadChapterAudio(currentChapterIndex); // Load the next chapter's audio
-      } else {
-        alert('You have reached the last chapter.');
-      }
-    });
-
-    // Dark mode toggle logic
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    darkModeToggle.addEventListener('click', function () {
-      document.body.classList.toggle('dark-mode');
-    });
-  </script>
 </body>
 </html>
