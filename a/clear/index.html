@@ -11,7 +11,73 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <!-- GSAP and JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+ <script>
+// Function to enter fullscreen on window load
+window.onload = function() {
+    // Check if fullscreen is available and try to request it
+    if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+        document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari, Opera
+        document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+        document.documentElement.msRequestFullscreen();
+    }
+};
+ </script>
 
+ <script>
+  // Get the audio element
+const audio = document.getElementById('audio');
+
+// Function to toggle play/pause
+function togglePlayPause() {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+
+// Event listener for the spacebar on PC
+document.addEventListener('keydown', (event) => {
+  // Spacebar keycode or "Space" for better clarity
+  if (event.code === 'Space') {
+    event.preventDefault();  // Prevent default spacebar behavior (scrolling)
+    togglePlayPause();
+  }
+  
+  // If the "OK" button on TV remote is mapped to the "Enter" key
+  if (event.code === 'Enter') {
+    togglePlayPause();
+  }
+  
+  // In some remote configurations, the "OK" button could map to the "KeyO" or "Enter"
+  // You can debug or log event.code to check the correct key code if needed.
+});
+
+// Event listener for double-tap on mobile
+let lastTap = 0;
+
+document.addEventListener('touchend', (event) => {
+  const now = Date.now();
+  const diff = now - lastTap;
+  
+  if (diff < 300 && diff > 0) {
+    // Double-tap detected, trigger play/pause
+    togglePlayPause();
+  }
+  lastTap = now;
+});
+
+// Optional: Handle "OK" button press (in case the remote sends key events)
+document.addEventListener('keydown', (event) => {
+  if (event.code === 'Enter') {  // "Enter" can correspond to "OK" on many remotes
+    togglePlayPause();
+  }
+});
+ </script>
   <style>
     @font-face {
       font-family: Verdana, Geneva, Arial, sans-serif;
@@ -134,7 +200,7 @@ label[for="chapterSelect"], #chapterSelect { display: none; } label[for="verseSe
 /* Detect light mode and change the color */
 @media (prefers-color-scheme: light) {
     #audio {
-        background-color: #000000; /* Change to white when in light mode */
+    opacity: 1;
     }
 }
 
