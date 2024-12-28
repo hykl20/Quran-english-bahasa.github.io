@@ -244,13 +244,13 @@ label[for="chapterSelect"], #chapterSelect { display: none; } label[for="verseSe
       color: white;
     }
 
-           #fullscreenBtn {
+        #fullscreenBtn {
             position: absolute;
             top: 3%;
             right: 4%;
             font-size: 12px; /* Icon size */
-            background-color: black;  /* Green background */
-            opacity: 0.1
+            background-color: #45a049;  /* Green background */
+            opacity: 0.1;
             color: white;               /* White text */
             padding: 5px 10px;          /* Padding */
             border: none;               /* No border */
@@ -261,9 +261,19 @@ label[for="chapterSelect"], #chapterSelect { display: none; } label[for="verseSe
 
         /* Button hover effect */
         #fullscreenBtn:hover {
-            background-color: #45a049;  /* Darker green on hover */
+            background-color: black;  /* Darker green on hover */
         }
 
+        /* Fullscreen button when in fullscreen mode */
+        #fullscreenBtn.fullscreen {
+            background-color: black;  /* Change background to black when in fullscreen */
+            opacity: 1;  /* Make the button more visible */
+        }
+
+        /* Fullscreen button hover effect when in fullscreen mode */
+        #fullscreenBtn.fullscreen:hover {
+            background-color: #45a049;  /* Green background on hover in fullscreen */
+        }
 
 
   </style>
