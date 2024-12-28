@@ -34,6 +34,11 @@
     .dark-mode #darkModeToggle { background-color: #333; color: white; } 
     #darkModeToggle i { font-size: 20px; } 
     #report { font-family: 'Inter', sans-serif;  /* Specify Inter font */ font-size: 19px; font-weight: bold; height: 0%; /* Reduce height by 10% */ position: absolute; /* Position the element relative to its nearest positioned ancestor */ top: 8%; /* Start 10% from the top */ right: 5%; /* Start 10% from the left */ max-width: 80%; /* Ensure content fits on zoomed screens */ margin-right: 10%; /* Safe margin to avoid cutoff on zoomed TVs */ margin-left: 0; /* No extra margin on the left since it's already defined */ transition: opacity 1s ease-in-out, filter 2s ease-in-out; } 
+    @media (aspect-ratio: 9/16) {
+    #report {
+        top: 12%;
+        font-size: 14px;
+    }
     #rraudio { position: absolute; /* or fixed if you want it to stay fixed */ bottom: 0; /* Align to the bottom */ left: 0; /* Align to the left edge */ width: 100%; /* Full width */ border-radius: 0; /* Remove any rounded corners */ background: none; /* Optional: removes any background */ outline: none; /* Optional: removes any outline for focus */ appearance: none; /* Optional: removes default styling */ padding: 0; /* Optional: removes default padding */ } 
     .translation { margin-top: 10px; font-size: 1.2em; color: #000000; padding: 10px; border-top: 1px solid #ddd; max-width: 80%; /* Reduce max-width to ensure content fits on zoomed screens */ margin-right: 10%; /* Safe margin to avoid cutoff on zoomed TVs */ margin-left: 10%;  /* Safe margin for left alignment */ transition: opacity 1s ease-in-out, filter 2s ease-in-out; } 
     .dark-mode .translation { color: #FFFFFF; margin-right: 10%; /* Same safe margin for zoomed TVs */ margin-left: 10%;  /* Same safe margin for zoomed TVs */ transition: opacity 1s ease-in-out, filter 2s ease-in-out; } 
@@ -50,15 +55,16 @@
       bottom: 0;
       left: 0;
       padding: 15px 20px;
-      font-size: 20px;
-      background-color: #007bff;
+      font-size: 18px;
+      background-color: #000000;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      opacity: 0.8;
     }
     #play-pause:hover {
-      background-color: #0056b3;
+      opacity:0.9;
     }
   </style>
 </head>
@@ -97,8 +103,43 @@
     Your browser does not support the audio element.
   </audio>
 </div>
-  <button id="play-pause" class="fa fa-play"></button>
+  <button id="play-pause" class="fa"></button>
+ <script>
+    // Get references to the audio and button elements
+    const audio = document.getElementById('audio');
+    const playPauseButton = document.getElementById('play-pause');
 
+    // Function to update button icon based on audio state
+    const updateButtonIcon = () => {
+      if (audio.paused) {
+        playPauseButton.classList.remove('fa-pause');
+        playPauseButton.classList.add('fa-play');
+      } else {
+        playPauseButton.classList.remove('fa-play');
+        playPauseButton.classList.add('fa-pause');
+      }
+    };
+
+    // Event listener for button click to toggle audio play/pause
+    playPauseButton.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+      updateButtonIcon();
+    });
+
+    // Auto-play audio on page load and update button state
+    window.addEventListener('load', () => {
+      audio.play().then(() => {
+        updateButtonIcon();
+      }).catch(() => {
+        // Handle autoplay restriction; fallback to paused state
+        updateButtonIcon();
+      });
+    });
+  </script>
   <script>
     const audio = document.getElementById('audio');
     const playPauseButton = document.getElementById('play-pause');
