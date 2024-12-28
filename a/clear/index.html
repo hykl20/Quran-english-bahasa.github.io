@@ -8,6 +8,7 @@
   <title>Qur'an</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
 
   <style>
     @font-face {
@@ -125,7 +126,22 @@ label[for="chapterSelect"], #chapterSelect { display: none; } label[for="verseSe
     outline: none; /* Optional: removes any outline for focus */
     appearance: none; /* Optional: removes default styling */
     padding: 0; /* Optional: removes default padding */
+    opacity: 0.1; /* 90% transparent */
 }
+
+/* GSAP animation would be applied via JavaScript */
+
+   // Ensure GSAP is included in your project
+// You can include GSAP via CDN
+
+// Use GSAP to animate the audio element's opacity over a slow duration
+gsap.to('#audio', {
+    opacity: 0.1,  // Final opacity (90% transparent)
+    duration: 5,   // Slow animation (5 seconds duration)
+    ease: "power1.inOut", // Smooth easing
+    repeat: -1, // Optional: make the animation repeat indefinitely
+    yoyo: true   // Optional: make the animation reverse every time
+});
 
 .translation {
   margin-top: 10px;
