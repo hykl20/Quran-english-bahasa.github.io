@@ -173,7 +173,7 @@ label[for="chapterSelect"], #chapterSelect { display: none; } label[for="verseSe
   font-weight: bold;
   height: 100%; /* Reduce height by 10% */
   position: absolute; /* Position the element relative to its nearest positioned ancestor */
-  top: 3%; /* Start 10% from the top */
+  top: 0%; /* Start 10% from the top */
   left: 5%; /* Start 10% from the left */
   max-width: 80%; /* Ensure content fits on zoomed screens */
   margin-right: 10%; /* Safe margin to avoid cutoff on zoomed TVs */
@@ -246,7 +246,7 @@ label[for="chapterSelect"], #chapterSelect { display: none; } label[for="verseSe
 
         #fullscreenBtn {
             position: absolute;
-            top: 6%;
+            top: 3%;
             right: 4%;
             font-size: 12px; /* Icon size */
             background-color: #45a049;  /* Green background */
@@ -264,29 +264,16 @@ label[for="chapterSelect"], #chapterSelect { display: none; } label[for="verseSe
             background-color: black;  /* Darker green on hover */
         }
 
-
-    /* Fullscreen button when in fullscreen mode */
+        /* Fullscreen button when in fullscreen mode */
         #fullscreenBtn.fullscreen {
-            display: none;
-        }
-
-        /* Fullscreen button hover effect when in fullscreen mode */
-        #fullscreenBtn.fullscreen:hover {
-            display: none;
-        }
-
-           /* Fullscreen button when in fullscreen mode */
-        #DELfullscreenBtn.fullscreen {
             background-color: black;  /* Change background to black when in fullscreen */
             opacity: 1;  /* Make the button more visible */
         }
 
         /* Fullscreen button hover effect when in fullscreen mode */
-        #DELfullscreenBtn.fullscreen:hover {
+        #fullscreenBtn.fullscreen:hover {
             background-color: #45a049;  /* Green background on hover in fullscreen */
         }
-
-   
 
 
   </style>
