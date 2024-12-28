@@ -244,6 +244,25 @@ label[for="chapterSelect"], #chapterSelect { display: none; } label[for="verseSe
       color: white;
     }
 
+           #fullscreenBtn {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            font-size: 24px; /* Icon size */
+            background-color: #4CAF50;  /* Green background */
+            color: white;               /* White text */
+            padding: 10px 20px;          /* Padding */
+            border: none;               /* No border */
+            border-radius: 5px;         /* Rounded corners */
+            cursor: pointer;            /* Pointer cursor on hover */
+            z-index: 1000;              /* Make sure it's above other content */
+        }
+
+        /* Button hover effect */
+        #fullscreenBtn:hover {
+            background-color: #45a049;  /* Darker green on hover */
+        }
+
 
 
   </style>
@@ -255,6 +274,53 @@ label[for="chapterSelect"], #chapterSelect { display: none; } label[for="verseSe
     <i class="fas fa-sun"></i> <!-- Sun icon for light mode -->
     <i class="fas fa-moon" style="display: none;"></i> <!-- Moon icon for dark mode -->
   </button>
+
+     <button id="fullscreenBtn">
+        <i class="fas fa-expand"></i> Fullscreen
+    </button>
+
+    <script>
+        // Get the fullscreen button
+        const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+        // Add an event listener for the button click
+        fullscreenBtn.addEventListener("click", function() {
+            // Check if the document is already in fullscreen
+            if (!document.fullscreenElement &&    // Not in fullscreen
+                !document.mozFullScreenElement && // Firefox
+                !document.webkitFullscreenElement && // Chrome/Safari
+                !document.msFullscreenElement) { // IE/Edge
+
+                // Request fullscreen for the document
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) {
+                    document.documentElement.mozRequestFullScreen(); // Firefox
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen(); // Chrome/Safari
+                } else if (document.documentElement.msRequestFullscreen) {
+                    document.documentElement.msRequestFullscreen(); // IE/Edge
+                }
+
+                // Change icon to indicate exit fullscreen
+                fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i> Exit Fullscreen';
+            } else {
+                // Exit fullscreen
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen(); // Firefox
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen(); // Chrome/Safari
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen(); // IE/Edge
+                }
+
+                // Change icon back to indicate fullscreen
+                fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i> Fullscreen';
+            }
+        });
+    </script>
 
   <h1></h1>
 
