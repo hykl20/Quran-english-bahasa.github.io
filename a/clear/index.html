@@ -11,6 +11,42 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <!-- GSAP and JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+          <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('audio');
+            
+            // Ensure the media session is supported
+            if ('mediaSession' in navigator) {
+                // Function to periodically update the media session metadata
+                function updateMediaSession() {
+                    navigator.mediaSession.metadata = new MediaMetadata({
+                        title: document.title,  // Always use the current <title> tag value
+                        artist: 'Mishary Alafasy (Indonesian meaning)',             // Empty artist field (can be customized)
+                        album: 'everyayah.com, muhdayin (archive.org), tpanurulalim',              // Empty album field (can be customized)
+                        artwork: []             // No artwork (can add an image URL here)
+                    });
+                }
+
+                // Initial media session update
+                updateMediaSession();
+
+                // Set interval to update the media session every second (1000ms)
+                setInterval(updateMediaSession, 1000);
+
+                // Play action
+                navigator.mediaSession.setActionHandler('play', () => {
+                    console.log('Play pressed');
+                    audio.play();
+                });
+
+                // Pause action
+                navigator.mediaSession.setActionHandler('pause', () => {
+                    console.log('Pause pressed');
+                    audio.pause();
+                });
+            }
+        });
+    </script>
  <script>
 // Function to enter fullscreen on window load
 window.onload = function() {
@@ -548,7 +584,7 @@ function updateRealTimeReport() {
         const reportText = `
           <strong></strong><br>
           Surah ${currentChapterData.title} (${currentChapterData.chapterNumber}) | Ayat ${verse.verseNumber}<br>
-          <strong style="font-size: 50%;">${verse.startTime}</strong>
+          <strong style="font-size: 53%;">${verse.startTime}</strong>
         `;
         reportDiv.innerHTML = reportText;
         displayVersePNG(currentChapterData.chapterNumber, verse.verseNumber);  // Update the verse image
@@ -603,6 +639,32 @@ window.onload = function() {
     seekToSelectedVerse();
   }
 }
+
+ // Title update function
+function updateTitle() {
+  const audio = document.getElementById('audio');
+  const currentTime = audio.currentTime;
+
+  // Find the current verse based on the currentTime of the audio
+  if (currentChapterData) {
+    const currentVerse = currentChapterData.verses.find(verse => {
+      const startTimeParts = verse.startTime.split(':').map(Number);
+      const endTimeParts = verse.endTime.split(':').map(Number);
+
+      const startTotalSeconds = startTimeParts[0] * 3600 + startTimeParts[1] * 60 + startTimeParts[2];
+      const endTotalSeconds = endTimeParts[0] * 3600 + endTimeParts[1] * 60 + endTimeParts[2];
+
+      return currentTime >= startTotalSeconds && currentTime <= endTotalSeconds;
+    });
+
+    if (currentVerse) {
+      document.title = `Surah ${currentChapterData.title} - ${currentVerse.verseNumber}`;
+    }
+  }
+}
+
+// Call updateTitle every second (1000 milliseconds)
+setInterval(updateTitle, 1000);
 </script>
 
 </body>
