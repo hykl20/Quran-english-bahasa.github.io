@@ -118,7 +118,7 @@
 
   <div id="report"></div>
 
- <script>
+<script>
 const toggleButton = document.getElementById('darkModeToggle');
 const sunIcon = toggleButton.querySelector('.fa-sun');
 const moonIcon = toggleButton.querySelector('.fa-moon');
@@ -178,7 +178,7 @@ function populateChapterSelect() {
   jsonData.chapters.forEach((chapter, index) => {
     const option = document.createElement('option');
     option.value = index;
-    option.textContent =  (${chapter.chapterNumber}) ${chapter.title} ;
+    option.textContent = ` (${chapter.chapterNumber}) ${chapter.title} `;
     chapterSelect.appendChild(option);
   });
 }
@@ -246,7 +246,7 @@ function updateVerseSelect() {
     currentChapterData.verses.forEach(verse => {
       const option = document.createElement('option');
       option.value = verse.verseNumber;
-      option.textContent = Ayat ${verse.verseNumber};
+      option.textContent = `Ayat ${verse.verseNumber}`;
       verseSelect.appendChild(option);
     });
   }
@@ -257,8 +257,8 @@ function displayVersePNG(chapNum, verseNum) {
   verseImageContainer.innerHTML = ''; // Clear any existing images
 
   const arabicImg = document.createElement('img');
-  arabicImg.src = https://everyayah.com/data/quranpngs/${chapNum}_${verseNum}.png;
-  arabicImg.alt = Arabic Verse ${verseNum};
+  arabicImg.src = `https://everyayah.com/data/quranpngs/${chapNum}_${verseNum}.png`;
+  arabicImg.alt = `Arabic Verse ${verseNum}`;
   verseImageContainer.appendChild(arabicImg);
 }
 
@@ -290,11 +290,11 @@ function updateRealTimeReport() {
 
       if (currentTime >= startTotalSeconds && currentTime <= endTotalSeconds) {
         const reportDiv = document.getElementById('report');
-        const reportText = 
+        const reportText = `
           <strong></strong><br>
           Surah ${currentChapterData.title} (${currentChapterData.chapterNumber}) | Ayat ${verse.verseNumber}<br>
           <strong style="font-size: 50%;">${verse.startTime}</strong>
-        ;
+        `;
         reportDiv.innerHTML = reportText;
         displayVersePNG(currentChapterData.chapterNumber, verse.verseNumber);  // Update the verse image
         displayTranslation(currentChapterData.chapterNumber, verse.verseNumber);  // Update translation
@@ -348,7 +348,8 @@ window.onload = function() {
     seekToSelectedVerse();
   }
 }
-// Title update function
+
+  // Title update function
 function updateTitle() {
   document.title = `Surah ${currentChapterData.title} - ${verse.verseNumber}`;
 }
