@@ -8,6 +8,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('audio');
+            
+            // Ensure the media session is supported
+            if ('mediaSession' in navigator) {
+                // Set media metadata based on the <title> tag and set up artwork (none in this case)
+                navigator.mediaSession.metadata = new MediaMetadata({
+                    title: document.title,  // Title based on the <title> tag
+                    artist: 'Mishary Rashid Alafasy',             // Empty artist field (can be customized)
+                    album: 'muslim1446.github.io',              // Empty album field (can be customized)
+                    artwork: []             // No artwork (can add an image URL here)
+                });
+
+                // Play action
+                navigator.mediaSession.setActionHandler('play', () => {
+                    console.log('Play pressed');
+                    audio.play();
+                });
+
+                // Pause action
+                navigator.mediaSession.setActionHandler('pause', () => {
+                    console.log('Pause pressed');
+                    audio.pause();
+                });
+            }
+        });
+    </script>
+
   <style>
     #audio {
       display: none; /* Hide the native audio player */
