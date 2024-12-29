@@ -329,7 +329,7 @@ function updateRealTimeReport() {
         const reportText = `
           <strong></strong><br>
           Surah ${currentChapterData.title} (${currentChapterData.chapterNumber}) | Ayat ${verse.verseNumber}<br>
-          <strong style="font-size: 63%;">${verse.startTime}</strong>
+          <strong style="font-size: 63%;" dir="rtl">${verse.startTime}</strong>
         `;
         reportDiv.innerHTML = reportText;
         displayVersePNG(currentChapterData.chapterNumber, verse.verseNumber);  // Update the verse image
