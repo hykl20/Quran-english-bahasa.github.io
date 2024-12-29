@@ -7,9 +7,9 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
   <style>
-   #audio {
+    #audio {
       display: none; /* Hide the native audio player */
     }
     @font-face {
@@ -90,14 +90,15 @@
   <div id="verseImageContainer"></div>
 
   <div id="translation" class="translation"></div>
-  <div id="audio-container" class="loading">
-    <div id="loading"></div>
-    <audio id="audio" controls>
-      <source id="audioSource" type="audio/mp3">
-      Your browser does not support the audio element.
-    </audio>
-  </div>
+<div id="audio-container" class="loading">
+  <div id="loading"></div>
+  <audio id="audio" controls>
+    <source id="audioSource" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+</div>
   <button id="play-pause" class="fa fa-play"></button>
+
   <script>
     const audio = document.getElementById('audio');
     const playPauseButton = document.getElementById('play-pause');
@@ -118,8 +119,6 @@
   <div id="report"></div>
 
   <script>
-    // Your existing JavaScript for play-pause and dark mode toggle
-
 const toggleButton = document.getElementById('darkModeToggle');
 const sunIcon = toggleButton.querySelector('.fa-sun');
 const moonIcon = toggleButton.querySelector('.fa-moon');
@@ -151,133 +150,212 @@ toggleButton.addEventListener('click', () => {
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', forceDarkMode);
 
-    // New function to update the title based on the chapter and verse
-    function updateTitle() {
-      if (currentChapterData && currentChapterData.title && verse) {
-        document.title = `Surah ${currentChapterData.title} - Ayat ${verse.verseNumber}`;
+let jsonData = null;
+let translationData = null;
+let currentChapterData = null;
+let currentChapterIndex = 0;
+
+// Fetch JSON data for chapters (2TM.json)
+fetch('https://muslim1446.github.io/a/2TM.json')
+  .then(response => response.json())
+  .then(data => {
+    jsonData = data;
+    populateChapterSelect();
+    checkUrlParams(); // Check URL params for Surah and Ayat
+  })
+  .catch(error => console.error('Error fetching JSON:', error));
+
+// Fetch translation data (3TM.json)
+fetch('https://muslim1446.github.io/a/3TM.json')
+  .then(response => response.json())
+  .then(data => {
+    translationData = data;
+  })
+  .catch(error => console.error('Error fetching translation JSON:', error));
+
+function populateChapterSelect() {
+  const chapterSelect = document.getElementById('chapterSelect');
+  jsonData.chapters.forEach((chapter, index) => {
+    const option = document.createElement('option');
+    option.value = index;
+    option.textContent =  (${chapter.chapterNumber}) ${chapter.title} ;
+    chapterSelect.appendChild(option);
+  });
+}
+
+function checkUrlParams() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const surah = urlParams.get('surah');
+  const ayat = urlParams.get('ayat');
+
+  if (surah) {
+    document.getElementById('chapterSelect').value = surah - 1;
+    loadChapterAudio(surah - 1); // Adjusting for 1-based index
+  }
+
+  if (ayat) {
+    const verseSelect = document.getElementById('verseSelect');
+    verseSelect.value = ayat;
+    seekToSelectedVerse();
+  }
+
+  const fragment = window.location.hash;
+  if (fragment === "#0") {
+    document.body.classList.add('light-mode');
+  }
+}
+
+function loadAudio() {
+  const chapterSelect = document.getElementById('chapterSelect');
+  const selectedChapterIndex = chapterSelect.value;
+
+  if (selectedChapterIndex !== "") {
+    loadChapterAudio(selectedChapterIndex);
+  }
+}
+
+function loadChapterAudio(index) {
+  const chapter = jsonData.chapters[index];
+  const audioSource = document.getElementById('audioSource');
+  audioSource.src = chapter.audioURL;
+  
+  const audioPlayer = document.getElementById('audio');
+  audioPlayer.load(); // Begin loading metadata
+  audioPlayer.play();
+
+  currentChapterData = chapter;
+  currentChapterIndex = index;
+  updateVerseSelect();
+
+  // Show the first verse image and translation right after the audio starts
+  audioPlayer.addEventListener('canplaythrough', () => {
+    displayVersePNG(chapter.chapterNumber, 1);  // Show the first verse image
+    displayTranslation(chapter.chapterNumber, 1);  // Show translation for the first verse
+  });
+
+  // Save the chapter and ayat in localStorage
+  localStorage.setItem('currentChapterIndex', index);
+  localStorage.setItem('currentAyatIndex', 1); // Default to 1 for now
+}
+
+function updateVerseSelect() {
+  const verseSelect = document.getElementById('verseSelect');
+  verseSelect.innerHTML = '<option value="">-AYAT</option>';
+
+  if (currentChapterData) {
+    currentChapterData.verses.forEach(verse => {
+      const option = document.createElement('option');
+      option.value = verse.verseNumber;
+      option.textContent = Ayat ${verse.verseNumber};
+      verseSelect.appendChild(option);
+    });
+  }
+}
+
+function displayVersePNG(chapNum, verseNum) {
+  const verseImageContainer = document.getElementById('verseImageContainer');
+  verseImageContainer.innerHTML = ''; // Clear any existing images
+
+  const arabicImg = document.createElement('img');
+  arabicImg.src = https://everyayah.com/data/quranpngs/${chapNum}_${verseNum}.png;
+  arabicImg.alt = Arabic Verse ${verseNum};
+  verseImageContainer.appendChild(arabicImg);
+}
+
+function displayTranslation(chapNum, verseNum) {
+  const translationContainer = document.getElementById('translation');
+  translationContainer.innerHTML = ''; // Clear existing translation
+
+  if (translationData && translationData[chapNum]) {
+    const translation = translationData[chapNum].data_ayat.data.find(item => item.aya_number === verseNum);
+    if (translation) {
+      const translationText = document.createElement('div');
+      translationText.textContent = translation.translation_aya_text;
+      translationContainer.appendChild(translationText);
+    }
+  }
+}
+
+function updateRealTimeReport() {
+  const audio = document.getElementById('audio');
+  const currentTime = audio.currentTime;
+
+  if (currentChapterData) {
+    currentChapterData.verses.forEach(verse => {
+      const startTimeParts = verse.startTime.split(':').map(Number);
+      const endTimeParts = verse.endTime.split(':').map(Number);
+
+      const startTotalSeconds = startTimeParts[0] * 3600 + startTimeParts[1] * 60 + startTimeParts[2];
+      const endTotalSeconds = endTimeParts[0] * 3600 + endTimeParts[1] * 60 + endTimeParts[2];
+
+      if (currentTime >= startTotalSeconds && currentTime <= endTotalSeconds) {
+        const reportDiv = document.getElementById('report');
+        const reportText = 
+          <strong></strong><br>
+          Surah ${currentChapterData.title} (${currentChapterData.chapterNumber}) | Ayat ${verse.verseNumber}<br>
+          <strong style="font-size: 50%;">${verse.startTime}</strong>
+        ;
+        reportDiv.innerHTML = reportText;
+        displayVersePNG(currentChapterData.chapterNumber, verse.verseNumber);  // Update the verse image
+        displayTranslation(currentChapterData.chapterNumber, verse.verseNumber);  // Update translation
       }
+    });
+  }
+}
+
+function seekToSelectedVerse() {
+  const verseSelect = document.getElementById('verseSelect');
+  const verseNum = verseSelect.value;
+
+  if (verseNum !== "") {
+    const verseData = currentChapterData.verses.find(v => v.verseNumber == verseNum);
+    if (verseData) {
+      const audio = document.getElementById('audio');
+      const startTimeParts = verseData.startTime.split(':').map(Number);
+      const startTotalSeconds = startTimeParts[0] * 3600 + startTimeParts[1] * 60 + startTimeParts[2];
+      audio.currentTime = startTotalSeconds;
+      
+      // Save the selected Ayat in localStorage
+      localStorage.setItem('currentAyatIndex', verseNum);
     }
+  }
+}
 
-    // Call the updateTitle function when the page is loaded
-    window.onload = function() {
-      alert("Audio loading takes less than a minute for the fastest connection.");
+// Add event listener for audio playing
+document.getElementById('audio').addEventListener('timeupdate', updateRealTimeReport);
 
-      const storedChapterIndex = localStorage.getItem('currentChapterIndex');
-      const storedAyatIndex = localStorage.getItem('currentAyatIndex');
+// Automatically go to the next Surah when the current one finishes
+document.getElementById('audio').addEventListener('ended', function() {
+  if (currentChapterIndex < jsonData.chapters.length - 1) {
+    currentChapterIndex++; 
+    loadChapterAudio(currentChapterIndex); 
+  } else {
+    alert('You have reached the last chapter.');
+  }
+});
 
-      if (storedChapterIndex && storedAyatIndex) {
-        document.getElementById('chapterSelect').value = storedChapterIndex;
-        loadChapterAudio(storedChapterIndex);
-        document.getElementById('verseSelect').value = storedAyatIndex;
-        seekToSelectedVerse();
-      }
-    }
+// Retrieve stored Surah and Ayat on page load
+window.onload = function() {
+  alert("Audio loading takes less than a minute for the fastest connection.");
 
-    let jsonData = null;
-    let translationData = null;
-    let currentChapterData = null;
-    let currentChapterIndex = 0;
-    let verse = null; // Track the current verse object
+  const storedChapterIndex = localStorage.getItem('currentChapterIndex');
+  const storedAyatIndex = localStorage.getItem('currentAyatIndex');
 
-    // Fetch JSON data for chapters (2TM.json)
-    fetch('https://muslim1446.github.io/a/2TM.json')
-      .then(response => response.json())
-      .then(data => {
-        jsonData = data;
-        populateChapterSelect();
-        checkUrlParams(); // Check URL params for Surah and Ayat
-      })
-      .catch(error => console.error('Error fetching JSON:', error));
+  if (storedChapterIndex && storedAyatIndex) {
+    document.getElementById('chapterSelect').value = storedChapterIndex;
+    loadChapterAudio(storedChapterIndex);
+    document.getElementById('verseSelect').value = storedAyatIndex;
+    seekToSelectedVerse();
+  }
 
-    // Fetch translation data (3TM.json)
-    fetch('https://muslim1446.github.io/a/3TM.json')
-      .then(response => response.json())
-      .then(data => {
-        translationData = data;
-      })
-      .catch(error => console.error('Error fetching translation JSON:', error));
+  // Title update script
+  function updateTitle() {
+    document.title = `Surah ${currentChapterData.title} - ${verse.verseNumber}`;
+  }
 
-    // Function to populate the chapter select dropdown
-    function populateChapterSelect() {
-      const chapterSelect = document.getElementById('chapterSelect');
-      jsonData.chapters.forEach((chapter, index) => {
-        const option = document.createElement('option');
-        option.value = index;
-        option.textContent = ` (${chapter.chapterNumber}) ${chapter.title} `;
-        chapterSelect.appendChild(option);
-      });
-    }
-
-    function loadChapterAudio(index) {
-      const chapter = jsonData.chapters[index];
-      const audioSource = document.getElementById('audioSource');
-      audioSource.src = chapter.audioURL;
-
-      const audioPlayer = document.getElementById('audio');
-      audioPlayer.load(); // Begin loading metadata
-      audioPlayer.play();
-
-      currentChapterData = chapter;
-      currentChapterIndex = index;
-      updateVerseSelect();
-
-      // Show the first verse image and translation right after the audio starts
-      audioPlayer.addEventListener('canplaythrough', () => {
-        displayVersePNG(chapter.chapterNumber, 1);  // Show the first verse image
-        displayTranslation(chapter.chapterNumber, 1);  // Show translation for the first verse
-
-        // Update the page title after the chapter is loaded
-        updateTitle();
-      });
-
-      // Save the chapter and ayat in localStorage
-      localStorage.setItem('currentChapterIndex', index);
-      localStorage.setItem('currentAyatIndex', 1); // Default to 1 for now
-    }
-
-    function updateVerseSelect() {
-      const verseSelect = document.getElementById('verseSelect');
-      verseSelect.innerHTML = '<option value="">-AYAT</option>';
-
-      if (currentChapterData) {
-        currentChapterData.verses.forEach(verse => {
-          const option = document.createElement('option');
-          option.value = verse.verseNumber;
-          option.textContent = `Ayat ${verse.verseNumber}`;
-          verseSelect.appendChild(option);
-        });
-      }
-    }
-
-    function displayVersePNG(chapNum, verseNum) {
-      const verseImageContainer = document.getElementById('verseImageContainer');
-      verseImageContainer.innerHTML = ''; // Clear any existing images
-
-      const arabicImg = document.createElement('img');
-      arabicImg.src = `https://everyayah.com/data/quranpngs/${chapNum}_${verseNum}.png`;
-      arabicImg.alt = `Arabic Verse ${verseNum}`;
-      verseImageContainer.appendChild(arabicImg);
-
-      verse = currentChapterData.verses.find(v => v.verseNumber === verseNum); // Set the current verse
-      updateTitle(); // Update the title when the verse changes
-    }
-
-    function displayTranslation(chapNum, verseNum) {
-      const translationContainer = document.getElementById('translation');
-      translationContainer.innerHTML = ''; // Clear existing translation
-
-      if (translationData && translationData[chapNum]) {
-        const translation = translationData[chapNum].data_ayat.data.find(item => item.aya_number === verseNum);
-        if (translation) {
-          const translationText = document.createElement('div');
-          translationText.textContent = translation.translation_aya_text;
-          translationContainer.appendChild(translationText);
-        }
-      }
-    }
-
-    // Other existing functions...
-  </script>
-
+  updateTitle(); // Call the updateTitle function when the page is loaded
+}
+</script>
 </body>
 </html>
+
