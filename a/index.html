@@ -118,7 +118,7 @@
 
   <div id="report"></div>
 
-  <script>
+ <script>
 const toggleButton = document.getElementById('darkModeToggle');
 const sunIcon = toggleButton.querySelector('.fa-sun');
 const moonIcon = toggleButton.querySelector('.fa-moon');
@@ -347,15 +347,19 @@ window.onload = function() {
     document.getElementById('verseSelect').value = storedAyatIndex;
     seekToSelectedVerse();
   }
-
-  // Title update script
-  function updateTitle() {
-    document.title = `Surah ${currentChapterData.title} - ${verse.verseNumber}`;
-  }
-
-  updateTitle(); // Call the updateTitle function when the page is loaded
 }
+// Title update function
+function updateTitle() {
+  document.title = `Surah ${currentChapterData.title} - ${verse.verseNumber}`;
+}
+
+// Call updateTitle every second (1000 milliseconds)
+setInterval(updateTitle, 1000);
+
 </script>
+
+
+
+
 </body>
 </html>
-
