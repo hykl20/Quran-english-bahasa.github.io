@@ -349,15 +349,34 @@ window.onload = function() {
   }
 }
 
-  // Title update function
+// Title update function
 function updateTitle() {
-  document.title = `Surah ${currentChapterData.title} - ${verse.verseNumber}`;
+  const audio = document.getElementById('audio');
+  const currentTime = audio.currentTime;
+
+  // Find the current verse based on the currentTime of the audio
+  if (currentChapterData) {
+    const currentVerse = currentChapterData.verses.find(verse => {
+      const startTimeParts = verse.startTime.split(':').map(Number);
+      const endTimeParts = verse.endTime.split(':').map(Number);
+
+      const startTotalSeconds = startTimeParts[0] * 3600 + startTimeParts[1] * 60 + startTimeParts[2];
+      const endTotalSeconds = endTimeParts[0] * 3600 + endTimeParts[1] * 60 + endTimeParts[2];
+
+      return currentTime >= startTotalSeconds && currentTime <= endTotalSeconds;
+    });
+
+    if (currentVerse) {
+      document.title = `Surah ${currentChapterData.title} - Ayat ${currentVerse.verseNumber}`;
+    }
+  }
 }
 
 // Call updateTitle every second (1000 milliseconds)
 setInterval(updateTitle, 1000);
 
 </script>
+
 
 
 
