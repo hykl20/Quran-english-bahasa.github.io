@@ -8,6 +8,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script>
+            // Function to update the title
+        function updateTitle() {
+            document.title = `Surah ${currentChapterData.title} - ${verse.verseNumber}`;
+        }
+
+        // Call the updateTitle function when the page is loaded
+        window.onload = function() {
+            updateTitle();
+        };
+  </script>
   <style>
     #audio {
       display: none; /* Hide the native audio player */
